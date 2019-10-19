@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Zeynep Özalp \\
+Id Number : 2237691 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\subsection*{a} 
+Let $R(x), G(x), B(x)$ be generating functions for red, green blue candies respectively. Actually, we can extend the terms of R(x) and B(x) to infinity but notice that we can not select 10 red candies since blue candies should be odd and the least odd number is 1. We can select at most 5 blue candies since there must be at least 4  red candies. Thus, generating functions are
+$$R(x)=x^4+x^5+x^6+x^7+x^8+x^9$$  
+$$G(x)=1+x^2+x^4$$ 
+$$B(x)=x+x^3+x^5$$    
+Then the ways to select 10 candies is the coefficient of $x^{10}$ in, let say $S(x)$, where $S(x)=R(x)G(x)B(x)$.
+$$S(x)=(x^4+x^5+x^6+x^7+x^8+x^9)(1+x^2+x^4)(x+x^3+x^5)$$ 
+$$S(x)=(x^4+x^5+x^6+x^7+x^8+x^9)(x+2x^3+3x^5+2x^7+x^9)$$
+The coefficient of $x^{10}$ in $S(x)$ is 6.
+\subsection*{b}
+If we have 5 candies of each of them, we can not select more than 5 candies. So, we need to delete the terms with power more than five in generating functions of them. Therefore,
+$$R(x)=x^4+x^5$$  
+$$G(x)=1+x^2+x^4$$ 
+$$B(x)=x+x^3+x^5$$ 
+$$S(x)=(x^4+x^5)(1+x^2+x^4)(x+x^3+x^5)$$
+$$S(x)=(x^4+x^5+x^6+x^7+x^8+x^9)(x+x^3+x^5)$$
+The coefficient of $x^{10}$ in $S(x)$ is 3.
+\subsection*{c}
+$$F(x)=x\dfrac{7x}{(1-2x)(1+3x)}$$
+Let $F(x)=xG(x)$
+$$G(x)=\dfrac{a}{1-2x}+\dfrac{b}{1+3x}=\dfrac{7x}{(1-2x)(1+3x)}$$
+$a+3ax+b-2bx=7x$. When we solve, $a=7/5,\ b=-7/5$
+$$G(x)=\frac{7}{5}\bigg( \dfrac{1}{1-2x}-\dfrac{1}{1+3x}\bigg)$$
+Notice that
+$$\dfrac{1}{1-2x}=\sum_{k=0}^{\infty}2^kx^k \longleftrightarrow <1,2,2^2,...>$$
+$$\dfrac{1}{1+3x}=\sum_{k=0}^{\infty}(-3)^kx^k \longleftrightarrow <1,(-3),(-3)^2,...>$$
+$$G(x)=\frac{7}{5}\sum_{k=0}^{\infty}(2^k-(-3)^k)x^k\longleftrightarrow \frac{7}{5}<0,2-(-3),2^2-(-3)^2,...>$$
+$$F(x)=xG(x)=\frac{7}{5}\sum_{k=0}^{\infty}(2^k-(-3)^k)x^{k+1}$$
+$$F(x)\longleftrightarrow \frac{7}{5}<0,0,1,(2-(-3)),(2^2-(-3)^2),...>$$
+$$F(x)\longleftrightarrow <0,0,\frac{7}{5},\frac{7(2-(-3))}{5},\frac{7(2^2-(-3)^2)}{5},...>$$
+\subsection*{d}
+First, notice that $s_1=8s_0+10^0=8s_0+1=9$. So, $s_0=1$.
+$$s_n=8s_{n-1}+10^{n-1}$$
+$$s_nx^n=8s_{n-1}x^n+10^{n-1x^n}$$
+Let $G(x)=\sum_{n=0}^{\infty}s_nx^n$. Since $s_0=1$, subtract 1 from $G(x)$ to start from $n=1$.
+$$G(x)-1=\sum_{n=1}^{\infty}s_nx^n=\sum_{n=1}^{\infty}(8s_{n-1}x^n+10^{n-1}x^n)$$
+$$G(x)-1=8\sum_{n=1}^{\infty}s_{n-1}x^n+\sum_{n=1}^{\infty}10^{n-1}x^n$$
+$$G(x)-1=8x\sum_{n=1}^{\infty}s_{n-1}x^{n-1}+x\sum_{n=1}^{\infty}10^{n-1}x^{n-1}$$
+$$G(x)-1=8x\sum_{n=0}^{\infty}s_{n}x^{n}+x\sum_{n=0}^{\infty}10^{n}x^{n}$$
+$$G(x)-1=8xG(x)+\dfrac{x}{1-10x}$$
+where I have used the Table 1 on page 542 to evaluate the second summation. Thus,
+$$G(x)=\dfrac{1-9x}{(1-8x)(1-10x)}$$
+$$G(x)=\dfrac{A}{1-8x}+\dfrac{B}{1-10x}$$
+Solving this gives $A=1/2, B=1/2$.
+$$G(x)=\frac{1}{2}\bigg(\dfrac{1}{1-8x}+\dfrac{1}{1-10x}\bigg)$$
+Again, use Table 1 to convert these into sums.
+$$G(x)=\frac{1}{2}\bigg(\sum_{n=0}^{\infty}8^nx^n+\sum_{n=0}^{\infty}10^nx^n\bigg)$$
+$$G(x)=\sum_{n=0}^{\infty}\frac{1}{2}(8^n+10^n)x^n$$
+Therefore,
+$$s_n=\frac{1}{2}(8^n+10^n)$$
+
+\section*{Answer 2}
+For simplicity, I will use the term "A-set" to represent the set of all numbers that are divisible by a given integer in a given interval.
+\subsection*{a}
+Let $k=cm$ where c is an integer and $A_k=\{k_1,k_2k_3,..\}$. If $k|k_i$ where $k_i\in A_k$, then $k_i=bk$ where b is an integer.
+$$k_i=b(cm)=bcm$$
+So, all elements in $A_k$ are divisible by m. Thus, $A_m$ contains all the elements of $A_k$ since these elements are divisible by m. Then,
+$$A_k\subseteq A_m$$
+\subsection*{b}
+If n is a composite number, n has a prime divisor less than or equal to $\sqrt{n}$, by theorem 2 on page 258. So the greatest prime divisor of n can be $\sqrt{n}$.\\
+From part a, the A-set of a composite number is the subset of the A-sets of prime divisors of it. So, we do not need to consider A-sets of composite numbers because all numbers which can be divisible by a composite number is also divisible by a prime number. Since the greatest prime number which divides the greatest composite number, which is n, can be less than or equal to $\sqrt{n}$ and since all other composite numbers less than  or equal to n are divisible by some primes $p\leq \sqrt{n}$, the right-hand side of equation 1 is equal to the union of A-sets of prime numbers up to $\sqrt{n}$.
+\subsection*{c}
+Assume that n is divisible by m. Thus,
+$$A_m=\{2m,3m,4m,...,(\frac{n}{m}m)\}$$
+Clearly, there are $n/m-1$ elements in $A_m$. Now assume that n is not divisible by m. Let k is the number before n that is divisible by m. Thus,
+$$A_m'=\{2m,3m,4m,...,(\frac{k}{m}m)\}$$
+in the interval $(m,k]$.
+Clearly, there are $k/m-1$ elements in $A_m'$. Since n is greater than k and is not divisible by m, $|A_m|=|A_m'|$. Thus, $|A_m|=k/m-1=\lfloor n/m \rfloor -1$.
+\subsection*{d}
+Since a and b are relatively prime, the intersection of $A_a$ and $A_b$ is the $lcm(a,b)=ab$ and its multiples. This set is the union of $A_{ab}$ and $\{ab\}$. So, the only number is $lcm(a,b)=ab$.
+\subsection*{e}
+Since all the elements in P is primes, $A_p$ is the multiples of those primes and the intersection of all A-sets is the A-set of the number, say k, such that
+$$k=p_1p_2p_3...$$ 
+where $p_i$'s are the elements of P. Therefore,
+$$\bigg |\bigcap_{p \in P}A_p\bigg |=|A_k|+1$$
+Add 1 because $k$ should be in the intersection of all A-sets of p's in P but  is not in the A-set of k.
+\subsection*{f}
+From part b,
+$$|C_{45}|=\bigg|\bigcup_{primes\ p\leq \sqrt{45}}A_p\bigg|$$
+$$|C_{45}|=|A_2\cup A_3\cup A_5|=|A_2|+|A_3|+|A_5|-|A_2\cap A_3|-|A_2\cap A_5|-|A_5\cap A_3|+|A_2\cup A_3\cup A_5|$$
+\subsection*{g}
+From part b, c, d and e: \\
+$|A_2\cap A_3|=|A_6|+1=7$
+$|A_2\cap A_5|=|A_{10}|+1=4$
+$|A_5\cap A_3|=|A_{15}|+1=3$
+$|A_2\cup A_3\cup A_5|=|A_{30}|+1=1$
+$$|C_{45}|=|A_2|+|A_3|+|A_5|-|A_6|-|A_{10}|-|A_{15}|+|A_{30}|$$
+$$|C_{45}|=21+14+8-7-4-3+1=30$$
+Notice that $C_{45}$ is defined in the interval (1,45] so 1 is not in $C_{45}$. Thus the number of composite numbers up to 45 is $|C_{45}|+1=31$. Subtracting this from 45 will give the number of primes up to 45.
+$45-31=14$
+
+\section*{Answer 3}
+\subsection*{a}
+If $\ll$ is a transitive relation, then for pairs for all arbitrary (a,b), (c,d), (e,f) in $Z^2$, the following is true.
+$$[((a,b)\ll (c,d)) \wedge ((c,d)\ll (e,f))]\rightarrow ((a,b)\ll (e,f))$$
+If $(a,b)\ll (c,d)$ and $(c,d)\ll (e,f)$, this means
+$$(a<c) \vee (a=c \wedge b\leq d)$$
+$$(c<e) \vee (c=e \wedge d\leq f)$$
+If $\ll$ is a transitive relation
+$$(a<e) \vee (a=e \wedge b\leq f)$$
+must hold.\\
+1. Consider the first case: $(a<c)$ and $(c<e)$. Then, $a<e$ and relation holds for the first case.\\
+2. Consider the second case: $(a=c \wedge b\leq d)$ and $(c=e \wedge d\leq f)$. Clearly $a=e$ and since $b\leq d \leq f$, this implies $b\leq f$.
+Therefore, $\ll$ is a transitive relation.
+\subsection*{b}
+Equivalence relations are reflexive, symmetric, transitive relations.
+\subsubsection*{Reflexivity}
+For all functions f, k in R such that $x\geq k$, the following is true for any k.
+$$f(x)=f(x)$$
+$$f\ \alpha \ f$$
+Thus, $\alpha$ is reflexive.
+\subsubsection*{Symmetry}
+If $f\ \alpha \ g$, for $x\geq k$, $f(x)=g(x)$. If $g\ \alpha \ f$, for $x\geq k$, $g(x)=f(x)$.
+If $f\ \alpha \ g$ holds, so do $g\ \alpha \ f$ for the same arbitrary k and vice versa. Thus, $\alpha$ is symmetric.
+\subsubsection*{Transitivity}
+If $\alpha$ is a transitive relation, then for pairs f, g and h the following is true.
+$$[(f\alpha g) \wedge (g\alpha h)]\rightarrow (f \alpha h)$$
+If $f\alpha g$ and $g\alpha h$, this means
+$$f(x)=g(x)$$ for every $x \geq k_1$.
+$$g(x)= h(x)$$ for every $x \geq k_2$.\\
+Since these tree functions are equal at points greater than the maximum of $k_1$ and $k_2$, clearly
+$$f \alpha h$$ for every $x \geq max(k_1,k_2)$
+Thus, $\alpha$ is transitive.
+
+
+
+
+\end{document}
+
+​
+

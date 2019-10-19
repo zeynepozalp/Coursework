@@ -1,0 +1,10 @@
+{"food" : {"chips" : "food;chips;res_low;10", "fish" : "food;fish;res_high;20", "nachos" : "food;nachos;res_high;20", "tacos" : "food;tacos;res_medium;15"}, "music" : {"bass" : "music;bass;res_high;25", "drum" : "music;drum;res_low;15", "guitar" : "music;guitar;res_low;15", "harp" : "music;harp;res_medium;20", "piano" : "music;piano;res_medium;20"}, "sports" : {"golf" : "sports;golf;res_low;30"}}
+{"music" : {"bass" : "music;bass;res_high;25", "drum" : "music;drum;res_low;15", "guitar" : "music;guitar;res_low;15", "harp" : "music;harp;res_medium;20", "piano" : "music;piano;res_medium;20"}}
+{"sports" : {"golf" : "sports;golf;res_low;30"}}
+{"music" : {"guitar" : "music;guitar;res_low;15"}}
+{"sports" : {"golf" : "sports;golf;res_low;30"}}
+{"food" : {"chips" : "food;chips;res_low;10", "fish" : "food;fish;res_high;20", "nachos" : "food;nachos;res_high;20", "tacos" : "food;tacos;res_medium;15"}, "music" : {"bass" : "music;bass;res_high;25", "drum" : "music;drum;res_low;15", "harp" : "music;harp;res_medium;20", "piano" : "music;piano;res_medium;20"}, "sports" : {}}
+{"music" : {"bass" : "music;bass;res_high;25", "drum" : "music;drum;res_low;15", "harp" : "music;harp;res_medium;20", "piano" : "music;piano;res_medium;20"}}
+{"sports" : {}}
+{}
+{}

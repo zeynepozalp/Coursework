@@ -1,0 +1,46 @@
+*Hw1> writeExpression ((ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST), [])
+"3"
+
+*Hw1> writeExpression ((ASTNode "x" EmptyAST EmptyAST), [("x", "num", "17")])
+"let x=17 in x"
+
+*Hw1> writeExpression ((ASTNode "plus" (ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST)), [])
+"(3+5)"
+
+*Hw1> writeExpression ((ASTNode "plus" (ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST) EmptyAST)), [])
+"(3+(-5))"
+
+*Hw1> writeExpression ((ASTNode "times" (ASTNode "num" (ASTNode "7" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST)), [])
+"(7*5)"
+
+*Hw1> writeExpression ((ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)), [])
+"(\"CENG\"++\"242\")"
+
+*Hw1> writeExpression ((ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST), [])
+"(length (\"CENG\"++\"242\"))"
+
+*Hw1> writeExpression ((ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "2" EmptyAST EmptyAST) EmptyAST) EmptyAST)), [("x", "num", "9")])
+"let x=9 in (x+(-2))"
+
+*Hw1> writeExpression ((ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "y" EmptyAST EmptyAST) EmptyAST)), [("x", "num", "9"), ("y", "num", "19")])
+"let x=9;y=19 in (x+(-y))"
+
+*Hw1> writeExpression ((ASTNode "times" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "x" EmptyAST EmptyAST) EmptyAST)), [("x", "num", "9")])
+"let x=9 in (x*(-x))"
+
+*Hw1> writeExpression ((ASTNode "negate" (ASTNode "len" (ASTNode "cat" (ASTNode "department" EmptyAST EmptyAST) (ASTNode "course_code" EmptyAST EmptyAST)) EmptyAST) EmptyAST), [("department", "str", "CENG"), ("course_code", "str", "242")])
+"let department=\"CENG\";course_code=\"242\" in (-(length (department++course_code)))"
+
+*Hw1> writeExpression ((ASTNode "times" (ASTNode "negate" (ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST) EmptyAST) (ASTNode "plus" (ASTNode "num" (ASTNode "8" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "14" EmptyAST EmptyAST) EmptyAST))), [])
+"((-(length (\"CENG\"++\"242\")))*(8+14))"
+
+a=((ASTNode "plus" (ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST)), [])
+b=((ASTNode "plus" (ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST) EmptyAST)), [])
+c=((ASTNode "times" (ASTNode "num" (ASTNode "7" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST)), [])
+d=((ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)), [])
+e=((ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST), [])
+f=((ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "2" EmptyAST EmptyAST) EmptyAST) EmptyAST)), [("x", "num", "9")])
+g=((ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "y" EmptyAST EmptyAST) EmptyAST)), [("x", "num", "9"), ("y", "num", "19")])
+h=((ASTNode "times" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "x" EmptyAST EmptyAST) EmptyAST)), [("x", "num", "9")])
+i=((ASTNode "negate" (ASTNode "len" (ASTNode "cat" (ASTNode "department" EmptyAST EmptyAST) (ASTNode "course_code" EmptyAST EmptyAST)) EmptyAST) EmptyAST), [("department", "str", "CENG"), ("course_code", "str", "242")])
+j=((ASTNode "times" (ASTNode "negate" (ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST) EmptyAST) (ASTNode "plus" (ASTNode "num" (ASTNode "8" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "14" EmptyAST EmptyAST) EmptyAST))), [])

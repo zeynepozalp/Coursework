@@ -1,0 +1,40 @@
+# Project: Proje1
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Code/DnDW.o Code/TicTacToe.o Code/Utilities.o $(RES)
+LINKOBJ  = Code/DnDW.o Code/TicTacToe.o Code/Utilities.o $(RES)
+LIBS =  -L"D:/Dev-Cpp/lib"  
+INCS =  -I"D:/Dev-Cpp/include" 
+CXXINCS =  -I"D:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/Dev-Cpp/include/c++/3.4.2/backward"  -I"D:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"D:/Dev-Cpp/include/c++/3.4.2"  -I"D:/Dev-Cpp/include" 
+BIN  = Proje1.dll
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Proje1.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=libProje1.def
+STATICLIB=libProje1.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+Code/DnDW.o: Code/DnDW.c
+	$(CC) -c Code/DnDW.c -o Code/DnDW.o $(CFLAGS)
+
+Code/TicTacToe.o: Code/TicTacToe.c
+	$(CC) -c Code/TicTacToe.c -o Code/TicTacToe.o $(CFLAGS)
+
+Code/Utilities.o: Code/Utilities.c
+	$(CC) -c Code/Utilities.c -o Code/Utilities.o $(CFLAGS)

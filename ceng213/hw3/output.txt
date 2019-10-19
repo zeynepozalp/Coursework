@@ -1,0 +1,497 @@
+User Add: Sarah 1
+User Add: Sarah 0
+User Add: Sarah 0
+---------
+Passwords
+Sarah pass123
+EMPTY EMPTY
+EMPTY EMPTY
+
+User Add: Morgan 1
+---------
+Passwords
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Morgan morP4ssw0rd
+EMPTY EMPTY
+Sarah pass123
+EMPTY EMPTY
+
+User Add: BigMike 1
+---------
+Passwords
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Morgan morP4ssw0rd
+EMPTY EMPTY
+Sarah pass123
+BigMike mikesPassword
+
+User Add: Jeff 1
+---------
+Passwords
+EMPTY EMPTY
+Jeff jeffsspassword
+EMPTY EMPTY
+Morgan morP4ssw0rd
+EMPTY EMPTY
+Sarah pass123
+BigMike mikesPassword
+
+User Add: Lester 1
+---------
+Passwords
+Morgan morP4ssw0rd
+BigMike mikesPassword
+Sarah pass123
+EMPTY EMPTY
+EMPTY EMPTY
+Jeff jeffsspassword
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Lester Lestersspassword
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+
+User Add: Sarah 1
+User Add: Sarah 0
+User Add: Morgan 1
+User Add: Ellie 1
+User Add: Vicky 1
+---------
+Passwords
+Sarah Sarahspass
+Vicky vickypass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Ellie elspassword
+Morgan morganspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+
+User Add: Casey 1
+User Add: Casey 0
+User Add: Vale 1
+User Add: Devon 1
+User Add: Chuck 1
+User Add: Orion 1
+User Add: Chuck 0
+User Add: Chuck 0
+User Add: Devon 0
+---------
+Passwords
+EMPTY EMPTY
+Vale valespass
+Devon devonspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Ellie elspassword
+EMPTY EMPTY
+Chuck chuckspass
+Vicky vickypass
+Sarah Sarahspass
+Orion orionspass
+Morgan morganspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Casey caseysspassword
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+
+User Add: Sarah 1
+User Add: Sarah 0
+---------
+Passwords
+Sarah Sarahspass
+EMPTY EMPTY
+EMPTY EMPTY
+*******************************************
+User Add: Sarah 1
+User Add: Morgan 1
+User Add: Ellie 1
+User Add: Vicky 1
+User Add: Casey 1
+User Add: Vale 1
+User Add: Devon 1
+User Add: Chuck 1
+User Add: Orion 1
+User Add: BigMike 1
+User Add: Jeff 1
+User Add: Lester 1
+Login: Chuck 1
+Login: Chuck 0
+Login: Morgan 0
+Login: Morgan 1
+Login: Morgan 0
+Login: Sarah 0
+---------
+Active Users
+EMPTY
+EMPTY
+EMPTY
+Morgan
+Chuck
+EMPTY
+EMPTY
+
+Login: Sarah 1
+Login: Sarah 0
+Login: Casey 1
+Login: Orion 1
+Login: Jefster 0
+Login: BigMike 1
+Login: Jeff 1
+Login: Lester 1
+---------
+Active Users
+Morgan
+Chuck
+Sarah
+EMPTY
+EMPTY
+Jeff
+EMPTY
+EMPTY
+Casey
+Orion
+EMPTY
+Lester
+EMPTY
+EMPTY
+EMPTY
+EMPTY
+BigMike
+***************************
+16
+Vicky vickypass
+Orion orionspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Ellie elspassword
+EMPTY EMPTY
+EMPTY EMPTY
+Chuck chuckspass
+Sarah Sarahspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Casey caseysspassword
+Bryce brycespass
+Morgan morganspass
+Alex alexspass
+Vale valespass
+Beckman generalspass
+Tang tangspass
+EMPTY EMPTY
+EMPTY EMPTY
+Devon devonspass
+Emmett hothothothot
+EMPTY EMPTY
+Roark Tedspass
+AnnaWu Annaspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+************************
+User Add: Sarah 1
+User Add: Morgan 1
+User Add: Ellie 1
+User Add: Vicky 1
+User Add: Casey 1
+User Add: Vale 1
+User Add: Devon 1
+User Add: Chuck 1
+User Add: Orion 1
+User Add: BigMike 1
+User Add: Jeff 1
+User Add: Lester 1
+Login: Chuck 1
+Logout: Chuck 1
+---------
+Active Users
+EMPTY
+EMPTY
+DELETED
+
+Login: Chuck 1
+---------
+Active Users
+EMPTY
+EMPTY
+Chuck
+
+Login: Morgan 1
+Login: Sarah 1
+Logout: Sarah 1
+---------
+Active Users
+EMPTY
+EMPTY
+EMPTY
+Morgan
+Chuck
+DELETED
+EMPTY
+
+Logout: Chuck 1
+Logout: Chuck 0
+Logout: Morgan 1
+Logout: Morgan 0
+Login: Sarah 1
+Login: Casey 1
+Login: Vicky 1
+Login: Vale 1
+Login: Orion 1
+Login: Jefster 0
+Login: BigMike 1
+Login: Jeff 1
+Login: Lester 1
+---------
+Active Users
+BigMike
+Vale
+Sarah
+EMPTY
+EMPTY
+Jeff
+EMPTY
+Casey
+Vicky
+Orion
+EMPTY
+Lester
+EMPTY
+EMPTY
+EMPTY
+EMPTY
+EMPTY
+
+Logout: Sarah 1
+Logout: Casey 1
+Logout: Sarah 0
+---------
+Active Users
+BigMike
+Vale
+DELETED
+EMPTY
+EMPTY
+Jeff
+EMPTY
+DELETED
+Vicky
+Orion
+EMPTY
+Lester
+EMPTY
+EMPTY
+EMPTY
+EMPTY
+EMPTY
+
+Logout: Orion 1
+Logout: Jefster 0
+Logout: BigMike 1
+Logout: Jeff 1
+Logout: Lester 1
+Logout: Vicky 1
+Logout: Vale 1
+Login: BigMike 1
+Login: Jeff 1
+Login: Lester 1
+Logout: BigMike 1
+Logout: Jeff 1
+Logout: Lester 1
+---------
+Active Users
+DELETED
+DELETED
+DELETED
+EMPTY
+EMPTY
+DELETED
+EMPTY
+DELETED
+DELETED
+DELETED
+EMPTY
+DELETED
+EMPTY
+EMPTY
+EMPTY
+EMPTY
+EMPTY
+*****************
+User Add: Sarah 1
+User Add: Morgan 1
+User Add: Ellie 1
+User Add: Vicky 1
+Change Pass: Sarah 0
+Change Pass: Sarah 1
+User Add: Casey 1
+User Add: Vale 1
+---------
+Passwords
+Morgan morganspass
+Sarah Sarahsnewpass
+Sarah Sarahspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Casey caseysspassword
+Vicky vickypass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Ellie elspassword
+Vale valespass
+
+User Add: Devon 1
+---------
+Passwords
+Morgan morganspass
+Sarah Sarahsnewpass
+Sarah Sarahspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Casey caseysspassword
+Vicky vickypass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Devon devonspass
+Ellie elspassword
+Vale valespass
+
+Change Pass: Sarah 1
+User Add: Chuck 1
+User Add: Orion 1
+Change Pass: Vale 1
+Change Pass: Sarah 1
+User Add: BigMike 1
+User Add: Jeff 1
+Change Pass: Vale 1
+User Add: Lester 1
+User Add: Beckman 1
+User Add: Bryce 1
+User Add: Emmet 1
+User Add: Tang 1
+User Add: Alex 1
+Change Pass: Vale 1
+User Add: AnnaWu 1
+Change Pass: Tang 1
+User Add: Roark 1
+---------
+Passwords
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Chuck chuckspass
+Ellie elspassword
+Sarah Sarahsnewestpass
+Sarah Sarahsnewerpass
+Sarah Sarahsnewpass
+Sarah Sarahspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Casey caseysspassword
+Bryce brycespassword
+EMPTY EMPTY
+EMPTY EMPTY
+Emmet hothothothot
+EMPTY EMPTY
+BigMike mikesPassword
+AnnaWu AnnaWusspassword
+Devon devonspass
+EMPTY EMPTY
+EMPTY EMPTY
+Roark Tedsspassword
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Vicky vickypass
+Orion orionspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Beckman Generalsspassword
+EMPTY EMPTY
+Morgan morganspass
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Jeff jeffsspassword
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Lester Lestersspassword
+EMPTY EMPTY
+Alex alexsspassword
+Vale valesnewestpass
+Vale valesnewerpass
+Vale valesnewpass
+Vale valespass
+Tang harryssnewpassword
+Tang harrysspassword

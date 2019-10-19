@@ -1,0 +1,42 @@
+*Hw1> evaluateAST ((ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST), [])
+(ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST,"3")
+
+*Hw1> evaluateAST ((ASTNode "x" EmptyAST EmptyAST), [("x", "num", "17")])
+(ASTNode "num" (ASTNode "17" EmptyAST EmptyAST) EmptyAST,"17")
+
+*Hw1> evaluateAST ((ASTNode "plus" (ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST)), [])
+(ASTNode "plus" (ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST),"8")
+
+*Hw1> evaluateAST ((ASTNode "plus" (ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST) EmptyAST)), [])
+(ASTNode "plus" (ASTNode "num" (ASTNode "3" EmptyAST EmptyAST) EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST) EmptyAST),"-2")
+
+*Hw1> evaluateAST ((ASTNode "times" (ASTNode "num" (ASTNode "7" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST)), [])
+(ASTNode "times" (ASTNode "num" (ASTNode "7" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "5" EmptyAST EmptyAST) EmptyAST),"35")
+
+*Hw1> evaluateAST ((ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)), [])
+(ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST),"CENG242")
+
+*Hw1> evaluateAST ((ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST), [])
+(ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST,"7")
+
+*Hw1> evaluateAST ((ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "2" EmptyAST EmptyAST) EmptyAST) EmptyAST)), [("x", "num", "9")])
+(ASTNode "plus" (ASTNode "num" (ASTNode "9" EmptyAST EmptyAST) EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "2" EmptyAST EmptyAST) EmptyAST) EmptyAST),"7")
+
+*Hw1> evaluateAST ((ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "y" EmptyAST EmptyAST) EmptyAST)), [("x", "num", "9"), ("y", "num", "19")])
+(ASTNode "plus" (ASTNode "num" (ASTNode "9" EmptyAST EmptyAST) EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "19" EmptyAST EmptyAST) EmptyAST) EmptyAST),"-10")
+
+*Hw1> evaluateAST ((ASTNode "times" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "x" EmptyAST EmptyAST) EmptyAST)), [("x", "num", "9")])
+(ASTNode "times" (ASTNode "num" (ASTNode "9" EmptyAST EmptyAST) EmptyAST) (ASTNode "negate" (ASTNode "num" (ASTNode "9" EmptyAST EmptyAST) EmptyAST) EmptyAST),"-81")
+
+*Hw1> evaluateAST ((ASTNode "negate" (ASTNode "len" (ASTNode "cat" (ASTNode "department" EmptyAST EmptyAST) (ASTNode "course_code" EmptyAST EmptyAST)) EmptyAST) EmptyAST), [("department", "str", "CENG"), ("course_code", "str", "242")])
+(ASTNode "negate" (ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST) EmptyAST,"-7")
+
+*Hw1> evaluateAST ((ASTNode "times" (ASTNode "negate" (ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST) EmptyAST) (ASTNode "plus" (ASTNode "num" (ASTNode "8" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "14" EmptyAST EmptyAST) EmptyAST))), [])
+(ASTNode "times" (ASTNode "negate" (ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "CENG" EmptyAST EmptyAST) EmptyAST) (ASTNode "str" (ASTNode "242" EmptyAST EmptyAST) EmptyAST)) EmptyAST) EmptyAST) (ASTNode "plus" (ASTNode "num" (ASTNode "8" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "14" EmptyAST EmptyAST) EmptyAST)),"-154")
+
+a=(ASTNode "x" EmptyAST EmptyAST)
+b= [("x", "num", "9")]
+c= (ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "negate" (ASTNode "y" EmptyAST EmptyAST) EmptyAST))
+d= [("x", "num", "9"), ("y", "num", "19")]
+e=(ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "plus" (ASTNode "x" EmptyAST EmptyAST) (ASTNode "y" EmptyAST EmptyAST)))
+f=[("x", "num", "9"), ("y", "num", "19")]

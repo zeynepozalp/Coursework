@@ -1,0 +1,384 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: RgbMaskModule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RgbMaskModule.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RgbMaskModule"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : RgbMaskModule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lab4_1.v" in library work
+Module <MaskROM> compiled
+Module <RgbRAM> compiled
+Module <RgbMaskModule> compiled
+No errors in compilation
+Analysis of file <"RgbMaskModule.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <RgbMaskModule> in library <work>.
+
+Analyzing hierarchy for module <MaskROM> in library <work>.
+
+Analyzing hierarchy for module <RgbRAM> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <RgbMaskModule>.
+Module <RgbMaskModule> is correct for synthesis.
+ 
+Analyzing module <MaskROM> in library <work>.
+Module <MaskROM> is correct for synthesis.
+ 
+Analyzing module <RgbRAM> in library <work>.
+WARNING:Xst:905 - "lab4_1.v" line 74: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <memory>
+Module <RgbRAM> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MaskROM>.
+    Related source file is "lab4_1.v".
+    Found 16x8-bit ROM for signal <RomDataOut>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <MaskROM> synthesized.
+
+
+Synthesizing Unit <RgbRAM>.
+    Related source file is "lab4_1.v".
+WARNING:Xst:646 - Signal <i> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 24-bit latch for signal <RamDataOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 24-bit register for signal <RamDataOut>.
+    Found 24-bit 16-to-1 multiplexer for signal <$varindex0000> created at line 76.
+    Found 8-bit adder carry out for signal <COND_10$addsub0001> created at line 98.
+    Found 9-bit comparator greater for signal <COND_10$cmp_gt0000> created at line 98.
+    Found 8-bit adder carry out for signal <COND_11$addsub0001> created at line 99.
+    Found 9-bit comparator greater for signal <COND_11$cmp_gt0000> created at line 99.
+    Found 8-bit adder carry out for signal <COND_12$addsub0001> created at line 100.
+    Found 9-bit comparator greater for signal <COND_12$cmp_gt0000> created at line 100.
+    Found 9-bit subtractor for signal <COND_13$addsub0000> created at line 103.
+    Found 8-bit comparator less for signal <COND_13$cmp_lt0000> created at line 103.
+    Found 9-bit subtractor for signal <COND_14$addsub0000> created at line 104.
+    Found 8-bit comparator less for signal <COND_14$cmp_lt0000> created at line 104.
+    Found 9-bit subtractor for signal <COND_15$addsub0000> created at line 105.
+    Found 8-bit comparator less for signal <COND_15$cmp_lt0000> created at line 105.
+    Found 8-bit adder carry out for signal <COND_16$addsub0001> created at line 108.
+    Found 9-bit comparator greater for signal <COND_16$cmp_gt0000> created at line 108.
+    Found 8-bit adder carry out for signal <COND_17$addsub0001> created at line 109.
+    Found 9-bit comparator greater for signal <COND_17$cmp_gt0000> created at line 109.
+    Found 8-bit adder carry out for signal <COND_18$addsub0001> created at line 110.
+    Found 9-bit comparator greater for signal <COND_18$cmp_gt0000> created at line 110.
+    Found 9-bit subtractor for signal <COND_19$addsub0000> created at line 113.
+    Found 8-bit comparator less for signal <COND_19$cmp_lt0000> created at line 113.
+    Found 9-bit subtractor for signal <COND_20$addsub0000> created at line 114.
+    Found 8-bit comparator less for signal <COND_20$cmp_lt0000> created at line 114.
+    Found 9-bit subtractor for signal <COND_21$addsub0000> created at line 115.
+    Found 8-bit comparator less for signal <COND_21$cmp_lt0000> created at line 115.
+INFO:Xst:738 - HDL ADVISOR - 384 flip-flops were inferred for signal <memory>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 408 D-type flip-flop(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+	inferred  48 Multiplexer(s).
+Unit <RgbRAM> synthesized.
+
+
+Synthesizing Unit <RgbMaskModule>.
+    Related source file is "lab4_1.v".
+Unit <RgbMaskModule> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 9
+ 8-bit adder carry out                                 : 6
+ 9-bit subtractor                                      : 3
+# Registers                                            : 385
+ 1-bit register                                        : 384
+ 24-bit register                                       : 1
+# Latches                                              : 1
+ 24-bit latch                                          : 1
+# Comparators                                          : 3
+ 8-bit comparator less                                 : 3
+# Multiplexers                                         : 2
+ 24-bit 16-to-1 multiplexer                            : 2
+# Xors                                                 : 3
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <RO> is unconnected in block <RgbMaskModule>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 8-bit subtractor                                      : 3
+# Registers                                            : 408
+ Flip-Flops                                            : 408
+# Latches                                              : 1
+ 24-bit latch                                          : 1
+# Comparators                                          : 3
+ 8-bit comparator less                                 : 3
+# Multiplexers                                         : 2
+ 24-bit 16-to-1 multiplexer                            : 2
+# Xors                                                 : 3
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<23>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/23/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_23>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<22>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/22/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_22>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<21>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/21/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_21>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<20>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/20/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_20>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<19>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/19/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_19>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<18>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/18/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_18>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<17>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/17/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_17>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<16>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/16/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_16>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<15>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/15/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_15>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<14>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/14/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_14>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<13>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/13/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_13>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<12>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/12/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_12>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<11>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/11/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_11>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<10>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/10/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_10>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<9>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/9/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_9>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<8>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/8/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_8>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<7>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/7/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_7>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<6>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/6/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_6>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<5>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/5/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_5>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/4/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_4>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/3/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_3>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/2/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_2>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/1/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_1>
+
+ERROR:Xst:528 - Multi-source in Unit <RgbRAM> on signal <RamDataOut<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of LD_1 instance <RA/RamDataOut/0/0>
+   Output signal of FDE instance <RA/RamDataOut_ren_0>
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.37 secs
+ 
+--> 
+
+Total memory usage is 5117468 kilobytes
+
+Number of errors   :   24 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

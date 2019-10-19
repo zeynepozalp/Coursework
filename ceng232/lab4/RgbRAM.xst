@@ -1,0 +1,5 @@
+set -tmpdir "D:/ZEYNEP/Okul/ceng232/lab4/xst/projnav.tmp"
+set -xsthdpdir "D:/ZEYNEP/Okul/ceng232/lab4/xst"
+elaborate
+-ifn RgbRAM.prj
+-ifmt mixed

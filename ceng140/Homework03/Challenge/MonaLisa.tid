@@ -1,0 +1,60 @@
+#------------------------------------------------------------------------------
+# Artist  : Zeynep Ozalp
+# Artwork : Mona Lisa
+#------------------------------------------------------------------------------
+Image 265 385 MonaLisa.ppm
+SetColor 170 170 110
+Clear
+#------------------------------------------------------------------------------
+
+# Challenge Instructions:
+# -----------------------
+#
+# - Replace artist's name with your own full name (use only ASCII characters)
+# - Do not modify anything else above
+# - Just fill in your image commands below
+#
+# Note:
+# -----
+#
+# There is a way to exactly replicate Mona Lisa by using only "SetColor"
+# and "Point" commands to create the whole painting pixel by pixel, but we
+# will consider this as cheating. Therefore, do NOT paint Mona Lisa in a
+# pixel-by-pixel fashion. Be creative. The shortest image description that
+# resembles Mona Lisa the most is the ultimate goal.
+
+# TODO
+
+#------------------------------------------------------------------------------
+SetColor 132 132 80
+Line 30 0 30 265
+Fill 20 20
+
+SetColor 86 156 133
+Rectangle 60 0 90 60
+Fill 110 5
+
+SetColor 76 71 49
+Arc 60 0 90 180 50 20
+Line 60 0 60 20
+Fill 65 15
+
+SetColor 75 82 64
+Rectangle 60 175 90 60
+Fill 70 210
+
+SetColor 129 66 49
+Line 120 0 120 265
+Fill 300 200
+
+SetColor 158 138 69
+Arc 120 265 180 270 45 20
+Fill 125 260
+
+SetColor 148 113 59
+Rectangle 200 0 90 20
+Fill 210 40
+
+SetColor 119 75 40
+Arc 160 0 0 180 30 2
+Fill 165 10

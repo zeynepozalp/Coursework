@@ -1,0 +1,97 @@
+Board with ID
+__ __ __ __ __ 
+__ __ __ __ __ 
+FI __ __ __ fi 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+Board with ID
+__ __ __ __ __ 
+__ __ __ __ __ 
+02 __ __ __ 01 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+Turn 1 has started.
+Player 01 moved from (4/2) to (3/2)
+Player 02 moved from (0/2) to (1/2)
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ FI __ fi __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+--------------
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ 02 __ 01 __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+Turn 2 has started.
+Player 01 moved from (3/2) to (2/2)
+Player 02 attacked Player 01 (100)
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ FI fi __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+--------------
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ 02 01 __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+Turn 3 has started.
+Player 01 attacked Player 02 (100)
+Player 02 attacked Player 01 (100)
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ FI fi __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+--------------
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ 02 01 __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+Turn 4 has started.
+Player 01 attacked Player 02 (100)
+Player 02 attacked Player 01 (100)
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ FI fi __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+--------------
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ 02 01 __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+Turn 5 has started.
+Player 01 attacked Player 02 (100)
+Player 02 attacked Player 01 (100)
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ FI fi __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+--------------
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ 02 01 __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+Turn 6 has started.
+Player 01 has died.
+Player 02 moved from (1/2) to (2/2)
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ __ FI __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+--------------
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ __ 02 __ __ 
+__ __ __ __ __ 
+__ __ Ch __ __ 
+Game ended at turn 6. All knights dead. Barbarian victory.

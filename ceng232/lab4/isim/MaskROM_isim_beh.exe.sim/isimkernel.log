@@ -1,0 +1,29 @@
+Command line:
+   MaskROM_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63724
+
+Tue May 28 14:13:13 2019
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5331.76 Meg
+
+ Total Signals          : 14
+ Total Nets             : 25
+ Total Signal Drivers   : 6
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 113
+Total Line Count : 47
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 5331.76 Meg
+
+Tue May 28 14:13:20 2019
+

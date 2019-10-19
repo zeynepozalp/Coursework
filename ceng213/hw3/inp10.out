@@ -1,0 +1,82 @@
+User Add: Sarah 1
+User Add: Morgan 1
+User Add: Ellie 1
+User Add: Vicky 1
+---------
+Passwords
+Vicky vickypass
+Ellie elspassword
+EMPTY EMPTY
+Morgan morganspass
+EMPTY EMPTY
+Sarah Sarahspass
+EMPTY EMPTY
+
+User Del: Bob 0
+Passwords of Bob: 
+
+User Del: Vicky 1
+Passwords of Vicky: vickypass 
+
+---------
+Passwords
+DELETED DELETED
+Ellie elspassword
+EMPTY EMPTY
+Morgan morganspass
+EMPTY EMPTY
+Sarah Sarahspass
+EMPTY EMPTY
+
+Change Pass: Sarah 1
+Change Pass: Sarah 1
+Change Pass: Sarah 1
+User Del: Sarah 1
+Passwords of Sarah: Sarahspass Sarahsnewpass Sarahsnewerpass Sarahsnewestpass 
+
+---------
+Passwords
+DELETED DELETED
+DELETED DELETED
+DELETED DELETED
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+DELETED DELETED
+Ellie elspassword
+Morgan morganspass
+
+User Del: Morgan 1
+Passwords of Morgan: morganspass 
+
+User Del: Ellie 1
+Passwords of Ellie: elspassword 
+
+---------
+Passwords
+DELETED DELETED
+DELETED DELETED
+DELETED DELETED
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+DELETED DELETED
+DELETED DELETED
+DELETED DELETED
+

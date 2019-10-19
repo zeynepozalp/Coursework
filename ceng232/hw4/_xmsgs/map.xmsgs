@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">btn&lt;2&gt;_IBUF</arg> has no load.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/diesel_queue_4_mux0000&lt;0&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/diesel_queue_4_mux0001&lt;0&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/diesel_queue_4_mux0000&lt;1&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/diesel_queue_4_mux0001&lt;1&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/diesel_queue_4_mux0000&lt;2&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/diesel_queue_4_mux0001&lt;2&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/diesel_queue_4_mux0000&lt;3&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/diesel_queue_4_mux0001&lt;3&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/_old_n_cars_in_gasoline_queue_23&lt;2&gt;201</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/_old_n_cars_in_gasoline_queue_45&lt;2&gt;</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/gasoline_queue_4_mux0000&lt;0&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/gasoline_queue_4_mux0001&lt;0&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/gasoline_queue_4_mux0000&lt;1&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/gasoline_queue_4_mux0001&lt;1&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/gasoline_queue_4_mux0000&lt;2&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/gasoline_queue_4_mux0001&lt;2&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/gasoline_queue_4_mux0000&lt;3&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/gasoline_queue_4_mux0001&lt;3&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">HH/_old_total_diesel_needed_39&lt;5&gt;38</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">HH/total_diesel_needed_mux0001&lt;5&gt;240_SW1</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">btn&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+</messages>
+

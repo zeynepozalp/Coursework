@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Zeynep Özalp \\
+Id Number : 2237691 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\subsection*{1.1}
+$$a_n=a_{n-1}+n^2$$
+$$a_n=(a_{n-2}+(n-1)^2)+n^2$$
+$$a_n=a_{n-3}+(n-2)^2+(n-1)^2+n^2$$
+$$\vdots$$
+$$a_n=a_1+\sum_{i=2}^n i^2=a_1+(\sum_{i=1}^n i^2)-1=\sum_{i=1}^n i^2$$
+$$a_n=\frac{n(n+1)(2n+1)}{6}=\frac{2n^3+3n^2+n}{6}$$
+
+\subsection*{1.2}
+$$a_n=2a_{n-1}+2^n$$
+$$a_n=2^2a_{n-2}+2(2^n)$$
+$$a_n=2^3a_{n-3}+3(2^n)$$
+$$\vdots$$
+$$a_n=2^na_0+n2^n=2^n(n+1)$$
+\section*{Answer 2}
+First, put $n=1$, $f(n)=21$ and $g(n)=21$. So $f(n)\leq g(n)$ is true for $n=1$. Now assume that $f(n)\leq g(n)$ is true for $n=k$ where k is an arbitary positive integer. So, for $n=k$,
+$$f(n)\leq g(n)$$
+$$k^2+15k+5 \leq 21k^2$$
+With this assumption, we must show that the rule is true for its successor, n = (k + 1). For $n=k+1$, we have 
+$$f(k+1)=k^2+17k+21=f(k)+2k+16$$
+$$g(k+1)=21k^2+42k+21=g(k)+42k+21$$
+Since $f(k)\leq g(k)$ from our assumption and $2k+16\leq 42k+21$ for all positive integers,
+$$f(k+1)\leq g(k+1)$$
+So, we have shown that if the rule is true for any specific natural number k, then it is also true for its successor, k + 1. With this information, since the rule is true for $n=1$, $f(n) \leq g(n)$ is true for all n where n is a positive integers. 
+\section*{Answer 3}
+\subsection*{3.1}
+\subsubsection*{a)}
+Define a function $\theta:N^+\rightarrow \Sigma^*$ for simplicity.
+$$\theta (1)=(.p_1.)$$ 
+where . operator means the concenation of strings. Recursive steps for theta
+$$\theta (2)=(.p_2.\wedge .\theta(1).)$$
+$$\theta (3)=(.p_3.\wedge .\theta(2).)$$
+$$\vdots$$
+$$\theta (i)=(.p_i.\wedge .\theta(i-1).)$$
+Then $\phi (i)$ is the concatenation of $\theta (i)$ and the string "$\rightarrow q$".
+$$\phi (i)=\theta (i).\rightarrow .q$$
+\\
+Base step is
+$$\psi (1) = (.p_1.\rightarrow . q.)$$
+Recursive steps for psi
+$$\psi (2) = (.p_2.\rightarrow .\psi (1).)$$
+$$\psi (3) = (.p_3.\rightarrow .\psi (2).)$$
+$$\vdots$$
+$$\psi (i) = (.p_i.\rightarrow .\psi (i-1).)$$
+\subsubsection*{b)}
+\textbf{Base:} 
+$$\phi (1)\vdash \psi (1)$$
+$$p_1\rightarrow q \vdash p_1\rightarrow q$$
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lllllll}
+		1. & & & $p_1\rightarrow q$ & premise & & \\
+		2. & & & $p_1\rightarrow q$ & copy 1 & & \\  		
+	\end{tabular}
+\end{table}
+So, $\phi (1)\vdash \phi (1)$ for n=1.\\
+\textbf{Inductive Hypothesis:}
+Assume that $$\phi (k)\vdash \psi (k)$$
+\textbf{Inductive Step:} We need to prove
+$$\phi (k+1)\vdash \psi (k+1)$$
+$$p_{k+1}\wedge \phi (k)\vdash p_{k+1}\rightarrow \psi (k)$$
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lllllll}
+		1. & & & $p_{k+1}\wedge \phi (k)$ & premise & & \\ \cline{3-7}
+		2. & \multicolumn{1}{c|}{} & & $p_{k+1}$ & assumed & & \multicolumn{1}{c|}{}\\ 
+		3. & \multicolumn{1}{c|}{} & & $\phi (k)$ & $\wedge e,1$ & & \multicolumn{1}{c|}{}\\ 
+		4. & \multicolumn{1}{c|}{} & & $\psi (k)$ & inductive hypothesis, 3& & \multicolumn{1}{c|}{}\\ \cline{3-7}
+		5. &  & & $p_{k+1}\rightarrow \psi (k)$ & $\rightarrow i, 2-4$ & & \\		
+	\end{tabular}
+\end{table}
+
+\subsection*{3.2}
+\subsubsection*{a)}
+Let $H(x)$ be a function which returns the height of the binary tree $x$. Then, base case is $H(emptyTree)=-1$. Then, we can define $H(x)$ recursively as
+$$H(x)=1+max(H(leftChild), H(rightChild))$$
+\subsubsection*{b)}
+\textbf{Definition:} A binary tree is a 223-tree if for each vertex it holds that the number of vetices in the left subtree and the number of vertices in the right subtree differ by at most 2.\\
+
+We can find the number of nodes in a 223-tree by summing the number of vertices in the left subtree, in the right subtree and 1 for the root. \\
+
+\textbf{$f:N\rightarrow N$}\\
+To find the maximum number, the height of left and right subtree should be equal which is the (h-1) to get the height=h in total.
+$$f(0)=1$$
+$$f(h)=1+f(h-1)+f(h-1)\ for\ h>0$$
+
+\textbf{$g:N\rightarrow N$}\\
+One of left or right subtree should have height (h-1) and to find the minimum, other must have the minimum height whic is (h-3).
+$$g(0)=1,\ g(1)=2,\ g(2)=3$$
+$$g(h)=1+g(h-1)+g(h-3)\ for\ h>2$$
+
+\subsubsection*{c) f}
+\textbf{Basis Step:} Assume T is a 223-tree of h=1. Then the maximum number of vertices in T must be 3 with one root, one left vertex and one right vertex.
+$$f(1)=1+f(0)+f(0)=1+1+1=3$$
+\textbf{Inductive hypothesis:} Assume T's left subtree is $T_1$ and right subtree is $T_2$ with the same heights, h-1, to get the maximum number of vertices. Assume that the number of vertices in left and right subtree is
+$$f(h-1)=1+f(h-2)+f(h-2)$$
+\textbf{Inductive Step:} The maximum number of vertices occurs when vertices except the most bottom ones, which have the height 0, have exactly 2 child. A full binary tree of height h has maximum $2^{h+1}-1$ number of vertices as stated in theorem 2 on page 356 in our textbook. Show that $f(h)=2^{h+1}-1$.
+$$f(h)=1+2f(h-1)$$
+$$f(h)=1+2(1+2f(h-2))$$
+$$f(h)=1+2+2^2(1+2f(h-3))$$
+$$f(h)=1+2+4+2^3(1+2f(h-4))$$
+$$\vdots$$
+$$f(h)=\sum^{h-1}_{i=0}2^{i}+2^hf(0)$$
+$$f(h)=2^h-1+2^h=2^{h+1}-1$$
+\subsubsection*{c) g}
+\textbf{Basis Step:} Assume T is a 223-tree of h=3. Then the minimum number of vertices in T must be 5 with one root, one left vertex and one right subtree with one root and one right subtree with one root and one right vertex.
+$$g(3)=1+g(2)+g(0)=1+3+1=5$$
+\textbf{Inductive hypothesis:} Assume T's left subtree is $T_1$ and right subtree is $T_2$ with the heights h-1 and h-3, respectively. Assume that the numbers of vertices in left and right subtree are
+$$g(h-1)=1+g(h-2)+g(h-4)$$
+$$g(h-3)=1+g(h-4)+g(h-6)$$
+Therefore,
+$$g(h-1)+g(h-3)=1+g(h-2)+g(h-4)+1+g(h-4)+g(h-6)$$
+$$g(h-1)+g(h-3)=g(h-2)+2+2(h-4)+g(h-6)$$
+\textbf{Inductive Step:}
+\section*{Answer 4}
+\subsection*{4.1}
+\subsubsection*{a)}
+The initial values of a,b are 0 and 1 is added to b each time the nested loop is traversed with a sequence of integers i, j, k such that $1\leq k\leq j\leq i\leq n$. The number of such sequences of integers is the number of ways to choose 3 integers from \{1,2,3,...,n\} with repetition allowed. Therefore, by theorem 2 on page 425 in our textbook, b=C(n+3-1,3)=C(n+2,3) and a=2C(n+2-1,2)=2C(n+1,2) by the same approach (since 2 is added to a in each time, combination is multiplied by 2).
+\subsubsection*{b)}
+If a=b then C(n+2,3)=2.C(n+1,2).
+$$\dfrac{(n+2)!}{3!(n-1)!}=\dfrac{2(n+1)!}{2!(n-1)!}$$
+$$\dfrac{(n+2)}{6}=1$$
+$$n=4$$
+
+\subsection*{4.2}
+\subsubsection*{a)}
+For first plate, we need to choose 2 fruits from 10 fruits. For second plate, we need to choose 2 fruits from 8 fruits. For third plate, we need to choose 2 fruits from 6 fruits.
+$$C(10,2).C(8,2).C(6,2)=45.28.15=18900$$
+\subsubsection*{b)}
+For first plate, we need to choose 1 fruits from 10 fruits. For second plate, we need to choose 2 fruits from 9 fruits. For third plate, we need to choose 3 fruits from 7 fruits. For fourth plate, we need to chose 4 fruits from 4 fruits.
+$$C(10,1).C(9,2).C(7,3).C(4,4)=10.36.35.1=12600$$
+\subsubsection*{c)}
+To compute this, I will use the sum of \textbf{Stirling numbers of second kind} as it is used in the example 10 on page 430 in our textbook.
+$$\sum^4_{j=1}S(6,j)=1+31+90+65=187$$
+\subsubsection*{d)}
+We need to separate fruits into four groups. So, we need three separation operators. Let us denote the separator as "-" and fruits as "d". So, we have 6 fruits and 3 separators.
+$$dddddd---$$
+For instance, two distributions can be like,
+$$dd-d-dd-d$$
+$$dd--ddd-d$$
+where the second plate is empty.
+So, we can find all possible distributions of 6 fruits in 4 plates by putting 6 fruits and 3 separators in order. We can put them order in 9! way but there are repetitions, so we have divide it by the factorials of the number of repeating elements. If we do not have to use all the fruits, there are 7 cases:\\
+1. 6 fruits are used.
+$$\dfrac{9!}{3!6!}=84$$
+2. 5 fruits are used.
+$$\dfrac{8!}{3!5!}=56$$
+3. 4 fruits are used.
+$$\dfrac{7!}{3!4!}=35$$
+4. 3 fruits are used.
+$$\dfrac{6!}{3!3!}=20$$
+5. 2 fruits are used.
+$$\dfrac{5!}{3!2!}=10$$
+6. 1 fruit is used.
+$$\dfrac{4!}{3!1!}=4$$
+2. 0 fruit is used.
+$$\dfrac{3!}{3!0!}=1$$
+Sum all the independent cases: 84+56+35+20+10+4+1=210 ways.
+
+
+\end{document}
+
+​
+

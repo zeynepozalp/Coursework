@@ -1,0 +1,104 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'Board232'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off
+-c 100 -o Board232_map.ncd Board232.ngd Board232.pcf 
+Target Device  : xc3s250e
+Target Package : cp132
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Mon May 20 22:01:02 2019
+
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:266 - The function generator HH/diesel_queue_4_mux0000<0>1 failed
+   to merge with F5 multiplexer HH/diesel_queue_4_mux0001<0>_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator HH/diesel_queue_4_mux0000<1>1 failed
+   to merge with F5 multiplexer HH/diesel_queue_4_mux0001<1>_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator HH/diesel_queue_4_mux0000<2>1 failed
+   to merge with F5 multiplexer HH/diesel_queue_4_mux0001<2>_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator HH/diesel_queue_4_mux0000<3>1 failed
+   to merge with F5 multiplexer HH/diesel_queue_4_mux0001<3>_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   HH/_old_n_cars_in_gasoline_queue_23<2>201 failed to merge with F5 multiplexer
+   HH/_old_n_cars_in_gasoline_queue_45<2>.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator HH/gasoline_queue_4_mux0000<0>1 failed
+   to merge with F5 multiplexer HH/gasoline_queue_4_mux0001<0>_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator HH/gasoline_queue_4_mux0000<1>1 failed
+   to merge with F5 multiplexer HH/gasoline_queue_4_mux0001<1>_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator HH/gasoline_queue_4_mux0000<2>1 failed
+   to merge with F5 multiplexer HH/gasoline_queue_4_mux0001<2>_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator HH/gasoline_queue_4_mux0000<3>1 failed
+   to merge with F5 multiplexer HH/gasoline_queue_4_mux0001<3>_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator HH/_old_total_diesel_needed_39<5>38
+   failed to merge with F5 multiplexer HH/total_diesel_needed_mux0001<5>240_SW1.
+    There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
+Running delay-based LUT packing...
+Running related packing...
+Running unrelated packing...
+Updating timing models...
+WARNING:PhysDesignRules:367 - The signal <btn<2>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   11
+Logic Utilization:
+  Number of Slice Flip Flops:           173 out of   4,896    3%
+  Number of 4 input LUTs:             4,825 out of   4,896   98%
+Logic Distribution:
+  Number of occupied Slices:          2,446 out of   2,448   99%
+    Number of Slices containing only related logic:   2,446 out of   2,446 100%
+    Number of Slices containing unrelated logic:          0 out of   2,446   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       4,878 out of   4,896   99%
+    Number used as logic:             4,825
+    Number used as a route-thru:         53
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 43 out of      92   46%
+  Number of BUFGMUXs:                     2 out of      24    8%
+
+Average Fanout of Non-Clock Nets:                3.87
+
+Peak Memory Usage:  4467 MB
+Total REAL time to MAP completion:  16 secs 
+Total CPU time to MAP completion:   9 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "Board232_map.mrp" for details.

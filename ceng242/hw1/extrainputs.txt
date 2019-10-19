@@ -1,0 +1,3 @@
+a= ((ASTNode "times" (ASTNode "times" (ASTNode "len" (ASTNode "a" EmptyAST EmptyAST) EmptyAST) (ASTNode "num" (ASTNode "13" EmptyAST EmptyAST) EmptyAST))  (ASTNode "plus" (ASTNode "plus" (ASTNode "b" EmptyAST EmptyAST) (ASTNode "c" EmptyAST EmptyAST)) (ASTNode "num" (ASTNode "9" EmptyAST EmptyAST) EmptyAST ))) , [("a", "str", "Lewis"), ("b", "num", "7"), ("c", "num", "3")] )
+
+b=((ASTNode "plus" (ASTNode "times" (ASTNode "len" (ASTNode "a" EmptyAST EmptyAST) EmptyAST) (ASTNode "c" EmptyAST EmptyAST))  (ASTNode "len" (ASTNode "cat" (ASTNode "str" (ASTNode "tree" EmptyAST EmptyAST) EmptyAST) (ASTNode "d" EmptyAST EmptyAST)) EmptyAST )), [("a", "str", "lucky"), ("c", "num", "15"), ("d", "str", "band")])

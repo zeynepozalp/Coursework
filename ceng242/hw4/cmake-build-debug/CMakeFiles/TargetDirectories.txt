@@ -1,0 +1,3 @@
+D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/CMakeFiles/hw4.dir
+D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

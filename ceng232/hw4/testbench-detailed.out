@@ -1,0 +1,629 @@
+ISim P.20131013 (signature 0xfbc00daa)
+
+# run 1000 ns
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+TIME	PUMPS	?GAS	?DSL	N-GAS	N-DSL	F-GAS	F-DSL	INV-GAS	INV-DSL	INV-STP
+
+T: 1	000000	0	0	15	15	255	255	0	0	0
+
+T: 10	111110	1	1	 0	 0	  0	  0	0	0	0
+
+invalid car: fuel amount: 0 type: gasoline
+T: 20	111110	1	1	 0	 0	  0	  0	1	0	0
+
+added a car with 3 fuel to gasoline pump 0
+pump 0 updated to 3 gasoline
+T: 30	011110	1	1	 0	 0	  3	  0	0	0	0
+
+added a car with 4 fuel to   diesel pump 3
+pump 0 updated to 2 gasoline
+pump 3 updated to 4   diesel
+T: 40	011010	1	1	 0	 0	  2	  4	0	0	0
+
+added a car with 8 fuel to   diesel pump 4
+pump 0 updated to 1 gasoline
+pump 3 updated to 3   diesel
+pump 4 updated to 8   diesel
+T: 50	011000	1	1	 0	 0	  1	 11	0	0	0
+
+added a car with 5 fuel to gasoline pump 1
+pump 0 updated to 0 gasoline
+pump 1 updated to 5 gasoline
+pump 3 updated to 2   diesel
+pump 4 updated to 7   diesel
+T: 60	101000	1	1	 0	 0	  5	  9	0	0	0
+
+added a car with 7 fuel to gasoline pump 0
+pump 0 updated to 7 gasoline
+pump 1 updated to 4 gasoline
+pump 3 updated to 1   diesel
+pump 4 updated to 6   diesel
+T: 70	001000	1	1	 0	 0	 11	  7	0	0	0
+
+added a car with 1 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 1
+	1	 0	 0
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 6 gasoline
+pump 1 updated to 3 gasoline
+pump 3 updated to 0   diesel
+pump 4 updated to 5   diesel
+T: 80	001100	1	1	 0	 1	  9	  6	0	0	0
+
+car with 1 fuel from diesel queue moved to pump 3
+	idx	GAS	DSL
+	0	 0	 0
+	1	 0	 0
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+added a car with 8 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 8
+	1	 0	 0
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 5 gasoline
+pump 1 updated to 2 gasoline
+pump 3 updated to 1   diesel
+pump 4 updated to 4   diesel
+T: 90	001000	1	1	 0	 1	  7	 13	0	0	0
+
+added a car with 8 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 8
+	1	 0	 8
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 4 gasoline
+pump 1 updated to 1 gasoline
+pump 3 updated to 0   diesel
+pump 4 updated to 3   diesel
+T: 100	001100	1	1	 0	 2	  5	 19	0	0	0
+
+car with 8 fuel from diesel queue moved to pump 3
+	idx	GAS	DSL
+	0	 0	 8
+	1	 0	 0
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+added a car with 7 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 8
+	1	 0	 7
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 3 gasoline
+pump 1 updated to 0 gasoline
+pump 3 updated to 8   diesel
+pump 4 updated to 2   diesel
+T: 110	011000	1	1	 0	 2	  3	 25	0	0	0
+
+added a car with 6 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 8
+	1	 0	 7
+	2	 0	 6
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 2 gasoline
+pump 3 updated to 7   diesel
+pump 4 updated to 1   diesel
+T: 120	011000	1	1	 0	 3	  2	 29	0	0	0
+
+added a car with 5 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 8
+	1	 0	 7
+	2	 0	 6
+	3	 0	 5
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 1 gasoline
+pump 3 updated to 6   diesel
+pump 4 updated to 0   diesel
+T: 130	011010	1	1	 0	 4	  1	 32	0	0	0
+
+car with 8 fuel from diesel queue moved to pump 4
+	idx	GAS	DSL
+	0	 0	 7
+	1	 0	 6
+	2	 0	 5
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+added a car with 4 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 7
+	1	 0	 6
+	2	 0	 5
+	3	 0	 4
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 0 gasoline
+pump 3 updated to 5   diesel
+pump 4 updated to 8   diesel
+T: 140	111000	1	1	 0	 4	  0	 35	0	0	0
+
+added a car with 3 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 7
+	1	 0	 6
+	2	 0	 5
+	3	 0	 4
+	4	 0	 3
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 3 updated to 4   diesel
+pump 4 updated to 7   diesel
+T: 150	111000	1	1	 0	 5	  0	 36	0	0	0
+
+added a car with 8 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 7
+	1	 0	 6
+	2	 0	 5
+	3	 0	 4
+	4	 0	 3
+	5	 0	 8
+	6	 0	 0
+	7	 0	 0
+pump 3 updated to 3   diesel
+pump 4 updated to 6   diesel
+T: 160	111000	1	1	 0	 6	  0	 42	0	0	0
+
+added a car with 7 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 7
+	1	 0	 6
+	2	 0	 5
+	3	 0	 4
+	4	 0	 3
+	5	 0	 8
+	6	 0	 7
+	7	 0	 0
+pump 3 updated to 2   diesel
+pump 4 updated to 5   diesel
+T: 170	111000	1	1	 0	 7	  0	 47	0	0	0
+
+added a car with 6 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 7
+	1	 0	 6
+	2	 0	 5
+	3	 0	 4
+	4	 0	 3
+	5	 0	 8
+	6	 0	 7
+	7	 0	 6
+pump 3 updated to 1   diesel
+pump 4 updated to 4   diesel
+T: 180	111000	1	0	 0	 8	  0	 51	0	0	0
+
+invalid car with 5 fuel: no room in diesel queue
+pump 3 updated to 0   diesel
+pump 4 updated to 3   diesel
+T: 190	111100	1	0	 0	 8	  0	 49	0	1	0
+
+car with 7 fuel from diesel queue moved to pump 3
+	idx	GAS	DSL
+	0	 0	 6
+	1	 0	 5
+	2	 0	 4
+	3	 0	 3
+	4	 0	 8
+	5	 0	 7
+	6	 0	 6
+	7	 0	 0
+added a car with 4 fuel to   diesel queue
+	idx	GAS	DSL
+	0	 0	 6
+	1	 0	 5
+	2	 0	 4
+	3	 0	 3
+	4	 0	 8
+	5	 0	 7
+	6	 0	 6
+	7	 0	 4
+pump 3 updated to 7   diesel
+pump 4 updated to 2   diesel
+T: 200	111000	1	0	 0	 8	  0	 52	0	0	0
+
+added a car with 8 fuel to gasoline pump 0
+pump 0 updated to 8 gasoline
+pump 3 updated to 6   diesel
+pump 4 updated to 1   diesel
+T: 210	011000	1	0	 0	 8	  8	 50	0	0	0
+
+added a car with 8 fuel to gasoline pump 1
+pump 0 updated to 7 gasoline
+pump 1 updated to 8 gasoline
+pump 3 updated to 5   diesel
+pump 4 updated to 0   diesel
+T: 220	001010	1	0	 0	 8	 15	 48	0	0	0
+
+car with 6 fuel from diesel queue moved to pump 4
+	idx	GAS	DSL
+	0	 0	 5
+	1	 0	 4
+	2	 0	 3
+	3	 0	 8
+	4	 0	 7
+	5	 0	 6
+	6	 0	 4
+	7	 0	 0
+added a car with 7 fuel to gasoline pump 2
+pump 0 updated to 6 gasoline
+pump 1 updated to 7 gasoline
+pump 2 updated to 7 gasoline
+pump 3 updated to 4   diesel
+pump 4 updated to 6   diesel
+T: 230	000000	1	1	 0	 7	 20	 47	0	0	0
+
+added a car with 6 fuel to gasoline queue
+	idx	GAS	DSL
+	0	 6	 5
+	1	 0	 4
+	2	 0	 3
+	3	 0	 8
+	4	 0	 7
+	5	 0	 6
+	6	 0	 4
+	7	 0	 0
+pump 0 updated to 5 gasoline
+pump 1 updated to 6 gasoline
+pump 2 updated to 6 gasoline
+pump 3 updated to 3   diesel
+pump 4 updated to 5   diesel
+T: 240	000000	1	1	 1	 7	 23	 45	0	0	0
+
+added a car with 5 fuel to gasoline queue
+	idx	GAS	DSL
+	0	 6	 5
+	1	 5	 4
+	2	 0	 3
+	3	 0	 8
+	4	 0	 7
+	5	 0	 6
+	6	 0	 4
+	7	 0	 0
+pump 0 updated to 4 gasoline
+pump 1 updated to 5 gasoline
+pump 2 updated to 5 gasoline
+pump 3 updated to 2   diesel
+pump 4 updated to 4   diesel
+T: 250	000000	1	1	 2	 7	 25	 43	0	0	0
+
+added a car with 4 fuel to gasoline queue
+	idx	GAS	DSL
+	0	 6	 5
+	1	 5	 4
+	2	 4	 3
+	3	 0	 8
+	4	 0	 7
+	5	 0	 6
+	6	 0	 4
+	7	 0	 0
+pump 0 updated to 3 gasoline
+pump 1 updated to 4 gasoline
+pump 2 updated to 4 gasoline
+pump 3 updated to 1   diesel
+pump 4 updated to 3   diesel
+T: 260	000000	1	1	 3	 7	 26	 41	0	0	0
+
+added a car with 3 fuel to gasoline queue
+	idx	GAS	DSL
+	0	 6	 5
+	1	 5	 4
+	2	 4	 3
+	3	 3	 8
+	4	 0	 7
+	5	 0	 6
+	6	 0	 4
+	7	 0	 0
+pump 0 updated to 2 gasoline
+pump 1 updated to 3 gasoline
+pump 2 updated to 3 gasoline
+pump 3 updated to 0   diesel
+pump 4 updated to 2   diesel
+T: 270	000100	1	1	 4	 7	 26	 39	0	0	0
+
+car with 5 fuel from diesel queue moved to pump 3
+	idx	GAS	DSL
+	0	 6	 4
+	1	 5	 3
+	2	 4	 8
+	3	 3	 7
+	4	 0	 6
+	5	 0	 4
+	6	 0	 0
+	7	 0	 0
+added a car with 2 fuel to gasoline queue
+	idx	GAS	DSL
+	0	 6	 4
+	1	 5	 3
+	2	 4	 8
+	3	 3	 7
+	4	 2	 6
+	5	 0	 4
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 1 gasoline
+pump 1 updated to 2 gasoline
+pump 2 updated to 2 gasoline
+pump 3 updated to 5   diesel
+pump 4 updated to 1   diesel
+T: 280	000000	1	1	 5	 6	 25	 38	0	0	0
+
+pump 0 updated to 0 gasoline
+pump 1 updated to 1 gasoline
+pump 2 updated to 1 gasoline
+pump 3 updated to 4   diesel
+pump 4 updated to 0   diesel
+T: 290	100010	1	1	 5	 6	 22	 36	0	0	0
+
+car with 6 fuel from gasoline queue moved to pump 0
+	idx	GAS	DSL
+	0	 5	 4
+	1	 4	 3
+	2	 3	 8
+	3	 2	 7
+	4	 0	 6
+	5	 0	 4
+	6	 0	 0
+	7	 0	 0
+car with 4 fuel from diesel queue moved to pump 4
+	idx	GAS	DSL
+	0	 5	 3
+	1	 4	 8
+	2	 3	 7
+	3	 2	 6
+	4	 0	 4
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 6 gasoline
+pump 1 updated to 0 gasoline
+pump 2 updated to 0 gasoline
+pump 3 updated to 3   diesel
+pump 4 updated to 4   diesel
+T: 300	011000	1	1	 4	 5	 20	 35	0	0	0
+
+car with 5 fuel from gasoline queue moved to pump 1
+	idx	GAS	DSL
+	0	 4	 3
+	1	 3	 8
+	2	 2	 7
+	3	 0	 6
+	4	 0	 4
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+car with 4 fuel from gasoline queue moved to pump 2
+	idx	GAS	DSL
+	0	 3	 3
+	1	 2	 8
+	2	 0	 7
+	3	 0	 6
+	4	 0	 4
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 5 gasoline
+pump 1 updated to 5 gasoline
+pump 2 updated to 4 gasoline
+pump 3 updated to 2   diesel
+pump 4 updated to 3   diesel
+T: 310	000000	1	1	 2	 5	 19	 33	0	0	0
+
+pump 0 updated to 4 gasoline
+pump 1 updated to 4 gasoline
+pump 2 updated to 3 gasoline
+pump 3 updated to 1   diesel
+pump 4 updated to 2   diesel
+T: 320	000000	1	1	 2	 5	 16	 31	0	0	0
+
+pump 0 updated to 3 gasoline
+pump 1 updated to 3 gasoline
+pump 2 updated to 2 gasoline
+pump 3 updated to 0   diesel
+pump 4 updated to 1   diesel
+T: 330	000100	1	1	 2	 5	 13	 29	0	0	0
+
+T: 340	000100	1	1	 2	 5	 13	 29	0	0	1
+
+car with 3 fuel from diesel queue moved to pump 3
+	idx	GAS	DSL
+	0	 3	 8
+	1	 2	 7
+	2	 0	 6
+	3	 0	 4
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 2 gasoline
+pump 1 updated to 2 gasoline
+pump 2 updated to 1 gasoline
+pump 3 updated to 3   diesel
+pump 4 updated to 0   diesel
+T: 350	000010	1	1	 2	 4	 10	 28	0	0	0
+
+car with 8 fuel from diesel queue moved to pump 4
+	idx	GAS	DSL
+	0	 3	 7
+	1	 2	 6
+	2	 0	 4
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 1 gasoline
+pump 1 updated to 1 gasoline
+pump 2 updated to 0 gasoline
+pump 3 updated to 2   diesel
+pump 4 updated to 8   diesel
+T: 360	001000	1	1	 2	 3	  7	 27	0	0	0
+
+car with 3 fuel from gasoline queue moved to pump 2
+	idx	GAS	DSL
+	0	 2	 7
+	1	 0	 6
+	2	 0	 4
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 0 gasoline
+pump 1 updated to 0 gasoline
+pump 2 updated to 3 gasoline
+pump 3 updated to 1   diesel
+pump 4 updated to 7   diesel
+T: 370	110000	1	1	 1	 3	  5	 25	0	0	0
+
+car with 2 fuel from gasoline queue moved to pump 0
+	idx	GAS	DSL
+	0	 0	 7
+	1	 0	 6
+	2	 0	 4
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 2 gasoline
+pump 2 updated to 2 gasoline
+pump 3 updated to 0   diesel
+pump 4 updated to 6   diesel
+T: 380	010100	1	1	 0	 3	  4	 23	0	0	0
+
+car with 7 fuel from diesel queue moved to pump 3
+	idx	GAS	DSL
+	0	 0	 6
+	1	 0	 4
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 0 updated to 1 gasoline
+pump 2 updated to 1 gasoline
+pump 3 updated to 7   diesel
+pump 4 updated to 5   diesel
+T: 390	010000	1	1	 0	 2	  2	 22	0	0	0
+
+pump 0 updated to 0 gasoline
+pump 2 updated to 0 gasoline
+pump 3 updated to 6   diesel
+pump 4 updated to 4   diesel
+T: 400	111000	1	1	 0	 2	  0	 20	0	0	0
+
+pump 3 updated to 5   diesel
+pump 4 updated to 3   diesel
+T: 410	111000	1	1	 0	 2	  0	 18	0	0	0
+
+pump 3 updated to 4   diesel
+pump 4 updated to 2   diesel
+T: 420	111000	1	1	 0	 2	  0	 16	0	0	0
+
+pump 3 updated to 3   diesel
+pump 4 updated to 1   diesel
+T: 430	111000	1	1	 0	 2	  0	 14	0	0	0
+
+pump 3 updated to 2   diesel
+pump 4 updated to 0   diesel
+T: 440	111010	1	1	 0	 2	  0	 12	0	0	0
+
+car with 6 fuel from diesel queue moved to pump 4
+	idx	GAS	DSL
+	0	 0	 4
+	1	 0	 0
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 3 updated to 1   diesel
+pump 4 updated to 6   diesel
+T: 450	111000	1	1	 0	 1	  0	 11	0	0	0
+
+pump 3 updated to 0   diesel
+pump 4 updated to 5   diesel
+T: 460	111100	1	1	 0	 1	  0	  9	0	0	0
+
+car with 4 fuel from diesel queue moved to pump 3
+	idx	GAS	DSL
+	0	 0	 0
+	1	 0	 0
+	2	 0	 0
+	3	 0	 0
+	4	 0	 0
+	5	 0	 0
+	6	 0	 0
+	7	 0	 0
+pump 3 updated to 4   diesel
+pump 4 updated to 4   diesel
+T: 470	111000	1	1	 0	 0	  0	  8	0	0	0
+
+pump 3 updated to 3   diesel
+pump 4 updated to 3   diesel
+T: 480	111000	1	1	 0	 0	  0	  6	0	0	0
+
+pump 3 updated to 2   diesel
+pump 4 updated to 2   diesel
+T: 490	111000	1	1	 0	 0	  0	  4	0	0	0
+
+pump 3 updated to 1   diesel
+pump 4 updated to 1   diesel
+T: 500	111000	1	1	 0	 0	  0	  2	0	0	0
+
+pump 3 updated to 0   diesel
+pump 4 updated to 0   diesel
+T: 510	111110	1	1	 0	 0	  0	  0	0	0	0
+
+Stopped at time : 841 ns : File "/home/burak/Dropbox/Course/logic/lab4/Part2Solution/testbench3.v" Line 207

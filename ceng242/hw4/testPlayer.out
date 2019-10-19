@@ -1,0 +1,26 @@
+Archer ID: 0
+Tank Board ID: 04
+Scout position: (3/2)
+Priest team: KNIGHTS
+Fighter HP: 400
+Archer Dead? NO
+Scout AD: 25
+Archer AD: 50
+Priest Heal: 50
+Tank Max HP: 1000
+Fighter Max HP: 400
+Player 02 attacked Player 03 (25)
+Player 03 moved from (4/1) to (3/4)
+Player 00 attacked Player 02 (50)
+Player 01 attacked Player 04 (100)
+Player 03 healed Player 04
+Player 00 attacked Player 03 (50)
+Player 00 attacked Player 03 (50)
+Player 04 attacked Player 01 (25)
+Player 02 moved from (3/2) to (0/0)
+Scout attackable coordinates: {(-1/-1) (-1/0) (-1/1) (0/-1) (0/1) (1/-1) (1/0) (1/1) }
+Archer Dead? NO
+Priest HP: 25
+Player 00 attacked Player 03 (50)
+Priest Dead? YES
+Priest Coordinate: (3/4)

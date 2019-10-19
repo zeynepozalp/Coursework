@@ -1,0 +1,31 @@
+Image 400 300 aaa.ppm
+
+SetColor 220 255 220
+
+Clear
+
+#----------------------------------------------------------------------------------------------------------------------
+
+SetColor 255 0 0
+Point 100 20
+
+SetColor 0 255 0
+Line 100 50 60 350
+
+SetColor 0 0 255
+Point 150 80
+Arc 150 80 30 210 25 6
+
+SetColor 0 0 0
+Point 150 80
+Arc 150 410 0 360 25 5
+
+SetColor 0 0 0
+Rectangle 200 150 50 40
+
+SetColor 0 255 255
+Polygon 150 280 40 18
+Print 5 5 B_a
+
+SetColor 0 0 0
+Point 5 5

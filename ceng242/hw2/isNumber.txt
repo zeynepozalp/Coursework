@@ -1,0 +1,20 @@
+*Hw2> isNumber ""
+False
+
+*Hw2> isNumber "123"
+True
+
+*Hw2> isNumber "abc"
+False
+
+*Hw2> isNumber "123a456"
+False
+
+*Hw2> isNumber "-123"
+True
+
+*Hw2> isNumber "123-"
+False
+
+*Hw2> isNumber "123.4"
+False

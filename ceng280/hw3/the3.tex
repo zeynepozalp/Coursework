@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+%add the packages you need
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Zeynep Özalp \\
+Id Number : 2237691 \\
+
+% Write your answers below the section tags, complete for the questions you'd like submit answers for.
+\section*{Answer 1}
+\subsection*{a.}
+$K=\{s,q_1,q_2,q_3,q_4,q_5,h\}$, $H=\{h\}$. \\
+
+\begin{tabular}{|ll|r|}
+\hline
+$q$ & $\sigma$ & $\delta (q, \sigma)$ \\
+\hline
+$s$ & $a$ & $(q_1, \rightarrow)$ \\
+$s$ & $b$ & $(q_1, \rightarrow)$ \\
+$s$ & $\sqcup$ & $(q_1, \rightarrow)$ \\
+$q_1$ & $a$ & $(q_2, \sqcup)$ \\
+$q_1$ & $b$ & $(q_4, \sqcup)$ \\
+$q_1$ & $\sqcup$ & $(h, \sqcup)$ \\
+$q_2$ & $a$ & $(q_3, \leftarrow)$ \\
+$q_2$ & $b$ & $(q_3, \leftarrow)$ \\
+$q_2$ & $\sqcup$ & $(q_3, \leftarrow)$ \\
+$q_3$ & $a$ & $(q_3, \leftarrow)$ \\
+$q_3$ & $b$ & $(q_3, \leftarrow)$ \\
+$q_3$ & $\sqcup$ & $(h, a)$ \\
+$q_4$ & $a$ & $(q_5, \leftarrow)$ \\
+$q_4$ & $b$ & $(q_5, \leftarrow)$ \\
+$q_4$ & $\sqcup$ & $(q_5, \leftarrow)$ \\
+$q_5$ & $a$ & $(q_5, \leftarrow)$ \\
+$q_5$ & $b$ & $(q_5, \leftarrow)$ \\
+$q_5$ & $\sqcup$ & $(h, b)$ \\
+\hline
+\end{tabular}
+
+\subsection*{b.}
+\begin{enumerate}
+\item[i)] $(s,\,\triangleright\sqcup\sqcup b\underline{a}b) \vdash (q_1,\,\triangleright\sqcup\sqcup ba\underline{b}) \vdash (q_4,\,\triangleright\sqcup\sqcup ba\underline{\sqcup}) \vdash (q_5,\,\triangleright\sqcup\sqcup b\underline{a}\sqcup) \vdash (q_5,\,\triangleright\sqcup\sqcup \underline{b}a\sqcup) \vdash (q_5,\,\triangleright\sqcup \underline{\sqcup}ba\sqcup) \vdash (h,\,\triangleright\sqcup \underline{b}ba\sqcup)$.
+
+\item[ii)] $(s,\,\triangleright a\underline{a}a) \vdash (q_1,\,\triangleright aa\underline{a}) \vdash (q_2,\,\triangleright aa\underline{\sqcup}) \vdash (q_3,\,\triangleright a\underline{a}\sqcup) \vdash (q_3,\,\triangleright \underline{a}a\sqcup) \vdash (q_3,\, \underline{\triangleright}aa\sqcup) \vdash (q_3,\,\triangleright \underline{a}a\sqcup) \vdash (q_3,\, \underline{\triangleright}aa\sqcup)$. It never halts.
+
+\item[iii)] $(s,\,\triangleright\underline{a}\sqcup b b) \vdash (q_1,\,\triangleright a\underline{\sqcup} b b) \vdash (h,\,\triangleright a\underline{\sqcup} b b)$.
+\end{enumerate}
+
+\section*{Answer 2}
+$(\triangleright \underline{\sqcup} babc) \vdash_M (\triangleright \sqcup \underline{b} abc) \vdash^*_M (\triangleright \sqcup babc \underline{\sqcup}) \vdash_M (\triangleright \sqcup bab \underline{c}\sqcup) \vdash^*_M (\triangleright \sqcup babc \sqcup \underline{\sqcup}) \vdash_M (\triangleright \sqcup babc \sqcup \underline{b}) \vdash_M (\triangleright \sqcup babc \sqcup \underline{c}) \vdash^*_M (\triangleright \sqcup babc \sqcup c \sqcup \underline{\sqcup}) \vdash_M (\triangleright \sqcup babc \sqcup c \sqcup \underline{b})$ \\
+
+First, TM goes right on the input tape and reads a symbol, which is the first symbol of the string. If the first symbol of the string is not blank, it finds the first right blank. After that, it goes left on input tape and read a symbol, which is the last symbol of the string. If the last symbol of the string is $c$, it goes right, puts a blank, goes right and writes the first symbol of the string. However, it writes $c$ on it, goes right, puts a blank, goes right and writes the first symbol of the string.\\
+
+To, conclude, If our input tape is $\triangleright \underline{\sqcup} w$ where $w=xuc$, $x$ is any symbol in $\{a,b,c\}$ and $u \in \{a,b,c\}^*$, TM produces $\triangleright \sqcup w \sqcup c \sqcup \underline{x}$.
+
+\section*{Answer 3}
+\subsection*{a.}
+$L=\{w | w\in\{a,b\}^*\}$
+\subsection*{b.}
+$f(w)=a^mb^n$, $w\in \{a,b\}^*$, $m$ is the number of a's and $n$ is number of b's in $w$.
+\section*{Answer 4}
+I used two tape TM and initially the string $w$ on the first tape as $(\triangleright \underline{\sqcup} w)$ and the second tape is all blank.\\
+
+\begin{tikzpicture}[shorten >= 1pt, node distance=2cm, on grid, auto]
+	\node (1) {$> R^1_c$};
+	\node (2) [right=of 1] {$R^{1,2}$};
+	\node (3) [right=of 2] {$a^2$};
+	\node (4) [right=of 3] {$L^{1,2}_\sqcup R^1$};
+	\node (5) [right=of 4] {$R^1$};
+	\node (6) [right=of 5] {$R^2$};
+	\node (7) [right=of 6] {$R^{1,2}$};
+	\node (8) [above=of 5] {$n$};
+	\node (9) [below=of 7] {$y$};
+
+	\path[->]
+		(1) edge node {} (2)
+		(2) edge node {$a^1 \neq \sqcup$} (3)
+		(2) edge [bend right=60, swap] node {$\sqcup^1$} (4)
+		(4) edge node {$a^1$} (5)
+		(5) edge node {$a^1$} (6)	
+		(6) edge node {$a^2$} (7)	
+		(7) edge [bend left=40] node {$\overline{\sqcup}^{1,2}$} (4)
+		(7) edge node {$\sqcup^{1,2}$} (9)
+		(5) edge node {$\overline{a}^1$} (8)
+		(6) edge [swap] node {$\overline{a}^2$} (8)
+		;
+\end{tikzpicture}
+\section*{Answer 5}
+I used two tape TM and initially the string $u$ on the first tape as $(\triangleright \underline{\sqcup} u)$ and the second tape is all blank. After the operation of TM M that designed to compute $f(u)=v$, the first tape is $(\triangleright \sqcup v \underline{\sqcup})$ and the second tape is full blank. The first part of the machine (upper part) computes the string $v$ and places it on the second tape it erases the string $u$ from the first tape. After that, it copies the content of the second tape to the first tape. Also note that, each node is inseparable. Since I could not make the arrows to leave its node form the right-most side, you can think that only after all the operations are done on a node, an arrow leaves that node and it enters a node from the left-most side. For examples, the second left-most node of the upper part goes to $x^2$ node after the operation $L^1$ and the arrow from $x^2$ node enters the right-most node of the upper part from the operation $\sqcup^1$. \\ \\
+
+\begin{tikzpicture}[shorten >= 1pt, node distance=4cm, on grid, auto]
+	\node (1) {$> R^{1,2}$};
+	\node (2) [right=of 1] {$\sqcup^1 x^2 R^{1,2}_{\sqcup} L^1$};
+	\node (3) [right=of 2] {$\sqcup^1 y^2 L^1_{\sqcup}$};
+	\node (4) [above=of 3] {$x^2$};
+	\node (5) [below right=of 1] {$L^2_{\sqcup} R^2$};
+	\node (6) [right=of 5] {$\sqcup^2 x^1 R^1$};
+	\node (7) [below=of 5] {$h$};
+
+	\path[->]
+		(1) edge node {$x^1\neq \sqcup$} (2)
+		(2) edge node {$y^1\neq \sqcup$} (3)
+		(2) edge node {$\sqcup^1$} (4)
+		(3) edge [bend right=160] node {} (1)
+		(4) edge node {} (3)
+		(1) edge node {$\sqcup$} (5)
+		(5) edge node {$x^2\neq \sqcup$} (6)
+		(6) edge [bend right=160] node {} (5)
+		(5) edge node {$\sqcup$} (7)
+		;
+\end{tikzpicture}
+\section*{Answer 6}
+\subsection*{a.}
+In transition $\delta(q,a) = (p,X)$, $X\neq \triangleright$ and if $a=\triangleright$ then $X\neq \ \downarrow$.
+\subsection*{b.}
+$\delta'\;:\;(K-H) \times \Sigma \cup \{e\} \mapsto K\times(\Sigma \cup \{\downarrow\})$ is the new transition function which is the union of transitions $\delta'(q,a) = (p,X)$ or $\delta'(q,e) = (p,X)$ if there is a transition $\delta(q,a)=(p,X)$ for any $a\in \Sigma$, $q\in K-H$, $p\in K$ and $X\in\Sigma \cup \{\downarrow\}$. From state $q$, the machine can go to state $p$ by either reading $e$ or a symbol $a$, but not both.
+\subsection*{c.}
+A configuration $(q,\ \triangleright a b w_1)$ yields to configuration $(p,\ \triangleright b w_2)$ if $\delta'(q,e) = (p,\downarrow)$ for all $a,b \in \Sigma$ and $w_1,w_2 \in \Sigma^*$. A configuration $(q,\ \triangleright a w_1 )$ yields to configuration $(p,\ \triangleright a w_1 b)$ if $\delta'(q,e) = (p,b)$ for all $a,b \in \Sigma$ and $w \in \Sigma^*$.
+\subsection*{d.}
+
+\section*{Answer 7}
+\subsection*{a.}
+The insert-delete TM is a two-tape TM. $(K, \Sigma, \delta, s, H)$ where $K$ is the set of states; $\Sigma$ is a finite alphabet containing $\triangleright$ and $\sqcup$; $s\in K$ is the initial state; $H\subseteq K$ is the set of halting states; and $\delta\;:\;(K-H) \times \Sigma \times \Sigma \mapsto K\times(\Sigma \cup \{\downarrow\})\times(\Sigma \cup \{\downarrow\})$ is the transition function where $\delta(q,a,b) = (p,X,Y)$ for $p\in K-H$, $q\in K$, $a,b\in\Sigma$, $X,Y\in\Sigma \cup \{\downarrow\}$ indicates: \\
+1. Read: The machine reads $a$ from front and $b$ from rear. \\
+2. Push: If $X\in \Sigma$ the machine pushes $X$ at front. If $Y\in \Sigma$ the machine pushes $Y$ at rear. \\
+3. Pop: If $X=\downarrow$ the machine pops from front. If $Y=\downarrow$ the machine pop from rear. \\
+\subsection*{b.}
+A configuration is a member of $K \times \triangleright \Sigma \times \Sigma^* \times  (\Sigma - \{\sqcup\})\cup \{e\}$. For example, $(q, \triangleright a, bb\sqcup a, b)$ is a configuration which corresponds to the tape contents $\triangleright \underline{a} bb\sqcup a\underline{b}$ where the front is $a$, rear is $b$ and underlined symbols indicate the head positions (front and rear only).
+\subsection*{c.}
+
+\subsection*{d.}
+
+\section*{Answer 8}
+$S\rightarrow PATR$\\
+$S\rightarrow e$\\
+$UA\rightarrow CaAU$\\
+$Ua\rightarrow CaU$\\
+$UR\rightarrow AATR$\\
+$aT\rightarrow Ta$\\
+$AT\rightarrow TA$\\
+$PT\rightarrow PU$\\
+$TR\rightarrow B$\\
+$aB\rightarrow Ba$\\
+$AB\rightarrow BA$\\
+$CB\rightarrow Ba$\\
+$CT\rightarrow TC$\\
+$UC\rightarrow CU$\\
+$PB\rightarrow e$\\
+\section*{Answer 9}
+%Let TM's $M_1=\{K_1, \Sigma, \delta_1, s_1, H_1\}$, $M_2=\{K_2, \Sigma, \delta_2, s_2, H_2\}$ and $M_3=\{K_3, \Sigma, \delta_3, s_3, H_3\}$ be a TM that semi-decides $L_1, L_2,L_3$ respectively.\\
+%First, the TM $M_{12}=\{K_{12}, \Sigma, \delta_{12}, s_1, H_2\}$ that semi-decides $L_1L_2$ can be constructed using $M_1$ and $M_2$. $K_{12}=K_1\cup K_2$, $\delta_1$ and $\delta_2$ is a subset of $\delta_{12}$. Add all possible transitions $\delta_{12}(h_1,a)=(s_2,a)$ where $h_1\in H_1$. \\
+%Second, the TM $M'=\{K', \Sigma, \delta', s', H'\}$
+Let TM's $M_1$, $M_2$ and $M_3$ be a TM that semi-decides $L_1, L_2,L_3$ respectively.\\
+First, we can construct a TM $M_{12}$ that semi-decides $L_1L_2$ using non-determinism:\\
+On input $w$, \\
+1. For each split $w=w_1w_2$,\\
+2. Run $M_1$ on $w_1$. If it halts, run $M_2$ on $w_2$. If it halts too, accept $w$.\\
+3. If the machine never halts for every split, reject $w$.\\
+Second, construct a TM $M'$ that semi-decides $(L_1L_2)\cap L_3$:\\
+On input $w$, \\
+1. Run $M_{12}$ and $M_3$ on $w$.\\
+2. If both of them halts, accept $w$.\\
+3. If at least one of them does not halt, reject $w$.
+%...
+
+%REGENERATE THESE BLOCKS AS MANY AS YOU NEED
+
+
+\end{document}
+
+​
+

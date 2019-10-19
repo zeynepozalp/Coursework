@@ -1,0 +1,13 @@
+Board with ID
+SC __ __ __ __ 
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ __ __ __ Ch 
+Board with ID
+01 __ __ __ __ 
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ __ __ __ __ 
+__ __ __ __ Ch 
+Game ended at turn 0. All knights dead. Barbarian victory.

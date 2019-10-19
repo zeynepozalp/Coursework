@@ -1,0 +1,11 @@
+Board with ID
+__ __ __ __ 
+__ Ch __ __ 
+__ __ sc __ 
+SC __ __ __ 
+Board with ID
+__ __ __ __ 
+__ Ch __ __ 
+__ __ 02 __ 
+01 __ __ __ 
+Game ended at turn 0. Chest captured. Barbarian victory.

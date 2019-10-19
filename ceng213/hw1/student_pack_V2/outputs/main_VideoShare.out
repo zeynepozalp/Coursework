@@ -1,0 +1,80 @@
+ All Users
+username:userName284,name:name284,surname:surname284,Status:active
+username:userName450,name:name450,surname:surname450,Status:active
+username:userName341,name:name341,surname:surname341,Status:active
+username:userName056,name:name056,surname:surname056,Status:active
+username:userName200,name:name200,surname:surname200,Status:active
+username:userName392,name:name392,surname:surname392,Status:active
+username:userName163,name:name163,surname:surname163,Status:active
+username:userName051,name:name051,surname:surname051,Status:active
+username:userName265,name:name265,surname:surname265,Status:active
+username:userName127,name:name127,surname:surname127,Status:active
+
+ All Videos
+title:title353,genre:genre353
+title:title051,genre:genre051
+title:title109,genre:genre109
+title:title384,genre:genre384
+title:title276,genre:genre276
+title:title343,genre:genre343
+title:title269,genre:genre269
+title:title135,genre:genre135
+title:title061,genre:genre061
+title:title311,genre:genre311
+
+Add Friendship
+Friends  of userName284
+username:userName163,name:name163,surname:surname163,Status:active
+username:userName265,name:name265,surname:surname265,Status:active
+username:userName392,name:name392,surname:surname392,Status:active
+username:userName341,name:name341,surname:surname341,Status:active
+
+Friends  of userName341
+username:userName284,name:name284,surname:surname284,Status:active
+
+Remove Friendship
+Friends  of userName284
+username:userName163,name:name163,surname:surname163,Status:active
+username:userName265,name:name265,surname:surname265,Status:active
+username:userName392,name:name392,surname:surname392,Status:active
+
+Friends  of userName341
+
+Add Subscription
+Subscriptions of userName056
+title:title135,genre:genre135
+title:title061,genre:genre061
+title:title384,genre:genre384
+
+Subscriptions of userName341
+title:title384,genre:genre384
+title:title051,genre:genre051
+title:title061,genre:genre061
+
+sortUserSubscriptions
+Subscriptions of userName056
+title:title061,genre:genre061
+title:title135,genre:genre135
+title:title384,genre:genre384
+
+Subscriptions of userName341
+title:title384,genre:genre384
+title:title051,genre:genre051
+title:title061,genre:genre061
+
+printCommonSubscriptions
+title:title061,genre:genre061
+title:title384,genre:genre384
+
+ADDITIONAL TESTS..
+Subscriptions of userName284's friends
+title:title061,genre:genre061
+title:title109,genre:genre109
+title:title311,genre:genre311
+title:title343,genre:genre343
+title:title353,genre:genre353
+title:title384,genre:genre384
+
+Subscriptions of userName341's friends
+
+END OF TESTS..

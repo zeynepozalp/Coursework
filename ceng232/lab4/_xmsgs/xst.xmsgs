@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="905" delta="new" >&quot;<arg fmt="%s" index="1">lab4_1.v</arg>&quot; line <arg fmt="%d" index="2">74</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;memory&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">i</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">24</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">RamDataOut</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="738" delta="new" >HDL ADVISOR - <arg fmt="%d" index="1">384</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">memory</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">RO</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">RgbMaskModule</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;23&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;22&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;21&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;20&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;19&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;18&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;17&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;16&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;15&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;14&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;13&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;12&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;11&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;10&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;9&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;8&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;7&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;6&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;5&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;4&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;3&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;2&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;1&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">RgbRAM</arg>&gt; on signal &lt;<arg fmt="%s" index="2">RamDataOut&lt;0&gt;</arg>&gt;; this signal is connected to multiple drivers.
+</msg>
+
+</messages>
+

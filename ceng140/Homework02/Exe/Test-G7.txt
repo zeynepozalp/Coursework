@@ -1,0 +1,33 @@
+register G7
+register Tusk
+register Trump
+register May
+register Macron
+register Gentiloni
+register Trudeau
+register Juncker
+register Abe
+register Merkel
+
+connect Tusk      Trudeau
+connect Tusk      Gentiloni
+connect Tusk      Juncker
+connect Trump     May
+connect May       Merkel
+connect May       Trump
+connect Macron    Merkel
+connect Macron    Tusk
+connect Gentiloni Trudeau
+connect Gentiloni Merkel
+connect Gentiloni Macron
+connect Trudeau   Trump
+connect Trudeau   Abe
+connect Juncker   Abe
+connect Abe       Merkel
+connect Abe       Trump
+connect Merkel    Juncker
+
+sort abc asc
+sort pop desc
+
+list

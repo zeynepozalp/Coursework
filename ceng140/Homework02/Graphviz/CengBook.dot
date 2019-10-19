@@ -1,0 +1,37 @@
+digraph CengBook
+{
+  graph [label="CengBook\nNumber of users = 10" , labelloc=t] ;
+
+  node  [shape=ellipse , fontcolor=black , color=red , penwidth=2.0] ;
+
+  edge  [color=blue , penwidth=2.0] ;
+
+  Merkel [label="Merkel\n1 Friend(s)\n4 Follower(s)"] ;
+  Trump [label="Trump\n1 Friend(s)\n3 Follower(s)"] ;
+  Abe [label="Abe\n2 Friend(s)\n2 Follower(s)"] ;
+  Juncker [label="Juncker\n1 Friend(s)\n2 Follower(s)"] ;
+  Trudeau [label="Trudeau\n2 Friend(s)\n2 Follower(s)"] ;
+  Gentiloni [label="Gentiloni\n3 Friend(s)\n1 Follower(s)"] ;
+  Macron [label="Macron\n2 Friend(s)\n1 Follower(s)"] ;
+  May [label="May\n2 Friend(s)\n1 Follower(s)"] ;
+  Tusk [label="Tusk\n3 Friend(s)\n1 Follower(s)"] ;
+  G7 [label="G7\n0 Friend(s)\n0 Follower(s)"] ;
+
+  Merkel -> Juncker ;
+  Trump -> May ;
+  Abe -> Merkel ;
+  Abe -> Trump ;
+  Juncker -> Abe ;
+  Trudeau -> Trump ;
+  Trudeau -> Abe ;
+  Gentiloni -> Trudeau ;
+  Gentiloni -> Merkel ;
+  Gentiloni -> Macron ;
+  Macron -> Merkel ;
+  Macron -> Tusk ;
+  May -> Merkel ;
+  May -> Trump ;
+  Tusk -> Trudeau ;
+  Tusk -> Gentiloni ;
+  Tusk -> Juncker ;
+}

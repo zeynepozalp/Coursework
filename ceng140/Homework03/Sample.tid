@@ -1,0 +1,69 @@
+#----------------------------------------------------------------------------------------------------------------------
+# Temizer (Textual) Image Description File :
+#
+# Lines that start with (some possible whitespace characters followed by) '#' character are comments.
+# Empty lines (all whitespaces) should also be skipped.
+#
+# List of commands :
+#
+# Image     <width> <height> <fileName>
+# SetColor  <red> <green> <blue>
+# Clear
+# Point     <row> <col>
+# Line      <fromRow> <fromCol> <toRow> <toCol>
+# Arc       <centerRow> <centerCol> <startAngleDegrees> <endAngleDegrees> <radius> <numberOfSegments>
+# Rectangle <topLeftRow> <topLeftCol> <width> <height>
+# Polygon   <centerRow> <centerCol> <radius> <numberOfSides>
+# Fill      <startRow> <startCol>
+# Print     <topLeftRow> <topLeftCol> <String>
+#
+#----------------------------------------------------------------------------------------------------------------------
+
+# Create and initialize canvas
+
+Image 400 300 Sample.ppm
+
+SetColor 220 255 220
+
+Clear
+
+#----------------------------------------------------------------------------------------------------------------------
+
+SetColor 255 0 0
+Point 100 20
+
+SetColor 0 255 0
+Line 100 50 60 350
+
+SetColor 0 0 255
+Point 150 80
+Arc 150 80 30 210 25 6
+
+SetColor 0 0 0
+Point 150 80
+Arc 150 410 0 360 25 5
+
+SetColor 0 0 0
+Rectangle 200 150 50 40
+
+SetColor 0 255 255
+Polygon 150 280 40 18
+
+SetColor 255 255 0
+Fill 150 280
+
+SetColor 255 0 255
+Print  5 5 abcdefghijklmnopqrstuvwxyz
+Print 20 5 ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Print 35 5 0123456789 -+*/ <=> (){}[]
+Print 50 5 .,:;!?  `'"^  _~%$&@#\|
+
+#----------------------------------------------------------------------------------------------------------------------
+
+# Name, sign and date artwork
+
+SetColor 128 128 128
+Print 269 5 TID Sample
+Print 284 5 by Selim Temizer (May 19, 2018)
+
+#----------------------------------------------------------------------------------------------------------------------

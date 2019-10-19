@@ -1,0 +1,59 @@
+User Add: Sarah 1
+User Add: Morgan 1
+User Add: Ellie 1
+User Add: Vicky 1
+---------
+Active Users
+EMPTY
+EMPTY
+EMPTY
+
+Login: Chuck 0
+Logout: Chuck 0
+Login: Ellie 0
+Login: Ellie 1
+---------
+Active Users
+EMPTY
+EMPTY
+Ellie
+
+Logout: Ellie 1
+---------
+Active Users
+EMPTY
+EMPTY
+DELETED
+
+Change Pass: Sarah 1
+Login: Sarah 0
+Login: Sarah 1
+---------
+Active Users
+Sarah
+EMPTY
+DELETED
+
+---------
+Passwords
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+EMPTY EMPTY
+Ellie elspassword
+Morgan morganspass
+EMPTY EMPTY
+Sarah Sarahsnewpass
+Sarah Sarahspass
+EMPTY EMPTY
+EMPTY EMPTY
+Vicky vickypass
+EMPTY EMPTY
+

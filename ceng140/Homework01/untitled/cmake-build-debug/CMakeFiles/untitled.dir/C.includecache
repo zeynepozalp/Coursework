@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/ZEYNEP/Desktop/Homework01/untitled/main.c
+Utilities.h
+C:/Users/ZEYNEP/Desktop/Homework01/untitled/Utilities.h
+stdio.h
+-
+

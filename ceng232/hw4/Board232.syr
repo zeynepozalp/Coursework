@@ -1,0 +1,769 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.47 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.47 secs
+ 
+--> Reading design: Board232.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Board232.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Board232"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-cp132
+
+---- Source Options
+Top Module Name                    : Board232
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lab4_2.v" in library work
+Compiling verilog file "Board232.v" in library work
+Module <lab4_2> compiled
+Module <Board232> compiled
+Module <binary_to_BCD> compiled
+Module <binary_to_BCD_add3> compiled
+No errors in compilation
+Analysis of file <"Board232.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Board232> in library <work>.
+
+Analyzing hierarchy for module <lab4_2> in library <work>.
+
+Analyzing hierarchy for module <binary_to_BCD> in library <work>.
+
+Analyzing hierarchy for module <binary_to_BCD_add3> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Board232>.
+WARNING:Xst:905 - "Board232.v" line 86: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <invalid_diesel_car>, <invalid_setup_params>, <btn>, <n_cars_in_diesel_queue>, <total_diesel_needed>, <diesel_ones>, <diesel_tens>, <invalid_gasoline_car>, <n_cars_in_gasoline_queue>, <total_gasoline_needed>, <gasoline_ones>, <gasoline_tens>, <tmp_digit>
+Module <Board232> is correct for synthesis.
+ 
+Analyzing module <lab4_2> in library <work>.
+Module <lab4_2> is correct for synthesis.
+ 
+Analyzing module <binary_to_BCD> in library <work>.
+Module <binary_to_BCD> is correct for synthesis.
+ 
+Analyzing module <binary_to_BCD_add3> in library <work>.
+Module <binary_to_BCD_add3> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <i> in unit <lab4_2> has a constant value of 000 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <lab4_2>.
+    Related source file is "lab4_2.v".
+    Found 4-bit register for signal <n_cars_in_gasoline_queue>.
+    Found 4-bit register for signal <n_cars_in_diesel_queue>.
+    Found 8-bit register for signal <total_diesel_needed>.
+    Found 6-bit register for signal <pump_status>.
+    Found 1-bit register for signal <invalid_diesel_car>.
+    Found 1-bit register for signal <is_diesel_queue_not_full>.
+    Found 8-bit register for signal <total_gasoline_needed>.
+    Found 1-bit register for signal <invalid_setup_params>.
+    Found 1-bit register for signal <is_gasoline_queue_not_full>.
+    Found 1-bit register for signal <invalid_gasoline_car>.
+    Found 3-bit adder carry out for signal <add0000$addsub0000> created at line 196.
+    Found 3-bit register for signal <diesel>.
+    Found 32-bit register for signal <diesel_queue>.
+    Found 3-bit register for signal <gasoline>.
+    Found 32-bit register for signal <gasoline_queue>.
+    Found 3-bit adder carry out for signal <invalid_setup_params$addsub0000> created at line 78.
+    Found 4-bit comparator greater for signal <invalid_setup_params$cmp_gt0000> created at line 78.
+    Found 1-bit register for signal <isSetup>.
+    Found 4-bit comparator greater for signal <mux0005$cmp_gt0000> created at line 135.
+    Found 4-bit subtractor for signal <mux0006$share0000>.
+    Found 4-bit subtractor for signal <mux0007$share0000>.
+    Found 4-bit subtractor for signal <mux0008$share0000>.
+    Found 4-bit subtractor for signal <mux0009$share0000>.
+    Found 4-bit subtractor for signal <mux0010$share0000>.
+    Found 3-bit comparator lessequal for signal <mux0011$cmp_ge0000> created at line 203.
+    Found 4-bit subtractor for signal <mux0011$share0000>.
+    Found 4-bit comparator greater for signal <old_n_cars_in_diesel_queue_12$cmp_gt0000> created at line 135.
+    Found 4-bit subtractor for signal <old_n_cars_in_diesel_queue_12$sub0000> created at line 138.
+    Found 4-bit comparator greater for signal <old_n_cars_in_diesel_queue_16$cmp_gt0000> created at line 135.
+    Found 4-bit subtractor for signal <old_n_cars_in_diesel_queue_16$sub0000> created at line 138.
+    Found 4-bit comparator greater for signal <old_n_cars_in_diesel_queue_20$cmp_gt0000> created at line 135.
+    Found 4-bit subtractor for signal <old_n_cars_in_diesel_queue_20$sub0000> created at line 138.
+    Found 4-bit subtractor for signal <old_n_cars_in_diesel_queue_34$sub0000> created at line 138.
+    Found 4-bit comparator greater for signal <old_n_cars_in_diesel_queue_4$cmp_gt0000> created at line 135.
+    Found 4-bit subtractor for signal <old_n_cars_in_diesel_queue_4$sub0000> created at line 138.
+    Found 4-bit adder for signal <old_n_cars_in_diesel_queue_46$addsub0000> created at line 198.
+    Found 4-bit comparator greater for signal <old_n_cars_in_diesel_queue_8$cmp_gt0000> created at line 135.
+    Found 4-bit subtractor for signal <old_n_cars_in_diesel_queue_8$sub0000> created at line 138.
+    Found 4-bit comparator greater for signal <old_n_cars_in_gasoline_queue_11$cmp_gt0000> created at line 119.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_11$cmp_lt0000> created at line 116.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_11$cmp_lt0001> created at line 118.
+    Found 4-bit subtractor for signal <old_n_cars_in_gasoline_queue_11$sub0000> created at line 122.
+    Found 4-bit comparator greater for signal <old_n_cars_in_gasoline_queue_15$cmp_gt0000> created at line 119.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_15$cmp_lt0000> created at line 116.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_15$cmp_lt0001> created at line 118.
+    Found 4-bit subtractor for signal <old_n_cars_in_gasoline_queue_15$sub0000> created at line 122.
+    Found 4-bit comparator greater for signal <old_n_cars_in_gasoline_queue_19$cmp_gt0000> created at line 119.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_19$cmp_lt0000> created at line 116.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_19$cmp_lt0001> created at line 118.
+    Found 4-bit subtractor for signal <old_n_cars_in_gasoline_queue_19$sub0000> created at line 122.
+    Found 4-bit comparator greater for signal <old_n_cars_in_gasoline_queue_23$cmp_gt0000> created at line 119.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_23$cmp_lt0000> created at line 116.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_23$cmp_lt0001> created at line 118.
+    Found 4-bit subtractor for signal <old_n_cars_in_gasoline_queue_23$sub0000> created at line 122.
+    Found 3-bit adder for signal <old_n_cars_in_gasoline_queue_3$add0000> created at line 116.
+    Found 4-bit comparator greater for signal <old_n_cars_in_gasoline_queue_3$cmp_gt0000> created at line 119.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_3$cmp_lt0000> created at line 116.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_3$cmp_lt0001> created at line 118.
+    Found 4-bit subtractor for signal <old_n_cars_in_gasoline_queue_3$sub0000> created at line 122.
+    Found 4-bit adder for signal <old_n_cars_in_gasoline_queue_45$addsub0000> created at line 173.
+    Found 4-bit comparator greater for signal <old_n_cars_in_gasoline_queue_45$cmp_gt0000> created at line 167.
+    Found 4-bit comparator less for signal <old_n_cars_in_gasoline_queue_45$cmp_lt0000> created at line 167.
+    Found 4-bit comparator greater for signal <old_n_cars_in_gasoline_queue_7$cmp_gt0000> created at line 119.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_7$cmp_lt0000> created at line 116.
+    Found 3-bit comparator greater for signal <old_n_cars_in_gasoline_queue_7$cmp_lt0001> created at line 118.
+    Found 4-bit subtractor for signal <old_n_cars_in_gasoline_queue_7$sub0000> created at line 122.
+    Found 8-bit subtractor for signal <old_total_diesel_needed_10$sub0000> created at line 157.
+    Found 8-bit subtractor for signal <old_total_diesel_needed_14$sub0000> created at line 157.
+    Found 8-bit subtractor for signal <old_total_diesel_needed_18$sub0000> created at line 157.
+    Found 8-bit subtractor for signal <old_total_diesel_needed_22$sub0000> created at line 157.
+    Found 8-bit subtractor for signal <old_total_diesel_needed_38$sub0000> created at line 157.
+    Found 8-bit adder for signal <old_total_diesel_needed_40$add0000> created at line 207.
+    Found 3-bit comparator lessequal for signal <old_total_diesel_needed_40$cmp_ge0000> created at line 203.
+    Found 8-bit adder for signal <old_total_diesel_needed_41$add0000> created at line 207.
+    Found 3-bit comparator lessequal for signal <old_total_diesel_needed_41$cmp_ge0000> created at line 203.
+    Found 8-bit adder for signal <old_total_diesel_needed_42$add0000> created at line 207.
+    Found 3-bit comparator lessequal for signal <old_total_diesel_needed_42$cmp_ge0000> created at line 203.
+    Found 8-bit adder for signal <old_total_diesel_needed_43$add0000> created at line 207.
+    Found 3-bit comparator lessequal for signal <old_total_diesel_needed_43$cmp_ge0000> created at line 203.
+    Found 8-bit adder for signal <old_total_diesel_needed_44$add0000> created at line 207.
+    Found 3-bit comparator lessequal for signal <old_total_diesel_needed_44$cmp_ge0000> created at line 203.
+    Found 8-bit subtractor for signal <old_total_diesel_needed_6$sub0000> created at line 157.
+    Found 8-bit subtractor for signal <old_total_gasoline_needed_13$sub0000> created at line 153.
+    Found 8-bit subtractor for signal <old_total_gasoline_needed_17$sub0000> created at line 153.
+    Found 8-bit subtractor for signal <old_total_gasoline_needed_21$sub0000> created at line 153.
+    Found 8-bit subtractor for signal <old_total_gasoline_needed_27$sub0000> created at line 153.
+    Found 8-bit adder for signal <old_total_gasoline_needed_29$add0000> created at line 182.
+    Found 8-bit adder for signal <old_total_gasoline_needed_30$add0000> created at line 182.
+    Found 8-bit adder for signal <old_total_gasoline_needed_31$add0000> created at line 182.
+    Found 8-bit adder for signal <old_total_gasoline_needed_32$add0000> created at line 182.
+    Found 8-bit adder for signal <old_total_gasoline_needed_33$add0000> created at line 182.
+    Found 8-bit subtractor for signal <old_total_gasoline_needed_5$sub0000> created at line 153.
+    Found 8-bit subtractor for signal <old_total_gasoline_needed_9$sub0000> created at line 153.
+    Found 3-bit adder for signal <pump_status_0$add0000> created at line 92.
+    Found 3-bit comparator lessequal for signal <pump_status_0$cmp_ge0000> created at line 92.
+    Found 3-bit comparator lessequal for signal <pump_status_1$cmp_ge0000> created at line 92.
+    Found 3-bit comparator lessequal for signal <pump_status_2$cmp_ge0000> created at line 92.
+    Found 3-bit comparator lessequal for signal <pump_status_3$cmp_ge0000> created at line 92.
+    Found 3-bit comparator lessequal for signal <pump_status_4$cmp_ge0000> created at line 92.
+    Found 3-bit comparator lessequal for signal <pump_status_5$cmp_ge0000> created at line 92.
+    Found 24-bit register for signal <pumps>.
+    Found 8-bit adder for signal <total_diesel_needed$share0000>.
+    Found 3-bit comparator lessequal for signal <total_gasoline_needed$cmp_ge0000> created at line 116.
+    Found 3-bit comparator lessequal for signal <total_gasoline_needed$cmp_ge0001> created at line 116.
+    Found 3-bit comparator lessequal for signal <total_gasoline_needed$cmp_ge0002> created at line 116.
+    Found 3-bit comparator lessequal for signal <total_gasoline_needed$cmp_ge0003> created at line 116.
+    Found 3-bit comparator lessequal for signal <total_gasoline_needed$cmp_ge0004> created at line 116.
+    Found 3-bit comparator lessequal for signal <total_gasoline_needed$cmp_ge0005> created at line 116.
+    Found 4-bit comparator greatequal for signal <total_gasoline_needed$cmp_ge0006> created at line 167.
+    Found 4-bit comparator lessequal for signal <total_gasoline_needed$cmp_le0000> created at line 167.
+    Found 8-bit adder for signal <total_gasoline_needed$share0000>.
+    Summary:
+	inferred 130 D-type flip-flop(s).
+	inferred  48 Adder/Subtractor(s).
+	inferred  47 Comparator(s).
+Unit <lab4_2> synthesized.
+
+
+Synthesizing Unit <binary_to_BCD_add3>.
+    Related source file is "Board232.v".
+    Found 16x4-bit ROM for signal <out>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <binary_to_BCD_add3> synthesized.
+
+
+Synthesizing Unit <binary_to_BCD>.
+    Related source file is "Board232.v".
+Unit <binary_to_BCD> synthesized.
+
+
+Synthesizing Unit <Board232>.
+    Related source file is "Board232.v".
+WARNING:Xst:647 - Input <btn<2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <tmp_digit> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <gasoline_hundreds> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <diesel_hundreds> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16x7-bit ROM for signal <seg>.
+    Found 1-of-4 decoder for signal <an>.
+    Found 1-bit 4-to-1 multiplexer for signal <dp>.
+    Found 27-bit up counter for signal <mclk_counter>.
+    Found 19-bit up counter for signal <sevenseg_refresh_counter>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <Board232> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 15
+ 16x4-bit ROM                                          : 14
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 48
+ 3-bit adder                                           : 2
+ 3-bit adder carry out                                 : 2
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 18
+ 8-bit adder                                           : 12
+ 8-bit subtractor                                      : 12
+# Counters                                             : 2
+ 19-bit up counter                                     : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 40
+ 1-bit register                                        : 12
+ 3-bit register                                        : 2
+ 4-bit register                                        : 24
+ 8-bit register                                        : 2
+# Comparators                                          : 47
+ 3-bit comparator greater                              : 12
+ 3-bit comparator lessequal                            : 18
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 14
+ 4-bit comparator less                                 : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch isSetup hinder the constant cleaning in the block HH.
+   You should achieve better results by setting this init to 1.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 15
+ 16x4-bit ROM                                          : 14
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 48
+ 3-bit adder                                           : 2
+ 3-bit adder carry out                                 : 2
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 18
+ 8-bit adder                                           : 12
+ 8-bit subtractor                                      : 12
+# Counters                                             : 2
+ 19-bit up counter                                     : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 130
+ Flip-Flops                                            : 130
+# Comparators                                          : 47
+ 3-bit comparator greater                              : 12
+ 3-bit comparator lessequal                            : 18
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 14
+ 4-bit comparator less                                 : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch isSetup hinder the constant cleaning in the block lab4_2.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:2677 - Node <mclk_counter_24> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <mclk_counter_25> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <mclk_counter_26> of sequential type is unconnected in block <Board232>.
+
+Optimizing unit <Board232> ...
+
+Optimizing unit <lab4_2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Board232, actual ratio is 112.
+Optimizing block <Board232> to meet ratio 100 (+ 5) of 2448 slices :
+Area constraint is met for block <Board232>, final ratio is 103.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 173
+ Flip-Flops                                            : 173
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Board232.ngr
+Top Level Output File Name         : Board232
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 43
+
+Cell Usage :
+# BELS                             : 5351
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 41
+#      LUT2                        : 148
+#      LUT2_D                      : 46
+#      LUT2_L                      : 25
+#      LUT3                        : 691
+#      LUT3_D                      : 140
+#      LUT3_L                      : 80
+#      LUT4                        : 2764
+#      LUT4_D                      : 421
+#      LUT4_L                      : 503
+#      MUXCY                       : 125
+#      MUXF5                       : 222
+#      MUXF6                       : 1
+#      VCC                         : 1
+#      XORCY                       : 139
+# FlipFlops/Latches                : 173
+#      FD                          : 43
+#      FDE                         : 113
+#      FDRE                        : 1
+#      FDRSE                       : 16
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 41
+#      IBUF                        : 11
+#      OBUF                        : 30
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250ecp132-5 
+
+ Number of Slices:                     2504  out of   2448   102% (*) 
+ Number of Slice Flip Flops:            173  out of   4896     3%  
+ Number of 4 input LUTs:               4862  out of   4896    99%  
+ Number of IOs:                          43
+ Number of bonded IOBs:                  42  out of     92    45%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+mclk                               | BUFGP                       | 43    |
+clk1(clk1:O)                       | BUFG(*)(HH/diesel_queue_7_0)| 130   |
+-----------------------------------+-----------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 42.536ns (Maximum Frequency: 23.510MHz)
+   Minimum input arrival time before clock: 20.961ns
+   Maximum output required time after clock: 13.384ns
+   Maximum combinational path delay: 10.191ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mclk'
+  Clock period: 4.088ns (frequency: 244.648MHz)
+  Total number of paths / destination ports: 490 / 43
+-------------------------------------------------------------------------
+Delay:               4.088ns (Levels of Logic = 24)
+  Source:            mclk_counter_1 (FF)
+  Destination:       mclk_counter_23 (FF)
+  Source Clock:      mclk rising
+  Destination Clock: mclk rising
+
+  Data Path: mclk_counter_1 to mclk_counter_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.514   0.509  mclk_counter_1 (mclk_counter_1)
+     LUT1:I0->O            1   0.612   0.000  Mcount_mclk_counter_cy<1>_rt (Mcount_mclk_counter_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  Mcount_mclk_counter_cy<1> (Mcount_mclk_counter_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_mclk_counter_cy<2> (Mcount_mclk_counter_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<3> (Mcount_mclk_counter_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<4> (Mcount_mclk_counter_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<5> (Mcount_mclk_counter_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<6> (Mcount_mclk_counter_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<7> (Mcount_mclk_counter_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<8> (Mcount_mclk_counter_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<9> (Mcount_mclk_counter_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<10> (Mcount_mclk_counter_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<11> (Mcount_mclk_counter_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<12> (Mcount_mclk_counter_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<13> (Mcount_mclk_counter_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<14> (Mcount_mclk_counter_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<15> (Mcount_mclk_counter_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<16> (Mcount_mclk_counter_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<17> (Mcount_mclk_counter_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<18> (Mcount_mclk_counter_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<19> (Mcount_mclk_counter_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<20> (Mcount_mclk_counter_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<21> (Mcount_mclk_counter_cy<21>)
+     MUXCY:CI->O           0   0.051   0.000  Mcount_mclk_counter_cy<22> (Mcount_mclk_counter_cy<22>)
+     XORCY:CI->O           1   0.699   0.000  Mcount_mclk_counter_xor<23> (Result<23>)
+     FD:D                      0.268          mclk_counter_23
+    ----------------------------------------
+    Total                      4.088ns (3.579ns logic, 0.509ns route)
+                                       (87.5% logic, 12.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk1'
+  Clock period: 42.536ns (frequency: 23.510MHz)
+  Total number of paths / destination ports: 71622833732 / 240
+-------------------------------------------------------------------------
+Delay:               42.536ns (Levels of Logic = 40)
+  Source:            HH/gasoline_2 (FF)
+  Destination:       HH/total_gasoline_needed_7 (FF)
+  Source Clock:      clk1 rising
+  Destination Clock: clk1 rising
+
+  Data Path: HH/gasoline_2 to HH/total_gasoline_needed_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q            338   0.514   1.224  HH/gasoline_2 (HH/gasoline_2)
+     LUT2:I1->O            2   0.612   0.410  HH/Madd_add0000_addsub0000_lut<2>1 (HH/Madd_add0000_addsub0000_lut<2>)
+     LUT4:I2->O          475   0.612   1.195  HH/Madd_add0000_addsub0000_xor<2>11 (HH/add0000_addsub0000<2>)
+     LUT4_D:I3->O        112   0.612   1.124  HH/old_n_cars_in_gasoline_queue_3_cmp_lt00001 (HH/old_n_cars_in_gasoline_queue_3_cmp_lt0000)
+     LUT3:I2->O            6   0.612   0.599  HH/_old_n_cars_in_diesel_queue_4<0>1 (HH/Msub_old_n_cars_in_diesel_queue_8_sub0000_cy<0>)
+     LUT4:I2->O            8   0.612   0.646  HH/old_n_cars_in_diesel_queue_8_cmp_gt00001 (HH/old_n_cars_in_diesel_queue_8_cmp_gt0000)
+     LUT4_D:I3->O          9   0.612   0.700  HH/_old_n_cars_in_diesel_queue_8<0>311 (HH/N2157)
+     LUT4_L:I3->LO         1   0.612   0.103  HH/_old_n_cars_in_diesel_queue_8<2>_SW0 (N276)
+     LUT4:I3->O            8   0.612   0.646  HH/_old_n_cars_in_diesel_queue_8<2> (HH/_old_n_cars_in_diesel_queue_8<2>)
+     LUT4:I3->O           22   0.612   0.992  HH/old_n_cars_in_diesel_queue_12_cmp_gt00001 (HH/old_n_cars_in_diesel_queue_12_cmp_gt0000)
+     LUT4_D:I3->O         46   0.612   1.080  HH/diesel_queue_0_mux0002<0>11 (HH/N10)
+     LUT4:I3->O            1   0.612   0.360  HH/_old_n_cars_in_diesel_queue_12<3>26_SW0 (N1228)
+     LUT4_D:I3->LO         1   0.612   0.103  HH/_old_n_cars_in_diesel_queue_12<3>55 (N2013)
+     LUT4:I3->O           11   0.612   0.796  HH/old_n_cars_in_diesel_queue_16_cmp_gt00001 (HH/old_n_cars_in_diesel_queue_16_cmp_gt0000)
+     LUT4_D:I3->O         41   0.612   1.078  HH/diesel_queue_0_mux0003<0>11 (HH/N12)
+     LUT4:I3->O            1   0.612   0.387  HH/_old_n_cars_in_diesel_queue_16<2>45 (HH/_old_n_cars_in_diesel_queue_16<2>45)
+     LUT4:I2->O            4   0.612   0.651  HH/_old_n_cars_in_diesel_queue_16<2>53 (HH/_old_n_cars_in_diesel_queue_16<2>)
+     LUT4_D:I0->O         16   0.612   0.882  HH/old_n_cars_in_diesel_queue_20_cmp_gt00001 (HH/old_n_cars_in_diesel_queue_20_cmp_gt0000)
+     LUT4_D:I3->O          3   0.612   0.481  HH/_old_n_cars_in_diesel_queue_20<1>11 (HH/N43)
+     LUT4:I2->O            1   0.612   0.387  HH/_old_n_cars_in_diesel_queue_20<2>43 (HH/_old_n_cars_in_diesel_queue_20<2>43)
+     LUT4:I2->O            5   0.612   0.541  HH/_old_n_cars_in_diesel_queue_20<2>51 (HH/_old_n_cars_in_diesel_queue_20<2>)
+     LUT4:I3->O           10   0.612   0.753  HH/mux0005_cmp_gt00001 (HH/mux0005_cmp_gt0000)
+     LUT4_L:I3->LO         1   0.612   0.103  HH/_mux0005_SW0 (N282)
+     LUT4:I3->O           41   0.612   1.078  HH/_mux0005 (HH/_mux0005)
+     LUT4_D:I3->LO         1   0.612   0.169  HH/_COND_2671 (N1674)
+     LUT2:I1->O            8   0.612   0.646  HH/_COND_2674 (HH/_COND_26)
+     LUT4_D:I3->LO         1   0.612   0.103  HH/total_gasoline_needed_mux0001<7>2531 (N1833)
+     LUT4:I3->O            7   0.612   0.605  HH/total_gasoline_needed_mux0001<1>2111 (HH/N1579)
+     LUT4:I3->O            1   0.612   0.387  HH/total_gasoline_needed_mux0001<2>528 (HH/total_gasoline_needed_mux0001<2>528)
+     LUT3_L:I2->LO         1   0.612   0.103  HH/total_gasoline_needed_mux0001<2>530 (HH/total_gasoline_needed_mux0001<2>530)
+     LUT4:I3->O            1   0.612   0.387  HH/total_gasoline_needed_mux0001<2>615 (HH/total_gasoline_needed_mux0001<2>615)
+     LUT3_L:I2->LO         1   0.612   0.103  HH/total_gasoline_needed_mux0001<2>643 (HH/total_gasoline_needed_mux0001<2>643)
+     LUT4:I3->O            1   0.612   0.426  HH/total_gasoline_needed_mux0001<2>688 (HH/total_gasoline_needed_mux0001<2>)
+     LUT2:I1->O            1   0.612   0.000  HH/Madd_total_gasoline_needed_share0000_lut<2> (HH/Madd_total_gasoline_needed_share0000_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  HH/Madd_total_gasoline_needed_share0000_cy<2> (HH/Madd_total_gasoline_needed_share0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<3> (HH/Madd_total_gasoline_needed_share0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<4> (HH/Madd_total_gasoline_needed_share0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<5> (HH/Madd_total_gasoline_needed_share0000_cy<5>)
+     MUXCY:CI->O           0   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<6> (HH/Madd_total_gasoline_needed_share0000_cy<6>)
+     XORCY:CI->O           1   0.699   0.387  HH/Madd_total_gasoline_needed_share0000_xor<7> (HH/total_gasoline_needed_share0000<7>)
+     LUT3:I2->O            1   0.612   0.000  HH/total_gasoline_needed_mux0000<7>192 (HH/total_gasoline_needed_mux0000<7>)
+     FDRSE:D                   0.268          HH/total_gasoline_needed_7
+    ----------------------------------------
+    Total                     42.536ns (22.899ns logic, 19.637ns route)
+                                       (53.8% logic, 46.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk1'
+  Total number of paths / destination ports: 178619 / 291
+-------------------------------------------------------------------------
+Offset:              20.961ns (Levels of Logic = 28)
+  Source:            sw<4> (PAD)
+  Destination:       HH/total_gasoline_needed_7 (FF)
+  Destination Clock: clk1 rising
+
+  Data Path: sw<4> to HH/total_gasoline_needed_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            31   1.106   1.142  sw_4_IBUF (sw_4_IBUF)
+     LUT4:I1->O            1   0.612   0.000  HH/Madd_old_total_gasoline_needed_29_add0000_lut<0> (HH/Madd_old_total_gasoline_needed_29_add0000_lut<0>)
+     XORCY:LI->O           6   0.458   0.721  HH/Madd_old_total_gasoline_needed_29_add0000_xor<0> (HH/old_total_gasoline_needed_29_add0000<0>)
+     LUT4:I0->O            1   0.612   0.000  HH/Madd_old_total_gasoline_needed_30_add0000_lut<0> (HH/Madd_old_total_gasoline_needed_30_add0000_lut<0>)
+     XORCY:LI->O           4   0.458   0.568  HH/Madd_old_total_gasoline_needed_30_add0000_xor<0> (HH/old_total_gasoline_needed_30_add0000<0>)
+     LUT4_D:I1->O          2   0.612   0.383  HH/_old_total_gasoline_needed_32<0>103 (HH/N479)
+     LUT4:I3->O            1   0.612   0.000  HH/Madd_old_total_gasoline_needed_31_add0000_lut<0> (HH/Madd_old_total_gasoline_needed_31_add0000_lut<0>)
+     XORCY:LI->O           4   0.458   0.651  HH/Madd_old_total_gasoline_needed_31_add0000_xor<0> (HH/old_total_gasoline_needed_31_add0000<0>)
+     LUT4:I0->O            1   0.612   0.387  HH/_old_total_gasoline_needed_31<0>96_SW0 (N1384)
+     LUT4:I2->O            1   0.612   0.000  HH/Madd_old_total_gasoline_needed_32_add0000_lut<0> (HH/Madd_old_total_gasoline_needed_32_add0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  HH/Madd_old_total_gasoline_needed_32_add0000_cy<0> (HH/Madd_old_total_gasoline_needed_32_add0000_cy<0>)
+     XORCY:CI->O           3   0.699   0.481  HH/Madd_old_total_gasoline_needed_32_add0000_xor<1> (HH/old_total_gasoline_needed_32_add0000<1>)
+     LUT4:I2->O            1   0.612   0.000  HH/Madd_old_total_gasoline_needed_33_add0000_lut<1> (HH/Madd_old_total_gasoline_needed_33_add0000_lut<1>)
+     XORCY:LI->O           2   0.458   0.383  HH/Madd_old_total_gasoline_needed_33_add0000_xor<1> (HH/old_total_gasoline_needed_33_add0000<1>)
+     LUT4:I3->O            1   0.612   0.426  HH/total_gasoline_needed_mux0001<1>258_SW0 (N1382)
+     LUT4_L:I1->LO         1   0.612   0.130  HH/total_gasoline_needed_mux0001<1>272 (HH/total_gasoline_needed_mux0001<1>272)
+     LUT4:I2->O            1   0.612   0.509  HH/total_gasoline_needed_mux0001<1>2_SW0 (N1196)
+     LUT3_L:I0->LO         1   0.612   0.130  HH/total_gasoline_needed_mux0001<1>299 (HH/total_gasoline_needed_mux0001<1>299)
+     LUT4:I2->O            1   0.612   0.426  HH/total_gasoline_needed_mux0001<1>824 (HH/total_gasoline_needed_mux0001<1>)
+     LUT2:I1->O            1   0.612   0.000  HH/Madd_total_gasoline_needed_share0000_lut<1> (HH/Madd_total_gasoline_needed_share0000_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  HH/Madd_total_gasoline_needed_share0000_cy<1> (HH/Madd_total_gasoline_needed_share0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<2> (HH/Madd_total_gasoline_needed_share0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<3> (HH/Madd_total_gasoline_needed_share0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<4> (HH/Madd_total_gasoline_needed_share0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<5> (HH/Madd_total_gasoline_needed_share0000_cy<5>)
+     MUXCY:CI->O           0   0.052   0.000  HH/Madd_total_gasoline_needed_share0000_cy<6> (HH/Madd_total_gasoline_needed_share0000_cy<6>)
+     XORCY:CI->O           1   0.699   0.387  HH/Madd_total_gasoline_needed_share0000_xor<7> (HH/total_gasoline_needed_share0000<7>)
+     LUT3:I2->O            1   0.612   0.000  HH/total_gasoline_needed_mux0000<7>192 (HH/total_gasoline_needed_mux0000<7>)
+     FDRSE:D                   0.268          HH/total_gasoline_needed_7
+    ----------------------------------------
+    Total                     20.961ns (14.237ns logic, 6.723ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
+  Total number of paths / destination ports: 109 / 12
+-------------------------------------------------------------------------
+Offset:              8.313ns (Levels of Logic = 5)
+  Source:            sevenseg_refresh_counter_17 (FF)
+  Destination:       seg<2> (PAD)
+  Source Clock:      mclk rising
+
+  Data Path: sevenseg_refresh_counter_17 to seg<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              17   0.514   1.045  sevenseg_refresh_counter_17 (sevenseg_refresh_counter_17)
+     LUT4:I0->O            1   0.612   0.360  Mmux__old_tmp_digit_2_43_SW0 (N344)
+     LUT4:I3->O            1   0.612   0.000  Mmux__old_tmp_digit_2_43 (Mmux__old_tmp_digit_2_43)
+     MUXF5:I0->O           7   0.278   0.754  Mmux__old_tmp_digit_2_2_f5_2 (_old_tmp_digit_2<3>)
+     LUT4:I0->O            1   0.612   0.357  Mrom_seg21 (seg_2_OBUF)
+     OBUF:I->O                 3.169          seg_2_OBUF (seg<2>)
+    ----------------------------------------
+    Total                      8.313ns (5.797ns logic, 2.516ns route)
+                                       (69.7% logic, 30.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
+  Total number of paths / destination ports: 10834 / 16
+-------------------------------------------------------------------------
+Offset:              13.384ns (Levels of Logic = 9)
+  Source:            HH/total_diesel_needed_7 (FF)
+  Destination:       seg<5> (PAD)
+  Source Clock:      clk1 rising
+
+  Data Path: HH/total_diesel_needed_7 to seg<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRSE:C->Q           27   0.514   1.224  HH/total_diesel_needed_7 (HH/total_diesel_needed_7)
+     LUT4:I0->O            4   0.612   0.651  b2bcd2/m2/Mrom_out11 (b2bcd2/c2<0>)
+     LUT4:I0->O            4   0.612   0.651  b2bcd2/m3/Mrom_out111 (b2bcd2/c3<1>)
+     LUT4:I0->O            4   0.612   0.651  b2bcd2/m4/Mrom_out11 (b2bcd2/c4<0>)
+     LUT4:I0->O            1   0.612   0.509  old_tmp_digit_2_mux0003<2>43_SW0 (N336)
+     LUT4:I0->O            1   0.612   0.426  old_tmp_digit_2_mux0003<2>43 (old_tmp_digit_2_mux0003<2>43)
+     LUT4:I1->O            1   0.612   0.000  Mmux__old_tmp_digit_2_42 (Mmux__old_tmp_digit_2_42)
+     MUXF5:I0->O           7   0.278   0.671  Mmux__old_tmp_digit_2_2_f5_1 (_old_tmp_digit_2<2>)
+     LUT4:I1->O            1   0.612   0.357  Mrom_seg51 (seg_5_OBUF)
+     OBUF:I->O                 3.169          seg_5_OBUF (seg<5>)
+    ----------------------------------------
+    Total                     13.384ns (8.245ns logic, 5.139ns route)
+                                       (61.6% logic, 38.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 126 / 7
+-------------------------------------------------------------------------
+Delay:               10.191ns (Levels of Logic = 8)
+  Source:            btn<1> (PAD)
+  Destination:       seg<6> (PAD)
+
+  Data Path: btn<1> to seg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.106   1.031  btn_1_IBUF (btn_1_IBUF)
+     LUT3:I0->O            2   0.612   0.383  old_tmp_digit_2_mux0002<2>2 (old_tmp_digit_2_mux0002<2>2)
+     LUT4:I3->O            1   0.612   0.000  old_tmp_digit_2_mux0002<2>93_F (N968)
+     MUXF5:I0->O           1   0.278   0.387  old_tmp_digit_2_mux0002<2>93 (old_tmp_digit_2_mux0002<2>)
+     LUT3:I2->O            1   0.612   0.000  Mmux__old_tmp_digit_2_41 (Mmux__old_tmp_digit_2_41)
+     MUXF5:I0->O           7   0.278   0.754  Mmux__old_tmp_digit_2_2_f5_0 (_old_tmp_digit_2<1>)
+     LUT4:I0->O            1   0.612   0.357  Mrom_seg41 (seg_4_OBUF)
+     OBUF:I->O                 3.169          seg_4_OBUF (seg<4>)
+    ----------------------------------------
+    Total                     10.191ns (7.279ns logic, 2.912ns route)
+                                       (71.4% logic, 28.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 1838.00 secs
+Total CPU time to Xst completion: 1837.97 secs
+ 
+--> 
+
+Total memory usage is 6695824 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/ZEYNEP/Okul/ceng232/lab4.2/a/testbenchROM_isim_beh.exe" -prj "D:/ZEYNEP/Okul/ceng232/lab4.2/a/testbenchROM_beh.prj" "work.testbenchROM" "work.glbl" 

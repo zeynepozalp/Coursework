@@ -1,0 +1,3 @@
+D:/ZEYNEP/Okul/ceng242/hw4/PL-HW4-Tester-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/ZEYNEP/Okul/ceng242/hw4/PL-HW4-Tester-master/cmake-build-debug/CMakeFiles/PL_HW4_Tester_master.dir
+D:/ZEYNEP/Okul/ceng242/hw4/PL-HW4-Tester-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir

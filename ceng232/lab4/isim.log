@@ -1,0 +1,41 @@
+ISim log file
+Running: D:\ZEYNEP\Okul\ceng232\lab4\testbenchRAM_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/ZEYNEP/Okul/ceng232/lab4/testbenchRAM_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Starting Testbench
+Finished circuit initialization process.
+RamDataOut after AND 100000001000001000000010
+RamDataOut after OR 101001111110011111100110
+RamDataOut after XOR 001001110110010111100100
+RamDataOut after ADD 100100001101001001010001
+RamDataOut after ADD_OVERFLOW 111111111111111111111111
+RamDataOut after SUB_UNDERFLOW 000000000000000000000000
+RamDataOut after SUB 011100101011010000110011
+RamDataOut after INC 100000101100010001000011
+RamDataOut after INC_OVERFLOW 111111111111111111111110
+RamDataOut after DEC 100000001100001001000001
+RamDataOut after DEC_UNDERFLOW 000000000000000000000001
+RamDataOut after ROTL 000000101000011010000100
+Starting to read 12 RAM cells:
+RamDataOut at cell           0: 100000001000001000000010
+RamDataOut at cell           1: 101001111110011111100110
+RamDataOut at cell           2: 001001110110010111100100
+RamDataOut at cell           3: 100100001101001001010001
+RamDataOut at cell           4: 111111111111111111111111
+RamDataOut at cell           5: 000000000000000000000000
+RamDataOut at cell           6: 011100101011010000110011
+RamDataOut at cell           7: 100000101100010001000011
+RamDataOut at cell           8: 111111111111111111111110
+RamDataOut at cell           9: 100000001100001001000001
+RamDataOut at cell          10: 000000000000000000000001
+RamDataOut at cell          11: 000000101000011010000100
+Result          12
+Stopped at time : 149 ns : File "D:/ZEYNEP/Okul/ceng232/lab4/testbenchRAM.v" Line 262

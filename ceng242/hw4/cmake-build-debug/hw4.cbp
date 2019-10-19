@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="hw4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hw4">
+				<Option output="D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/hw4.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/ZEYNEP/Okul/ceng242/hw4/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 hw4"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hw4/fast">
+				<Option output="D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/hw4.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/ZEYNEP/Okul/ceng242/hw4/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 hw4/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/ZEYNEP/Okul/ceng242/hw4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Archer.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Archer.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Board.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Board.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Constants.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Coordinate.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Fighter.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Fighter.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Game.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Game.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/InputParser.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/InputParser.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Player.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Player.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Priest.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Priest.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Scout.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Scout.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Tank.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/Tank.h">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/testBoard.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/testGame.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/testPlayer.cpp">
+			<Option target="hw4"/>
+		</Unit>
+		<Unit filename="D:/ZEYNEP/Okul/ceng242/hw4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

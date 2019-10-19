@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Sample.tid (Syntax Colored)</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="tid">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="koehler">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+* { font-size: 1em; }
+.tidFilename { color: #ffaf00; text-decoration: underline; }
+.tidString { color: #d787ff; }
+.tidRow { color: #00d7ff; text-decoration: underline; }
+.tidCol { color: #d75f00; }
+.Statement { color: #ffff60; font-weight: bold; }
+.tidRed { color: #d70000; }
+.tidGreen { color: #00d700; }
+.tidBlue { color: #87afff; }
+.tidWidth { color: #000000; background-color: #0087d7; }
+.tidHeight { color: #000000; background-color: #ffff5f; }
+.tidAngle { color: #000000; background-color: #00ffd7; }
+.tidRadius { color: #ff00ff; }
+.tidCount { color: #875f00; text-decoration: underline; }
+.Comment { color: #80a0ff; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment">#----------------------------------------------------------------------------------------------------------------------</span>
+<span class="Comment"># Temizer (Textual) Image Description File :</span>
+<span class="Comment">#</span>
+<span class="Comment"># Lines that start with (some possible whitespace characters followed by) '#' character are comments.</span>
+<span class="Comment"># Empty lines (all whitespaces) should also be skipped.</span>
+<span class="Comment">#</span>
+<span class="Comment"># List of commands :</span>
+<span class="Comment">#</span>
+<span class="Comment"># Image     &lt;width&gt; &lt;height&gt; &lt;fileName&gt;</span>
+<span class="Comment"># SetColor  &lt;red&gt; &lt;green&gt; &lt;blue&gt;</span>
+<span class="Comment"># Clear</span>
+<span class="Comment"># Point     &lt;row&gt; &lt;col&gt;</span>
+<span class="Comment"># Line      &lt;fromRow&gt; &lt;fromCol&gt; &lt;toRow&gt; &lt;toCol&gt;</span>
+<span class="Comment"># Arc       &lt;centerRow&gt; &lt;centerCol&gt; &lt;startAngleDegrees&gt; &lt;endAngleDegrees&gt; &lt;radius&gt; &lt;numberOfSegments&gt;</span>
+<span class="Comment"># Rectangle &lt;topLeftRow&gt; &lt;topLeftCol&gt; &lt;width&gt; &lt;height&gt;</span>
+<span class="Comment"># Polygon   &lt;centerRow&gt; &lt;centerCol&gt; &lt;radius&gt; &lt;numberOfSides&gt;</span>
+<span class="Comment"># Fill      &lt;startRow&gt; &lt;startCol&gt;</span>
+<span class="Comment"># Print     &lt;topLeftRow&gt; &lt;topLeftCol&gt; &lt;String&gt;</span>
+<span class="Comment">#</span>
+<span class="Comment">#----------------------------------------------------------------------------------------------------------------------</span>
+
+<span class="Comment"># Create and initialize canvas</span>
+
+<span class="Statement">Image</span> <span class="tidWidth">400</span> <span class="tidHeight">300</span> <span class="tidFilename">Sample.ppm</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">220</span> <span class="tidGreen">255</span> <span class="tidBlue">220</span>
+
+<span class="Statement">Clear</span>
+
+<span class="Comment">#----------------------------------------------------------------------------------------------------------------------</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">255</span> <span class="tidGreen">0</span> <span class="tidBlue">0</span>
+<span class="Statement">Point</span> <span class="tidRow">100</span> <span class="tidCol">20</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">0</span> <span class="tidGreen">255</span> <span class="tidBlue">0</span>
+<span class="Statement">Line</span> <span class="tidRow">100</span> <span class="tidCol">50</span> <span class="tidRow">60</span> <span class="tidCol">350</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">0</span> <span class="tidGreen">0</span> <span class="tidBlue">255</span>
+<span class="Statement">Arc</span> <span class="tidRow">150</span> <span class="tidCol">80</span> <span class="tidAngle">45</span> <span class="tidAngle">315</span> <span class="tidRadius">25</span> <span class="tidCount">10</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">0</span> <span class="tidGreen">0</span> <span class="tidBlue">0</span>
+<span class="Statement">Rectangle</span> <span class="tidRow">200</span> <span class="tidCol">150</span> <span class="tidWidth">50</span> <span class="tidHeight">40</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">0</span> <span class="tidGreen">255</span> <span class="tidBlue">255</span>
+<span class="Statement">Polygon</span> <span class="tidRow">150</span> <span class="tidCol">280</span> <span class="tidRadius">40</span> <span class="tidCount">18</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">255</span> <span class="tidGreen">255</span> <span class="tidBlue">0</span>
+<span class="Statement">Fill</span> <span class="tidRow">150</span> <span class="tidCol">280</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">255</span> <span class="tidGreen">0</span> <span class="tidBlue">255</span>
+<span class="Statement">Print</span>  <span class="tidRow">5</span> <span class="tidCol">5</span> <span class="tidString">abcdefghijklmnopqrstuvwxyz</span>
+<span class="Statement">Print</span> <span class="tidRow">20</span> <span class="tidCol">5</span> <span class="tidString">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+<span class="Statement">Print</span> <span class="tidRow">35</span> <span class="tidCol">5</span> <span class="tidString">0123456789 -+*/ &lt;=&gt; (){}[]</span>
+<span class="Statement">Print</span> <span class="tidRow">50</span> <span class="tidCol">5</span> <span class="tidString">.,:;!?  `'&quot;^  _~%$&amp;@#\|</span>
+
+<span class="Comment">#----------------------------------------------------------------------------------------------------------------------</span>
+
+<span class="Comment"># Name, sign and date artwork</span>
+
+<span class="Statement">SetColor</span> <span class="tidRed">128</span> <span class="tidGreen">128</span> <span class="tidBlue">128</span>
+<span class="Statement">Print</span> <span class="tidRow">269</span> <span class="tidCol">5</span> <span class="tidString">TID Sample</span>
+<span class="Statement">Print</span> <span class="tidRow">284</span> <span class="tidCol">5</span> <span class="tidString">by Selim Temizer (May 19, 2018)</span>
+
+<span class="Comment">#----------------------------------------------------------------------------------------------------------------------</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

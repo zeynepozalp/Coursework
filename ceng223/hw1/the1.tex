@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+%\usepackage{fitch}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Zeynep Özalp \\
+Id Number : 2237691 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\subsection*{1.1}
+
+\begin{table}[H]
+\small
+\centering
+\caption{ a) Tautology }
+\label{table:example}
+\begin{tabular}
+{|c|c|c|c|c|c|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{p} & \textbf{q} & \textbf{r} & \textbf{$\neg$ r} & \textbf{p $\rightarrow$ q} & \textbf{p $\wedge$ $\neg$ r} & \textbf{(p $\rightarrow$ q) $\leftrightarrow$ (p $\wedge$ $\neg$ r)} & \textbf{$\neg$ (q $\wedge$ r)}  & \textbf{RESULT}\\
+\hline 
+T & T & T & F & T & F & F & F & T \\			%% separate columns by &
+T & T & F & T & T & T & T & T & T \\
+T & F & T & F & F & F & T & T & T \\
+T & F & F & T & F & T & F & T & T \\
+F & T & T & F & T & F & F & F & T \\
+F & T & F & T & T & F & F & T & T \\
+F & F & T & F & T & F & F & T & T \\
+F & F & F & T & T & F & F & T & T \\
+
+\hline 
+
+\end{tabular}
+\end{table}
+\quad \textbf{RESULT:} $\textbf{((p $\rightarrow$ q) $\leftrightarrow$ (p $\wedge$ $\neg$ r))} \rightarrow \textbf{$\neg$ (p $\wedge$ r)}$
+
+\begin{table}[H]
+\small
+\centering
+\caption{ b) Contradiction }
+\label{table:example}
+\begin{tabular}
+{|c|c|c|c|c|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{p} & \textbf{q} & \textbf{$\neg$ p} & \textbf{p $\vee$ q} & \textbf{p $\rightarrow$ q} & \textbf{(p $\vee$ q) $\wedge$ (p $\rightarrow$ q)} & \textbf{q $\rightarrow$ $\neg$ p} & \textbf{RESULT}\\
+\hline 
+T & T & F & T & T & T & F & F \\			%% separate columns by &
+T & F & F & T & F & F & T & F \\
+F & T & T & T & T & T & T & F \\
+F & F & T & F & T & F & T & F \\
+\hline 
+
+\end{tabular}
+\end{table}
+\textbf{RESULT:} \textbf{$\neg$((p $\vee$ q) $\wedge$ (p $\rightarrow$ q) $\vee$ (\textbf{q $\rightarrow$ $\neg$ p}))}
+
+\subsection*{1.2}
+\textbf{a)} This argument is \textbf{invalid}. Let $D=\{-1,1\}$ be a domain for $P(x)$ and $Q(x)$. Suppose $P(x) : x<0 $ and $Q(x) : x>0 $. Note that $P(x)$ is true for $x=-1$ and $Q(x)$ is true for $x=1$ in domain $D$. So, there exists at least one $x$ which $P(x)$ is true and there exists at least some other $x$ which $Q(x)$ is true. Note that first and second quantifiers' scopes are different on the left hand side so that one can choose different $x$ values. Thus, the argument $\exists x P(x) \wedge \exists x Q(x)$ is valid for different choices of $x$. However, since on the right hand side, one quantifier's scope is $(P(x) \wedge Q(x))$, one can choose only one $x$ for both $P(x)$ and $Q(x)$. Therefore, the argument $\exists x (P(x) \wedge Q(x))$ is invalid for $x=-1$ and $x=1$. In conclusion, the argument $\exists x P(x) \wedge \exists x Q(x) \rightarrow \exists x (P(x) \wedge Q(x))$ is invalid.\\\\
+\textbf{b)} This argument is \textbf{valid}. This argument is invalid if one can prove that the left hand side is true but the right hand side is false. Choose some arbitrary constant c in the domain of $P(x)$ and suppose the left hand side is true. This means for all choices of $x$, $P(x)$ is true; moreover, $P(c)$ is true. So, there exist at least one $x$ that $P(x)$ is true. Thus, the argument $\exists x P(x)$ is true. Hence, if the left hand side is true, the right hand side must be true and the argument $\forall x P(x) \rightarrow \exists x P(x)$ is valid.
+
+
+\section*{Answer 2}
+\begin{table}[H]
+	\begin{tabular}{*6{l}}
+		$1.$ & $(\neg p \vee p) \rightarrow ((p \wedge \neg q) \rightarrow r)$ &  & Premise \\ 
+		$2.$ & $T \rightarrow ((p \wedge \neg q) \rightarrow r)$ &  & Negation Law\\ 
+		$3.$ & $\neg T \vee ((p \wedge \neg q) \rightarrow r)$ &  & Table 7/Line 1\\
+		$4.$ & $F \vee ((p \wedge \neg q) \rightarrow r)$ &  & Negation\\
+		$5.$ & $(p \wedge \neg q) \rightarrow r$ &  & Identity Law\\ 
+		$6.$ & $\neg (p \wedge \neg q) \vee r$ &  & Table 7/Line 1\\
+		$7.$ & $(\neg p \vee q) \vee r$ & & De Morgan's Law\\ 
+		$8.$ & $\neg p \vee q \vee r$ & & Associative Law\\
+		$9.$ & $q \vee r \vee \neg p$ & & Commutative Law \\
+		$10.$ & $(q \vee r) \vee \neg p$ & & Associative Law \\ 
+	\end{tabular}
+\end{table}
+
+
+\section*{Answer 3}
+1. $\forall x (W(x) \rightarrow Has\_CS\_Degree(x))$ \\
+2. $\forall x \forall y ((Phd(x) \wedge Phd(y) \wedge W(x) \wedge W(y) \wedge (x \neq y))\rightarrow Knows(x,y))$\\
+3. $\forall x ((W(x) \wedge (x \neq Cenk)) \rightarrow Older(Cenk,x))$\\
+4. $\forall x ((W(x) \wedge (x \neq Selen))\rightarrow Phd(x))$\\
+5. $\neg (\forall x \forall y ((W(x) \wedge W(y) \wedge (x\neq y))\rightarrow Knows(x,y)))$\\
+6. $(\exists x Phd(x) \wedge \exists y Phd(y) \wedge (x\neq y))\rightarrow \forall z ((z \neq x)\wedge (z \neq y)\rightarrow \neg Phd(z))$\\
+7. $(\exists x \exists y \exists z ((x \neq y \neq z \neq Gizem) \wedge Older(x,Gizem) \wedge Older(y,Gizem) \wedge Older(z,Gizem)))$\\
+8. $\exists x (Phd(x) \wedge W(x))\rightarrow (\forall y ((y \neq x) \rightarrow \neg(Phd(y) \wedge W(y))))$
+
+\section*{Answer 4}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lllllll}
+		1. & & & $(p \rightarrow r) \vee (q \rightarrow r)$ & premise & & \\ \cline{3-7}
+		2. & \multicolumn{1}{c|}{} & & $p \rightarrow r$ & assumed & & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		3. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $p \wedge q$ & assumed & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\
+		4. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $p$ & $\wedge e, 3$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\
+		5. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $r$ & $\rightarrow e,  2, 4$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		6. & \multicolumn{1}{c|}{} & & $(p \wedge q) \rightarrow r$ & $\rightarrow i, 3-5$ & & \multicolumn{1}{c|}{} \\ \cline{3-7} \\ \cline{3-7}
+		7. & \multicolumn{1}{c|}{} & & $q \rightarrow r$ & assumed & & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		8. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $p \wedge q$ & assumed & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\
+		9. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $q$ & $\wedge e, 8$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\
+		10. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $r$ & $\rightarrow e, 7, 9$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		11. & \multicolumn{1}{c|}{} & & $(p \wedge q) \rightarrow r$ & $\rightarrow i, 8-10$ & & \multicolumn{1}{c|}{} \\ \cline{3-7}
+		12. & & & $(p \wedge q) \rightarrow r$ & $\vee e, 1, 2-6, 7-11$ & & \\
+		
+	\end{tabular}
+\end{table}
+
+
+\section*{Answer 5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lllllll}
+		1. & & & $(\neg p \vee \neg q)$ & premise & & \\ \cline{3-7}
+		2. & \multicolumn{1}{c|}{} & & $p \wedge q$ & assumed & & \multicolumn{1}{c|}{} \\ 
+		3. & \multicolumn{1}{c|}{} &  & $p$ & $\wedge e, 2$ &  & \multicolumn{1}{c|}{} \\
+		4. & \multicolumn{1}{c|}{} &  & $q$ & $\wedge e, 2$ &  & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		5. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $\neg p$ & assumed & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ 
+		6. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $\perp$ & $\neg e, 5, 3$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ 
+		7. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $r$ & $lemma \ "\perp  \ \vdash X"$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		& \multicolumn{1}{c|}{} &  &  &  &  & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		8. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $\neg q$ & assumed & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\
+		9. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $\perp$ & $\neg e, 8, 4$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\
+		10. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $r$ & $lemma \ "\perp  \ \vdash X"$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		11. & \multicolumn{1}{c|}{} & & $r$ & $\vee e, 1, 5-7, 8-10$ & & \multicolumn{1}{c|}{} \\ \cline{3-7}
+		12. & & & $(p \wedge q) \rightarrow r$ & $\rightarrow i, 2-11$ & & \\
+		
+	\end{tabular}
+\end{table}
+
+\textbf{Proof for $lemma \ "\perp  \ \vdash X"$ :} \\
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lllllll}
+		1. & & & $\perp$ & premise & & \\ \cline{3-7}
+		2. & \multicolumn{1}{c|}{} & & $\neg A$ & assumed & & \multicolumn{1}{c|}{} \\ 
+		3. & \multicolumn{1}{c|}{} &  & $\perp$ & $copy 1$ &  & \multicolumn{1}{c|}{} \\ \cline{3-7}
+		4. &  &  & $\neg \neg A$ & $\neg i, 2-3$ &  & \\ 
+		5. &  &  & $A$ & $\neg \neg e, 4$ &  &  \\ 
+		
+	\end{tabular}
+\end{table}
+
+\section*{Answer 6}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lllllll}
+		1. & & & $\forall x (P(x) \rightarrow (Q(x) \rightarrow R(x)))$ & premise & & \\
+		2. & & & $\exists x P(x)$ & premise & & \\  
+		3. & & & $\forall x (\neg R(x))$ & premise & & \\ \cline{3-7}
+		4. & \multicolumn{1}{c|}{} &  & $P(c)$ & assumed &  & \multicolumn{1}{c|}{} \\ 
+		5. & \multicolumn{1}{c|}{} & & $(P(c) \rightarrow (Q(c) \rightarrow R(c)))$ & $\forall e,1 $ &  & \multicolumn{1}{c|}{} \\ 
+		6. & \multicolumn{1}{c|}{} &  & $Q(c) \rightarrow R(c)$ & $\rightarrow e, 5, 4$ &  & \multicolumn{1}{c|}{} \\ 
+		7. & \multicolumn{1}{c|}{} &  & $\neg R(c)$ & $\forall e, 3$ &  & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		8. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $Q(c)$ & assumed & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\
+		9. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $R(c)$ & $\rightarrow e,6,8 $ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\
+		10. & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & $\perp$ & $\neg e, 9, 7$ & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \cline{4-6}
+		11. & \multicolumn{1}{c|}{} & & $\neg Q(c)$ & $\neg i,8-10$ & & \multicolumn{1}{c|}{} \\ 
+		12. & \multicolumn{1}{c|}{} & & $\exists x (\neg Q(x))$ & $\exists i,11$ & & \multicolumn{1}{c|}{} \\ \cline{3-7}
+		13. & & & $\exists x (\neg Q(x))$ & $\exists e, 2,4-12$ & & \\
+		
+	\end{tabular}
+\end{table}
+
+
+\end{document}
+
+​
+

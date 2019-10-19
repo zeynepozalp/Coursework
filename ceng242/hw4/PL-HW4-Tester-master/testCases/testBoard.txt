@@ -1,0 +1,23 @@
+Coordinate (6/2)in board? 0
+Coordinate (-2/1)in board? 0
+Coordinate (6/-2)in board? 0
+Coordinate (2/3)in board? 1
+Player on coordinate (5/3)? 1
+Player on coordinate (3/3)? 0
+ID of player on coordinate (4/4) 3
+Printing with ID
+
+__ __ __ __ __ Ch 
+__ __ __ __ __ __ 
+__ __ __ __ __ __ 
+__ __ __ __ __ 04 
+__ 00 02 __ 03 __ 
+__ 01 __ __ __ __ 
+Printing with class
+
+__ __ __ __ __ Ch 
+__ __ __ __ __ __ 
+__ __ __ __ __ __ 
+__ __ __ __ __ ta 
+__ AR SC __ pr __ 
+__ FI __ __ __ __ 

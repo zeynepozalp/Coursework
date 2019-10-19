@@ -1,0 +1,173 @@
+Total: 45pts
+
+CASE1: 5pts
+Mode=1X
+-------------------
+#total at least 1
+n gasoline pumps=0
+n diesel pumps=0
+Check invalid setup params=1 (Display 4 dots)
+-----------------------
+n gasoline pumps=4
+n diesel pumps=0
+Check invalid setup params=0 (Clear 4 dots)
+-----------------------
+#Total at most 6
+n gasoline pumps=4
+n diesel pumps=4
+Check invalid setup params=1 (Display 4 dots)
+-----------------------
+n gasoline pumps=4
+n diesel pumps=0
+Check invalid setup params=0 (Clear 4 dots)
+--------------------
+#Individual at most 6
+n gasoline pumps=7
+n diesel pumps=0
+Check invalid setup params=1 (Display 4 dots)
+
+
+
+CASE2: 5pts
+Mode=1X --setup
+n gasoline pumps=2
+n diesel pumps=2
+Mode=01  --car entrance
+-------------
+fuel type =0 --gasoline
+fuel_amount=0
+Check  invalid gasoline car
+-------------
+fuel type =1 --diesel
+fuel_amount=0
+Check  invalid diesel car
+------------------
+fuel type =0 --gasoline
+fuel_amount=1100 (12)
+Check  invalid gasoline car
+-------------
+
+
+
+
+CASE3: 10pts
+Mode=1X --setup
+n gasoline pumps=2
+n diesel pumps=2
+Mode=01  --car entrance
+-----Add Car 1
+fuel type =0 --gasoline
+fuel_amount=8
+Check leftmost Led (Ld7) is 0
+-----Add Car 2
+fuel type =0 --gasoline
+fuel_amount=7
+Check Ld7 and Ld6 are 0
+Check Ld5 and Ld4 are 1.
+Press btn1
+Check 7-seg is 14 00
+-----
+Mode=00 --sim
+Press btn0 cont.
+Check after each press
+7-seg is 12 00 when btn1 pressed
+7-seg is 10 00
+7-seg is 08 00
+7-seg is 06 00
+7-seg is 04 00
+7-seg is 02 00
+Press btn0
+7-seg is 00 00
+Check Ld7-4 are 1.
+
+
+
+CASE4: 10pts
+Mode=1X --setup
+n gasoline pumps=1
+n diesel pumps=0
+Mode=01  --car entrance
+-----Add Car 9 times
+fuel type =0 --gasoline
+fuel_amount=8
+Check leftmost Led (Ld7) is 0
+Check after each clock
+7-segs are _ 1 _ _
+increase until:
+7-segs are _ 8 _ _
+7-segs are 6 4 _ _ when btn1 pressed
+At that point
+Ld7 is 1
+Ld1 is 0 - queue warning
+pump is free, queue is full
+----- Add 1 car again
+Check:
+7-segs are _ 8 _ _
+7-segs are 7 2 _ _ when btn1 pressed
+At that point
+Ld7 is 0 - pump not free
+Ld1 is 0 - queue full
+----- Add 1 car again
+Check:
+7-segs are _ 8. _ _ 
+7-seg dp is on - invalid car
+7-segs are 7 1. _ _ when btn1 pressed
+At that point
+Ld7 is 0 - pump not free
+Ld1 is 0 - queue full
+
+
+CASE5: 10pts
+Mode=1X --setup
+n gasoline pumps=0
+n diesel pumps=2
+Mode=01  --car entrance
+-----Add Car 8 times with decreasing fuel_amount
+fuel type =1 --diesel
+fuel_amount=8 (decreases at each new car)
+//after adding 8 cars, continue below
+Check 7seg display is _ _ _ 6, btn1: _ _ 2 3
+
+------- Add 1 more car with fuel_amount=1 again
+Check 7-segs are _ _ _ 7
+Ld7 and Ld6 are 1
+
+------- Add 1 more car with fuel_amount=1 again
+Check 7-segs are _ _ _ 6, btn1: _ _ 2 3
+Check Ld7 and Ld6 are 0
+
+
+
+CASE6: 5pts
+Mode=1X --setup
+n gasoline pumps=2
+n diesel pumps=3
+Mode=01  --car entrance
+Ld7, Ld6, Ld5, Ld4, Ld3 are 1
+-----Add Car
+fuel type =0 --gasoline
+fuel_amount=8
+-----Add Car
+fuel type =1 --diesel
+fuel_amount=8
+Check 7-segs are _0_0, btn1: 0 7 0 8
+All Leds 01011011
+Ld7, Ld5,  are 0
+Ld6, Ld4, Ld3 are 1
+-----Invalid setup
+n gasoline pumps=4
+n diesel pumps=4
+Check invalid setup params=1 (Display 4 dots)
+Check 7-segs are _.0._.0., btn1: 0. 7. 0. 8.
+-----Add Car
+fuel type =1 --diesel
+fuel_amount=8
+Check 7-segs are _0_0, btn1: 0 6 1 5
+All Leds 01001011
+Ld7, Ld5, Ld4 are 0
+Ld6, Ld3 are 1
+-----Valid setup
+n gasoline pumps=2
+n diesel pumps=1
+Check All Leds 11100011
+Ld7, Ld6, Ld5 are 1

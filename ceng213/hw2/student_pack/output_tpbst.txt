@@ -1,0 +1,10 @@
+{}
+{}
+{}
+{"ceng213" : {"sec1" : "25", "sec2" : "26", "sec3" : "24"}, "ceng477" : {"sec1" : "49", "sec2" : "50"}}
+{"ceng213" : {"sec1" : "25", "sec2" : "26", "sec3" : "24"}}
+{"ceng477" : {"sec1" : "49", "sec2" : "50"}}
+{"ceng213" : {"sec1" : "25"}}
+{"ceng477" : {"sec1" : "49"}}
+{"ceng213" : {"sec1" : "25", "sec3" : "24"}, "ceng477" : {"sec1" : "49"}}
+Number of enrolled students in ceng213 - sec3 is 24

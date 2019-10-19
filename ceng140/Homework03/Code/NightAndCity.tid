@@ -1,0 +1,254 @@
+Image 400 300 NightAndCity.ppm
+SetColor 255 255 255
+Clear
+
+Fill 172 123
+Fill 275 119
+Polygon 266 326 14 121
+SetColor 59 162 244
+Arc 204 358 174 253 50 111
+SetColor 230 241 140
+SetColor 30 32 75
+Point 199 215
+Rectangle 256 344 132 7
+Point 79 20
+Fill 132 190
+SetColor 224 122 185
+Point 214 293
+Rectangle 193 151 40 89
+Rectangle 107 235 33 63
+SetColor 234 166 253
+SetColor 11 114 171
+Rectangle 189 285 76 36
+Rectangle 267 63 143 130
+SetColor 68 211 90
+Arc 118 150 77 5 65 53
+SetColor 4 42 229
+Arc 69 84 110 87 98 101
+Point 81 98
+Line 156 69 91 186
+Fill 299 159
+Point 118 61
+Rectangle 102 65 29 129
+Line 207 361 144 116
+SetColor 174 195 18
+Line 273 84 56 133
+Polygon 52 221 133 107
+Polygon 111 267 1 109
+Polygon 123 84 60 149
+Rectangle 297 13 49 70
+Polygon 141 173 124 121
+Polygon 69 171 140 89
+Fill 259 372
+SetColor 211 113 4
+Fill 133 14
+Polygon 290 317 133 52
+Point 192 202
+Line 31 268 293 257
+Fill 286 370
+Rectangle 180 240 104 55
+SetColor 110 22 175
+SetColor 24 170 213
+Polygon 298 37 52 54
+Rectangle 135 47 113 12
+Point 96 326
+Point 119 78
+Fill 58 74
+SetColor 25 124 210
+Fill 256 242
+Fill 34 154
+Arc 6 11 172 199 110 166
+Arc 63 136 307 324 102 10
+Arc 196 134 220 353 130 37
+Line 156 378 114 249
+Arc 288 295 353 5 37 117
+Line 23 385 294 11
+Polygon 139 270 44 57
+Rectangle 73 118 106 145
+Polygon 252 399 63 128
+SetColor 202 0 120
+SetColor 220 44 224
+Point 224 238
+Point 186 215
+Line 95 371 62 281
+SetColor 217 118 228
+SetColor 123 37 20
+SetColor 15 193 97
+Point 198 375
+Point 15 52
+Polygon 178 53 56 85
+Point 66 188
+Fill 103 261
+SetColor 128 228 43
+SetColor 132 248 0
+SetColor 153 11 23
+Polygon 277 50 67 113
+SetColor 45 232 123
+Arc 235 231 124 260 87 122
+Point 108 128
+Arc 126 367 254 137 86 82
+Line 100 100 264 88
+SetColor 31 230 105
+Fill 122 262
+Polygon 81 125 106 117
+Point 240 38
+Rectangle 145 334 30 93
+SetColor 119 8 151
+Line 159 95 64 199
+SetColor 91 159 179
+Point 244 286
+SetColor 130 125 190
+SetColor 42 255 135
+Arc 198 56 98 303 97 100
+Point 97 118
+SetColor 48 181 223
+Line 223 267 256 317
+Arc 244 148 137 265 60 168
+SetColor 183 70 191
+SetColor 229 152 46
+Arc 29 295 226 49 100 180
+SetColor 228 149 11
+Rectangle 247 318 32 101
+Point 104 324
+SetColor 178 61 240
+Point 116 75
+Line 187 173 85 20
+Point 186 272
+SetColor 67 202 93
+Line 128 369 217 287
+Point 205 88
+SetColor 141 245 165
+Point 50 142
+Polygon 136 248 31 83
+SetColor 91 136 239
+SetColor 104 207 93
+SetColor 36 210 158
+Rectangle 12 328 133 79
+Line 63 22 217 245
+SetColor 250 183 201
+SetColor 26 132 166
+Point 177 148
+Rectangle 88 230 131 7
+Polygon 147 212 133 48
+Line 135 279 35 344
+Point 97 224
+Fill 172 187
+Fill 132 205
+Point 69 292
+SetColor 41 224 245
+SetColor 248 221 51
+SetColor 66 92 182
+Point 58 82
+Point 226 312
+Point 157 97
+Polygon 277 61 116 111
+Point 65 153
+Arc 121 130 285 173 14 5
+Rectangle 202 216 139 19
+Line 105 47 80 340
+Line 195 146 97 96
+Rectangle 122 242 131 127
+Rectangle 118 324 70 122
+Fill 172 125
+SetColor 170 134 65
+Line 66 95 166 284
+Line 33 195 54 231
+Point 12 203
+SetColor 190 220 82
+Arc 124 178 84 19 59 83
+Polygon 43 293 10 62
+SetColor 229 217 241
+Point 153 188
+Rectangle 134 237 95 106
+Line 192 331 42 279
+Polygon 271 69 108 1
+SetColor 110 100 99
+Fill 110 165
+SetColor 161 181 35
+SetColor 130 21 94
+SetColor 50 159 215
+Point 20 345
+Line 240 369 259 380
+SetColor 145 144 53
+Arc 139 284 333 280 69 63
+Rectangle 186 370 52 59
+Polygon 128 224 40 20
+Point 268 285
+Line 77 18 168 205
+Point 265 328
+Point 143 77
+Rectangle 60 14 15 137
+Point 261 57
+Rectangle 190 120 15 12
+Fill 245 307
+Fill 223 164
+Rectangle 231 276 71 35
+SetColor 121 21 212
+SetColor 93 226 122
+Arc 1 73 111 143 51 52
+SetColor 224 200 231
+Point 279 214
+Point 54 366
+SetColor 87 198 64
+SetColor 76 87 189
+Point 0 153
+SetColor 185 90 23
+Line 48 12 270 276
+Point 287 112
+Rectangle 196 249 86 143
+SetColor 40 11 194
+Line 251 100 26 365
+SetColor 239 158 236
+SetColor 213 221 94
+Rectangle 59 70 57 92
+Point 169 319
+SetColor 189 46 158
+SetColor 218 34 158
+Point 277 90
+Polygon 239 366 149 69
+Point 192 67
+SetColor 192 126 47
+Point 86 372
+Rectangle 61 185 69 112
+Point 55 387
+Line 172 141 264 236
+Point 264 377
+SetColor 115 206 53
+Line 10 122 198 57
+Line 118 78 52 380
+Point 107 377
+Line 135 195 38 12
+Line 81 267 131 286
+Fill 4 61
+Arc 284 66 105 256 128 21
+Point 156 101
+SetColor 27 97 99
+Point 29 344
+Point 144 143
+SetColor 42 43 170
+Point 142 352
+SetColor 90 188 187
+Polygon 216 396 79 14
+Line 101 342 203 234
+Line 181 58 78 154
+Point 282 163
+Line 37 116 118 276
+SetColor 139 137 223
+Point 245 258
+Point 246 169
+Fill 291 41
+Arc 7 93 278 80 133 93
+Point 73 0
+SetColor 66 113 10
+Point 131 14
+Polygon 230 67 129 83
+SetColor 23 168 85
+SetColor 13 57 116
+Rectangle 61 58 150 128
+Line 26 186 145 284
+SetColor 73 152 222
+SetColor 115 218 0
+Polygon 263 239 68 96
+Polygon 84 200 10 71
+Point 279 352
+SetColor 16 248 172

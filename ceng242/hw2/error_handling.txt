@@ -1,0 +1,61 @@
+--- THESE EXAMPLES ARE GIVEN WITH ONLY eagerEvaluation FUNCTION. BUT, THE RESULTS MUST BE THE SAME WITH normalEvaluation FUNCTION. --
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "") EmptyAST EmptyAST) EmptyAST)
+ASTError "the value '' is not a number!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST)
+ASTJust ("123","num",0)
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "abc") EmptyAST EmptyAST) EmptyAST)
+ASTError "the value 'abc' is not a number!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123a456") EmptyAST EmptyAST) EmptyAST)
+ASTError "the value '123a456' is not a number!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "plus") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "abc") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST))
+ASTError "the value 'abc' is not a number!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "plus") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123a456") EmptyAST EmptyAST) EmptyAST))
+ASTError "the value '123a456' is not a number!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "plus") (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "456") EmptyAST EmptyAST) EmptyAST))
+ASTError "plus operation is not defined between str and num!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "plus") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "456") EmptyAST EmptyAST) EmptyAST))
+ASTError "plus operation is not defined between num and str!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "plus") (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "456") EmptyAST EmptyAST) EmptyAST))
+ASTError "plus operation is not defined between str and str!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "plus") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "456") EmptyAST EmptyAST) EmptyAST))
+ASTJust ("579","num",1)
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "times") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "CENG242") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "test") EmptyAST EmptyAST) EmptyAST))
+ASTError "the value 'CENG242' is not a number!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "times") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "456") EmptyAST EmptyAST) EmptyAST))
+ASTError "times operation is not defined between num and str!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "cat") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "456") EmptyAST EmptyAST) EmptyAST))
+ASTError "cat operation is not defined between num and str!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "len") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) EmptyAST)
+ASTError "len operation is not defined on num!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "len") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123x") EmptyAST EmptyAST) EmptyAST) EmptyAST)
+ASTError "the value '123x' is not a number!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "len") (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "123x") EmptyAST EmptyAST) EmptyAST) EmptyAST)
+ASTJust ("4","num",1)
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "negate") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123") EmptyAST EmptyAST) EmptyAST) EmptyAST)
+ASTJust ("-123","num",1)
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "negate") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "123x") EmptyAST EmptyAST) EmptyAST) EmptyAST)
+ASTError "the value '123x' is not a number!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "negate") (ASTNode (ASTSimpleDatum "str") (ASTNode (ASTSimpleDatum "123x") EmptyAST EmptyAST) EmptyAST) EmptyAST)
+ASTError "negate operation is not defined on str!"
+
+*Hw2> eagerEvaluation (ASTNode (ASTSimpleDatum "plus") (ASTNode (ASTSimpleDatum "plus") (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "3") EmptyAST EmptyAST) EmptyAST) (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "4") EmptyAST EmptyAST) EmptyAST)) (ASTNode (ASTSimpleDatum "num") (ASTNode (ASTSimpleDatum "5") EmptyAST EmptyAST) EmptyAST))
+ASTJust ("12","num",2)
