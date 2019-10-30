@@ -37,8 +37,8 @@ The objectives of the course are to enable the students to understand the fundam
 * **ceng462 - ARTIFICIAL INTELLIGENCE:**
 This course will introduce the basic principles in artificial intelligence research. It will cover basic AI techniques including search strategies, representation schemes, problem solving paradigms, logic programming, planning problems, machine learning algorithms, probabilty and uncertainity and etc.
 Main objectives of the course are:
-- To have an appreciation for and understanding of both the achievements of AI and the theory underlying those achievements.
-- To have an appreciation for the engineering issues underlying the design of AI systems.
-- To have a basic proficiency in programming of AI and machine learning systems including an ability to write simple to intermediate     programs and an ability to understand code written in that language.
+  - To have an appreciation for and understanding of both the achievements of AI and the theory underlying those achievements.
+  - To have an appreciation for the engineering issues underlying the design of AI systems.
+  - To have a basic proficiency in programming of AI and machine learning systems including an ability to write simple to intermediate     programs and an ability to understand code written in that language.
 
 *Course descriptions are taken from the website of the METU. For further info see https://catalog.metu.edu.tr/prog_courses.php?prog=571.
