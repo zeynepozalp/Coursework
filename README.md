@@ -1,4 +1,6 @@
-# Course codes, course names and descriptions.
+# Homeworks given at Department of Computer Engineering, Middle East Technical University.
+
+### Followings are the course codes, course names and descriptions:
 
 * ceng111 - INTRODUCTION TO COMPUTER ENG. CONCEPTS:
 Introduction to fundamentals of computer systems, including computer organization, operating systems, language processors and user interfaces. Introduction to algorithms and programming. Reasoning informally about the correctness and efficiency of programs. A functional programming language will be used for practical work.
