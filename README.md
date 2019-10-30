@@ -1,4 +1,4 @@
-# Homeworks given at Department of Computer Engineering, Middle East Technical University.
+# Homeworks given at Department of Computer Engineering, Middle East Technical University. :smile:
 
 ### Followings are the course codes, course names and descriptions:
 
