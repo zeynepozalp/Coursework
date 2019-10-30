@@ -25,9 +25,24 @@ Computer Science needs mathematical languages to abstract away from particulars 
 
 ## Courses that I take this semester:
 
-* ceng315 - ALGORITHMS
-* ceng331 - COMPUTER ORGANIZATION
-* ceng351 - DATA MANAGEMENT AND FILE STRUCTURES
-* ceng462 - ARTIFICIAL INTELLIGENCE
+* **ceng315 - ALGORITHMS:**
+To introduce some important algorithms, basic algorithm design techniques and analysis of algorithms. Selected computer algorithms: sorting, searching, string processing and graph algorithms. Algorithm design and analysis techniques. Time and computational complexities of algorithms. Introduction to NP-completeness, parallelization of algorithms, linear and dynamic programming.
+
+* **ceng331 - COMPUTER ORGANIZATION:**
+To introduce the organizational paradigms and to describe how a computing system works. Microprogramming and microprogrammed control. Input and output devices, I/O interfaces. Memory hierarchy and memory management. Fast arithmetic: fast multipliers and floating point operations. Reduced instruction set computer. Computer communications.
+
+* **ceng351 - DATA MANAGEMENT AND FILE STRUCTURES:**
+The objectives of the course are to enable the students to understand the fundamentals of file organization and processing techniques and also the internals of the storage and retrieval components of relational database systems. Introduction to DBMSs. Relational databases. Entity-Relationship data model. Relational algebra. Relational calculus. SQL. Sequential files. Unordered sequential files. Ordered sequential files. External sorting. B+tree index. Hashing. Dynamic hashing. Basics of query evaluation.
+
+* **ceng462 - ARTIFICIAL INTELLIGENCE:**
+This course will introduce the basic principles in artificial intelligence research. It will cover basic AI techniques including search strategies, representation schemes, problem solving paradigms, logic programming, planning problems, machine learning algorithms, probabilty and uncertainity and etc.
+
+Main objectives of the course are:
+
+  - To have an appreciation for and understanding of both the achievements of AI and the theory underlying those achievements.
+
+  - To have an appreciation for the engineering issues underlying the design of AI systems.
+
+  - To have a basic proficiency in programming of AI and machine learning systems including an ability to write simple to intermediate programs and an ability to understand code written in that language.
 
 *Course descriptions are taken from the website of the METU. For further info see https://catalog.metu.edu.tr/prog_courses.php?prog=571.
