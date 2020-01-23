@@ -1,0 +1,2 @@
+~p(x,y),~p(y,z),g(x,z)$~g(u,v)$~p(u,y),~p(y,v)
+NO

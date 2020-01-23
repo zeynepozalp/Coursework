@@ -1,0 +1,479 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+%\usepackage{fitch}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Zeynep Özalp \\
+Id Number : 2237691 \\
+
+\section*{I}
+\subsection*{a.}
+Variables = \{CENG111, CENG213, CENG223, CENG315, CENG331, CENG351\} \\
+
+Domain(var) = \{10930, 11330, 20930, 21330, 31330, 31630\} for all var in Variables. First digit encodes the classroom (e.g. 1 represents BMB1), the last for digit encodes the time (e.g. 0930 represents 09:30). Thus, 10930 means BMB1 at 09:30 a.m. \\
+
+First of all, all variables must have different values i.e. no pair have the same values. Then, as you suggested, I will define a set of assignable pairs (SAP).\\
+SAP = \{ \\
+		(10930, 11330),
+		(10930, 21330),
+		(10930, 31330),
+		(10930, 31630), \\
+		(11330, 10930),
+		(11330, 20930),
+		(11330, 31630), \\
+		(20930, 11330),
+		(20930, 21330),
+		(20930, 31330),
+		(20930, 31630), \\
+		(21330, 10930),
+		(21330, 20930),
+		(21330, 31630), \\
+		(31330, 10930),
+		(31330, 20930),
+		(31330, 31630), \\
+		(31630, 10930),
+		(31630, 11330),
+		(31630, 20930),
+		(31630, 21330),
+		(31630, 31330)\}\\
+		
+Pairs = \{(CENG213, CENG223), (CENG315, CENG331), (CENG315, CENG351), (CENG331, CENG351)\}\\
+
+For all pairs in the set Pairs, the only possible assignments are in the SAT set. So, the constraint is that all pairs in Pairs must have the pair of values that is in SAP.
+\subsection*{b.}
+In the following tables, first column shows the assignment in each step and other show the set of legal values for that course. For simplicity, I have used the set All =\{10930, 11330, 20930, 21330, 31330, 31630\}. After the third assignment, there is no legal value for CENG315 course, so backtrack by forward checking.
+
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\scalebox{0.7}{
+\begin{tabular}
+{|c|c|c|c|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{Assignment:} & \textbf{CENG111} & \textbf{CENG213} & \textbf{CENG223} & \textbf{CENG315} & \textbf{CENG331} & \textbf{CENG351}\\
+\hline
+1. CENG351 = 10930 & All - \{10930\} & All - \{10930\} & All - \{10930\} & All - \{10930, 20930\} & All - \{10930, 20930\} & \textbf{10930} \\
+2. CENG331 = 11330 & All - \{10930, 11330\} & All - \{10930, 11330\} & All - \{10930, 11330\} & \{31630\} & \textbf{11330} & \textbf{10930} \\
+3. CENG213 = 31630 & \{20930, 21330, 31330\} & \textbf{31630} & \{20930, 21330, 31330\} & \{\} & \textbf{11330} & \textbf{10930} \\
+4. CENG315 = 31630 & \{20930, 21330, 31330\} & \{20930, 21330, 31330\}  & \{20930, 21330, 31330\} & \textbf{31630} & \textbf{11330} & \textbf{10930} \\
+5. CENG213 = 20930 & \{21330, 31330\} & \textbf{20930}  & \{21330, 31330\} & \textbf{31630} & \textbf{11330} & \textbf{10930} \\
+6. CENG223 = 21330 & \{31330\} & \textbf{20930}  & \textbf{21330} & \textbf{31630} & \textbf{11330} & \textbf{10930} \\
+7. CENG111 = 31330 & \textbf{31330} & \textbf{20930}  & \textbf{21330} & \textbf{31630} & \textbf{11330} & \textbf{10930} \\
+\hline
+\end{tabular}}
+\end{table}
+\subsection*{c.}
+After second assignment, value 31630 is deleted from CENG111, CENG213 and CENG223's domains because 31630 is the only legal value for CENG315. Another example is, after third assignment, the value 20930 is deleted from CENG111's domain because 20930 is the legal value for CENG223. There is no need to backtrack in these assignments.
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\scalebox{0.7}{
+\begin{tabular}
+{|c|c|c|c|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{Assignment:} & \textbf{CENG111} & \textbf{CENG213} & \textbf{CENG223} & \textbf{CENG315} & \textbf{CENG331} & \textbf{CENG351}\\
+\hline
+1. CENG351 = 10930 & All - \{10930\} & All - \{10930\} & All - \{10930\} & All - \{10930, 20930\} & All - \{10930, 20930\} & \textbf{10930} \\
+2. CENG331 = 11330 & \{20930,21330,31330\} & \{20930,21330,31330\} & \{20930,21330, 31330\} & \{31630\} & \textbf{11330} & \textbf{10930} \\
+3. CENG213 = 21330 & \{31330\} & \textbf{21330} & \{20930\} & \{31630\} & \textbf{11330} & \textbf{10930} \\
+4. CENG315 = 21330 & \{31330\} & \textbf{21330} & \{20930\} & \textbf{31630} & \textbf{11330} & \textbf{10930} \\
+5. CENG223 = 20930 & \{31330\} & \textbf{21330} & \textbf{20930} & \textbf{31630} & \textbf{11330} & \textbf{10930} \\
+6. CENG111 = 31330 & \textbf{31330} & \textbf{21330} & \textbf{21330} & \textbf{31630} & \textbf{11330} & \textbf{10930} \\
+\hline
+\end{tabular}}
+\end{table}
+
+\section*{II}
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\begin{tabular}
+{|c|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{Node} & \textbf{$v$} & \textbf{$\alpha$} & \textbf{$\beta$}\\
+\hline
+D & 5 & 5 & $\infty$ \\
+E & 6 & $-\infty$ & 5 \\
+B & 5 & $-\infty$ & 5 \\
+F & 2 & 5 & $\infty$ \\
+C & 2 & 5 & 5 \\
+A & 5 & 5 & $\infty$ \\
+\hline
+\end{tabular}
+\end{table}
+The right child of E (node 10) and the right sub-tree of C (nodes G, 1, 0) is pruned. Pay attention to the alpha value of E node! According to alpha-beta search algorithm in p.170 in our textbook, the value v is returned (because v is greater than beta!) before the assignment of alpha value! Thus, our alpha value will be unchanged, it will still be $-\infty$.
+
+\section*{III}
+\subsection*{a.}
+I have followed the representation on p.44-51 in our lecture slides.
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\begin{tabular}
+{|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{clause} & \textbf{count(clause)} & \textbf{Agenda}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 2 &\\
+$H \wedge D \Rightarrow J$ & 2 &\\
+$E \wedge H \Rightarrow G$ & 2 &\\
+$E \wedge F \Rightarrow H$ & 2 &\\
+$G \wedge A \Rightarrow E$ & 2 &\\
+$A \wedge B \Rightarrow E$ & 2 &\\
+$B \wedge C \Rightarrow F$ & 2 & \{A,B,C,D\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 2 &\\
+$H \wedge D \Rightarrow J$ & 2 &\\
+$E \wedge H \Rightarrow G$ & 2 &\\
+$E \wedge F \Rightarrow H$ & 2 &\\
+$G \wedge A \Rightarrow E$ & 1 &\\
+$A \wedge B \Rightarrow E$ & 1 &\\
+$B \wedge C \Rightarrow F$ & 2 & \{B,C,D\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 2 &\\
+$H \wedge D \Rightarrow J$ & 2 &\\
+$E \wedge H \Rightarrow G$ & 2 &\\
+$E \wedge F \Rightarrow H$ & 2 &\\
+$G \wedge A \Rightarrow E$ & 1 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 1 & \{C,D,E\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 2 &\\
+$H \wedge D \Rightarrow J$ & 2 &\\
+$E \wedge H \Rightarrow G$ & 2 &\\
+$E \wedge F \Rightarrow H$ & 2 &\\
+$G \wedge A \Rightarrow E$ & 1 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{D,E,F\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 2 &\\
+$H \wedge D \Rightarrow J$ & 1 &\\
+$E \wedge H \Rightarrow G$ & 2 &\\
+$E \wedge F \Rightarrow H$ & 2 &\\
+$G \wedge A \Rightarrow E$ & 1 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{E,F\}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\begin{tabular}
+{|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{clause} & \textbf{count(clause)} & \textbf{Agenda}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 2 &\\
+$H \wedge D \Rightarrow J$ & 1 &\\
+$E \wedge H \Rightarrow G$ & 1 &\\
+$E \wedge F \Rightarrow H$ & 1 &\\
+$G \wedge A \Rightarrow E$ & 1 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{F\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 2 &\\
+$H \wedge D \Rightarrow J$ & 1 &\\
+$E \wedge H \Rightarrow G$ & 1 &\\
+$E \wedge F \Rightarrow H$ & 0 &\\
+$G \wedge A \Rightarrow E$ & 1 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{H\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 1 &\\
+$H \wedge D \Rightarrow J$ & 0 &\\
+$E \wedge H \Rightarrow G$ & 0 &\\
+$E \wedge F \Rightarrow H$ & 0 &\\
+$G \wedge A \Rightarrow E$ & 1 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{J,G\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 2 &\\
+$G \wedge H \Rightarrow I$ & 0 &\\
+$H \wedge D \Rightarrow J$ & 0 &\\
+$E \wedge H \Rightarrow G$ & 0 &\\
+$E \wedge F \Rightarrow H$ & 0 &\\
+$G \wedge A \Rightarrow E$ & 0 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{J,I\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 1 &\\
+$G \wedge H \Rightarrow I$ & 0 &\\
+$H \wedge D \Rightarrow J$ & 0 &\\
+$E \wedge H \Rightarrow G$ & 0 &\\
+$E \wedge F \Rightarrow H$ & 0 &\\
+$G \wedge A \Rightarrow E$ & 0 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{J\}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\begin{tabular}
+{|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{clause} & \textbf{count(clause)} & \textbf{Agenda}\\
+\hline
+$I \wedge J \Rightarrow K$ & 0 &\\
+$G \wedge H \Rightarrow I$ & 0 &\\
+$H \wedge D \Rightarrow J$ & 0 &\\
+$E \wedge H \Rightarrow G$ & 0 &\\
+$E \wedge F \Rightarrow H$ & 0 &\\
+$G \wedge A \Rightarrow E$ & 0 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{K\}\\
+\hline
+$I \wedge J \Rightarrow K$ & 0 &\\
+$G \wedge H \Rightarrow I$ & 0 &\\
+$H \wedge D \Rightarrow J$ & 0 &\\
+$E \wedge H \Rightarrow G$ & 0 &\\
+$E \wedge F \Rightarrow H$ & 0 &\\
+$G \wedge A \Rightarrow E$ & 0 &\\
+$A \wedge B \Rightarrow E$ & 0 &\\
+$B \wedge C \Rightarrow F$ & 0 & \{\}\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{b.}
+I have followed the representation on p.54-64 in our lecture slides.
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\begin{tabular}
+{|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{clause} & \textbf{Check?} & \textbf{Explored}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No &\{\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K,I\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K,I,G\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K,I,G,E\}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\begin{tabular}
+{|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{clause} & \textbf{Check?} & \textbf{Explored}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K,I,G,E,A\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K,I,G,E,A,H\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K,I,G,E,A,H,F\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K,I,G,E,A,H,F,B,C\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & No &\\
+$B \wedge C \Rightarrow F$ & No & \{K,I,G,E,A,H,F,B,C\}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\begin{tabular}
+{|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{clause} & \textbf{Check?} & \textbf{Closed}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & Yes &\\
+$B \wedge C \Rightarrow F$ & No & \{A,B\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & No &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & Yes &\\
+$B \wedge C \Rightarrow F$ & Yes & \{A,B,C\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & No &\\
+$E \wedge F \Rightarrow H$ & Yes &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & Yes &\\
+$B \wedge C \Rightarrow F$ & Yes & \{A,B,C,E,F\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & No &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & Yes &\\
+$E \wedge F \Rightarrow H$ & Yes &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & Yes &\\
+$B \wedge C \Rightarrow F$ & Yes & \{A,B,C,E,F,H\}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & Yes &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & Yes &\\
+$E \wedge F \Rightarrow H$ & Yes &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & Yes &\\
+$B \wedge C \Rightarrow F$ & Yes & \{A,B,C,E,F,H,G\}\\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\small
+\centering
+\label{table:example}
+\begin{tabular}
+{|c|c|c|}	%% specify column number and vertical lines
+\hline 							%% line draw
+\textbf{clause} & \textbf{Check?} & \textbf{Closed}\\
+\hline
+$I \wedge J \Rightarrow K$ & No &\\
+$G \wedge H \Rightarrow I$ & Yes &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & Yes &\\
+$E \wedge F \Rightarrow H$ & Yes &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & Yes &\\
+$B \wedge C \Rightarrow F$ & Yes & \{A,B,C,E,F,H,G,I\}\\
+\hline
+$I \wedge J \Rightarrow K$ & Yes &\\
+$G \wedge H \Rightarrow I$ & Yes &\\
+$H \wedge D \Rightarrow J$ & No &\\
+$E \wedge H \Rightarrow G$ & Yes &\\
+$E \wedge F \Rightarrow H$ & Yes &\\
+$G \wedge A \Rightarrow E$ & No &\\
+$A \wedge B \Rightarrow E$ & Yes &\\
+$B \wedge C \Rightarrow F$ & Yes & \{A,B,C,E,F,H,G,I,K\}\\
+\hline
+\end{tabular}
+\end{table}
+\end{document}
+
+​
+
