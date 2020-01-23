@@ -23,8 +23,6 @@ To introduce the basic concepts and features of programming languages and differ
 * **ceng280 - FORMAL LANGU.AND ABSTRACT MACHINES:**
 Computer Science needs mathematical languages to abstract away from particulars of computing machinery and to concentrate on systematicity, capacity, and efficiency of computing in the abstract. Theory of formal languages studies such languages while automata theory studies their acceptors. Both theories have found scientific and practical use in all areas of computer science and engineering. In fact, description of any computational process can be recast in formal language theory or automata theory. From this perspective, the theory can be seen as a vehicle for communicating the ideas clearly and precisely among computer scientists. Introduction to strings, languages and grammars. Concept of abstract machines and language acceptance. Deterministic and non-deterministic finite state machines. Regular expressions. Machines with pushdown tape. Turing Machines and recursive functions.
 
-## Courses that I take this semester:
-
 * **ceng315 - ALGORITHMS:**
 To introduce some important algorithms, basic algorithm design techniques and analysis of algorithms. Selected computer algorithms: sorting, searching, string processing and graph algorithms. Algorithm design and analysis techniques. Time and computational complexities of algorithms. Introduction to NP-completeness, parallelization of algorithms, linear and dynamic programming.
 
