@@ -1,0 +1,40 @@
+# Zeynep Ozalp
+# 2237691
+
+.pos 0
+irmovq stack, %rsp
+call main
+halt
+
+.align 8
+ele1:
+.quad 0x00a
+.quad ele2
+ele2:
+.quad 0x0b0
+.quad ele3
+ele3:
+.quad 0xc00
+.quad 0
+
+main:
+irmovq ele1, %rdi
+call rsum #rsum(list*)
+ret
+
+rsum:
+	xorq %rax,%rax		# Set return value to 0
+	andq %rdi,%rdi		# Set condition codes
+	je     return		# If count == 0, return 0
+	pushq %rbx		# Save callee-saved register
+	mrmovq (%rdi),%rbx	# Get *start
+	mrmovq 8(%rdi),%rdi     # node->next
+	call rsum
+	addq %rbx,%rax          # Add *start to sum
+	popq %rbx		# Restore callee-saved register
+return:
+	ret
+
+# Stack starts here and grows to lower addresses
+.pos 0x200
+stack:

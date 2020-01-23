@@ -1,0 +1,39 @@
+# Zeynep Ozalp
+# 2237691
+
+.pos 0
+irmovq stack, %rsp
+call main
+halt
+
+.align 8
+ele1:
+.quad 0x00a
+.quad ele2
+ele2:
+.quad 0x0b0
+.quad ele3
+ele3:
+.quad 0xc00
+.quad 0
+
+main:
+irmovq ele1, %rdi
+call sum_list #sum_list(list*)
+ret
+
+sum_list:
+xorq %rax, %rax
+andq %rdi,%rdi	     # Set CC
+jmp     test         # Goto test
+loop:	mrmovq (%rdi),%r8   # Get *start
+addq %r8,%rax       # Add to sum
+mrmovq 8(%rdi),%rdi        # node->next
+rrmovq %rdi, %rsi
+andq %rsi,%rsi       # count--.  Set CC
+test:	jne    loop      # Stop when 0
+ret                  # Return
+
+# Stack starts here and grows to lower addresses
+.pos 0x200
+stack:

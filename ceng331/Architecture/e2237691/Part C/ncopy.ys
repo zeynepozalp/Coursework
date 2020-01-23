@@ -1,0 +1,182 @@
+#/* $begin ncopy-ys */
+##################################################################
+# ncopy.ys - Copy a src block of len words to dst.
+# Return the number of positive words (>0) contained in src.
+#
+# Include your name and ID here.
+# Zeynep Özalp
+# 2237691
+# Describe how and why you modified the baseline code.
+#
+# I used iaddq.
+# I applied loop unrolling with factor of 9. In a single loop, 9 elements are copied.
+# I used jumps after substracting 1 from len.
+#
+##################################################################
+# Do not modify this portion
+# Function prologue.
+# %rdi = src, %rsi = dst, %rdx = len
+ncopy:
+
+##################################################################
+# You can modify this portion
+# Loop header
+    andq %rdx,%rdx          # len <= 0?
+    jg Loop                 # if so, goto Loop:
+    jmp Done                # else, goto Done:
+
+Loop:
+    iaddq $-9, %rdx         # len -= 9
+    jge Loop1                  # if len >= 0, goto L1
+    jmp TSetUp              # else goto TSetUp
+Loop1:
+    mrmovq (%rdi), %r10     # read val1 from src
+    mrmovq $8(%rdi), %r11   # read val2 from src+8
+    rmmovq %r10, (%rsi)     # store val1 to dest
+    andq %r10, %r10         # val1 > 0?
+    jle Loop2                  # if not, goto L2
+    iaddq $1, %rax          # count++
+Loop2:
+    mrmovq $16(%rdi), %r10  # read val3 from src+16
+    rmmovq %r11, $8(%rsi)   # store val2 to dest+8
+    andq %r11, %r11         # val2 > 0?
+    jle Loop3                  # if not, goto L3
+    iaddq $1, %rax         # count++
+Loop3:
+    mrmovq $24(%rdi), %r11  # read val4 from src+24
+    rmmovq %r10, $16(%rsi)  # store val3 to dest+16
+    andq %r10, %r10         # val3 > 0?
+    jle Loop4                  # if not, goto L4
+    iaddq $1, %rax         # count++
+Loop4:
+    mrmovq $32(%rdi), %r10  # read val3 from src+16
+    rmmovq %r11, $24(%rsi)   # store val2 to dest+8
+    andq %r11, %r11         # val2 > 0?
+    jle Loop5                  # if not, goto L3
+    iaddq $1, %rax         # count++
+Loop5:
+    mrmovq $40(%rdi), %r11  # read val3 from src+16
+    rmmovq %r10, $32(%rsi)   # store val2 to dest+8
+    andq %r10, %r10         # val2 > 0?
+    jle Loop6                  # if not, goto L3
+    iaddq $1, %rax         # count++
+Loop6:
+    mrmovq $48(%rdi), %r10  # read val4 from src+24
+    rmmovq %r11, $40(%rsi)  # store val3 to dest+16
+    andq %r11, %r11         # val3 > 0?
+    jle Loop7                  # if not, goto L4
+    iaddq $1, %rax         # count++
+Loop7:
+    mrmovq $56(%rdi), %r11  # read val4 from src+24
+    rmmovq %r10, $48(%rsi)  # store val3 to dest+16
+    andq %r10, %r10         # val3 > 0?
+    jle Loop8                  # if not, goto L4
+    iaddq $1, %rax         # count++
+Loop8:
+    mrmovq $64(%rdi), %r10  # read val4 from src+24
+    rmmovq %r11, $56(%rsi)  # store val3 to dest+16
+    andq %r11, %r11         # val3 > 0?
+    jle Loop9                  # if not, goto L4
+    iaddq $1, %rax         # count++
+Loop9:
+    rmmovq %r10, $64(%rsi)  # store val4 to dest+24
+    andq %r10, %r10         # val4 > 0?
+    jle LClean              # if not, goto LClean
+    iaddq $1, %rax          # count++
+
+LClean:
+    iaddq $72, %rdi         # src += 9
+    iaddq $72, %rsi         # dest += 9
+    jmp Loop                # goto Loop
+
+TSetUp:
+    iaddq $8, %rdx          # correct len
+    jge T1                  # if len >= 0, goto T1
+    jmp Done                # otherwise, goto Done
+
+T1:
+    mrmovq (%rdi), %r10     # read val1 from src
+    mrmovq $8(%rdi), %r11   # read val2 from src+8
+    rmmovq %r10, (%rsi)     # store val1 to dest
+    andq %r10, %r10         # val1 > 0?
+    jle T11                 # if not, goto TT1
+    iaddq $1, %rax          # count++
+T11:
+    iaddq $-1, %rdx         # len--
+    jge T2                  # if len >= 0, goto T2
+    jmp Done                # otherwise, goto Done
+T2:
+    mrmovq $16(%rdi), %r10  # read val3 from src+16
+    rmmovq %r11, $8(%rsi)   # store val2 to dest+8
+    andq %r11, %r11         # val2 > 0?
+    jle T22                 # if not, goto TT2
+    iaddq $1, %rax          # count++
+T22:
+    iaddq $-1, %rdx         # len--
+    jge T3                  # if len >= 0, goto T3
+    jmp Done                # otherwise, goto Done
+T3:
+    mrmovq $24(%rdi), %r11  # read val4
+    rmmovq %r10, $16(%rsi)   # store val3
+    andq %r10, %r10         # val3 > 0?
+    jle T33                 # if not, goto TT3
+    iaddq $1, %rax          # count++
+T33:
+    iaddq $-1, %rdx         # len--
+    jge T4                  # if len >= 0, goto T4
+    jmp Done                # otherwise, goto Done
+T4:
+    mrmovq $32(%rdi), %r10  # read val5
+    rmmovq %r11, $24(%rsi)   # store val4
+    andq %r11, %r11         # val4 > 0?
+    jle T44                 # if not, goto TT4
+    iaddq $1, %rax          # count++
+T44:
+    iaddq $-1, %rdx         # len--
+    jge T5                  # if len >= 0, goto T5
+    jmp Done                # otherwise, goto Done
+T5:
+    mrmovq $40(%rdi), %r11  # read val6
+    rmmovq %r10, $32(%rsi)   # store val3
+    andq %r10, %r10         # val5 > 0?
+    jle T55                 # if not, goto TT5
+    iaddq $1, %rax          # count++
+T55:
+    iaddq $-1, %rdx         # len--
+    jge T6                  # if len >= 0, goto T6
+    jmp Done                # otherwise, goto Done
+T6:
+    mrmovq $48(%rdi), %r10  # read val7
+    rmmovq %r11, $40(%rsi)   # store val6
+    andq %r11, %r11         # val6 > 0?
+    jle T66                 # if not, goto TT6
+    iaddq $1, %rax          # count++
+T66:
+    iaddq $-1, %rdx         # len--
+    jge T7                  # if len >= 0, goto T7
+    jmp Done                # otherwise, goto Done
+T7:
+    mrmovq $56(%rdi), %r11  # read val6
+    rmmovq %r10, $48(%rsi)   # store val3
+    andq %r10, %r10         # val5 > 0?
+    jle T77                 # if not, goto TT5
+    iaddq $1, %rax          # count++
+T77:
+    iaddq $-1, %rdx         # len--
+    jge T8                  # if len >= 0, goto T6
+    jmp Done                # otherwise, goto Done
+T8:
+    rmmovq %r11, $56(%rsi)  # store val9
+    andq %r11, %r11         # val9 > 0?
+    jle Done                # if not, goto Done
+    iaddq $1, %rax         # count++
+
+##################################################################
+# Do not modify the following section of code
+# Function epilogue.
+Done:
+	ret
+##################################################################
+# Keep the following label at the end of your function
+End:
+#/* $end ncopy-ys */
