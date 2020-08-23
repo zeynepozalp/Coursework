@@ -1,0 +1,32 @@
+Person (0, hp, 6 -> 8, 50) made a request
+Elevator (Moving-up, 0, 0, 0 -> 6)
+Elevator (Moving-up, 0, 0, 1 -> 6)
+Elevator (Moving-up, 0, 0, 2 -> 6)
+Elevator (Moving-up, 0, 0, 3 -> 6)
+Elevator (Moving-up, 0, 0, 4 -> 6)
+Elevator (Moving-up, 0, 0, 5 -> 6)
+Elevator (Idle, 0, 0, 6 ->)
+Person (0, hp, 6 -> 8, 50) made a request
+Elevator (Idle, 0, 0, 6 ->)
+Person (0, hp, 6 -> 8, 50) entered the elevator
+Elevator (Moving-up, 50, 1, 6 -> 8)
+Elevator (Moving-up, 50, 1, 7 -> 8)
+Elevator (Idle, 50, 1, 8 ->)
+Person (1, lp, 2 -> 0, 50) made a request
+Elevator (Moving-down, 50, 1, 8 -> 2)    
+Person (0, hp, 6 -> 8, 50) has left the elevator
+Elevator (Moving-down, 0, 0, 8 -> 2)
+Elevator (Moving-down, 0, 0, 7 -> 2)
+Elevator (Moving-down, 0, 0, 6 -> 2)
+Elevator (Moving-down, 0, 0, 5 -> 2)
+Elevator (Moving-down, 0, 0, 4 -> 2)
+Elevator (Moving-down, 0, 0, 3 -> 2)
+Elevator (Idle, 0, 0, 2 ->)
+Person (1, lp, 2 -> 0, 50) made a request
+Elevator (Idle, 0, 0, 2 ->)
+Person (1, lp, 2 -> 0, 50) entered the elevator
+Elevator (Moving-down, 50, 1, 2 -> 0)
+Elevator (Moving-down, 50, 1, 1 -> 0)
+Elevator (Idle, 50, 1, 0 ->)
+Person (1, lp, 2 -> 0, 50) has left the elevator
+Elevator (Idle, 0, 0, 0 ->)
