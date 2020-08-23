@@ -52,16 +52,9 @@ Main objectives of the course are:
   - To have a basic proficiency in programming of AI and machine learning systems including an ability to write simple to intermediate     programs and an ability to understand code written in that language.
   
 * **ceng488 - SPECIAL TOPICS IN CENG: GUIDED RESEARCH:**
-This course is a one-semester course for developing a novel computer science and engineering solution to a research problem to be carried out individually or by a small team of undergraduate students under the guidance of a faculty member. The course includes one term duration research project involving focused literature survey, creative problem solving, prototyping as appropriate, experimental and/or theoretical analysis, presentation and paper writing.
-
-The purpose of the guided research is for students to further explore an area of interest she/he may have just scratched the surface of during one of the core courses.
-
-The objective of the course is to provide a medium for undergraduate students who want to take part in research projects and gain research experience. At the end of the course, the students will gain:
-
-- experience on conducting research
-
-- ability to work as a part of research group
-
-- experience on academic paper writing and presentation
+This course is a one-semester course for developing a novel computer science and engineering solution to a research problem to be carried out individually or by a small team of undergraduate students under the guidance of a faculty member. The course includes one term duration research project involving focused literature survey, creative problem solving, prototyping as appropriate, experimental and/or theoretical analysis, presentation and paper writing. The purpose of the guided research is for students to further explore an area of interest she/he may have just scratched the surface of during one of the core courses. The objective of the course is to provide a medium for undergraduate students who want to take part in research projects and gain research experience. At the end of the course, the students will gain:
+  - experience on conducting research
+  - ability to work as a part of research group
+  - experience on academic paper writing and presentation
 
 *Course descriptions are taken from the website of the METU. For further info see https://catalog.metu.edu.tr/prog_courses.php?prog=571.
