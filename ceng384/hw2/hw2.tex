@@ -1,0 +1,293 @@
+\documentclass[10pt,a4paper, margin=1in]{article}
+\usepackage{fullpage}
+\usepackage{amsfonts, amsmath, pifont}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\usepackage{fullpage}
+\usepackage{amsfonts, amsmath, pifont}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\usepackage{geometry}
+
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=10mm,
+ right=10mm,
+ top=10mm,
+ bottom=10mm,
+ }
+ % Write both of your names here. Fill exxxxxxx with your ceng mail address.
+ \author{
+  Özalp, Zeynep\\
+  \texttt{e2237691@ceng.metu.edu.tr}
+  \and
+  Yıldırım, Hilmi Cihan\\
+  \texttt{e2237949@ceng.metu.edu.tr}
+}
+\title{CENG 384 - Signals and Systems for Computer Engineers \\
+Spring 2020 \\
+Written Assignment 2}
+\begin{filecontents}{q3.dat}
+ n   xn
+ -2  2
+ -1  4
+ 0   1
+ 1   2  
+ 2   0
+ 3   0
+ 4   0
+ 5	 0 
+
+\end{filecontents}
+\begin{document}
+\maketitle
+
+
+
+\noindent\rule{19cm}{1.2pt}
+
+\begin{enumerate}
+
+\item %write the solution of q1
+    \begin{enumerate}
+    % Write your solutions in the following items.
+    \item %write the solution of q1a\\
+    
+   	\textbf{memory} \\
+   	y[0]=y[-1]+y[-2]+.. so we need memory because the output y[5] depends upon the past value of x[-1] so we need memory\\
+   	\textbf{stability} \\
+   	we have to find bounded inputs give or give not bounded outputs so \\
+   	it is unstable because if B<x[n]<B y[n] goes infinity because there is infity sum of B's 
+   	\\
+   		\textbf{Linearity} \\
+   		Let us apply superposition property to determine linearity \\
+   		y1[n] =x1[n-1]+x1[n-2]+...\\
+   		y2[n] =x2[n-1]+x2[n-2]+... \\
+	now let us consider a third input x3[n] such that it is linear combination of x1[n] and x2[n]  \\   	
+		x3[n]=ax1[n]+bx2[n] \\ 
+		therefore ,the output y3[n] is given as \\ 
+		y3[n]=x3[n-1]+x3[n-2]+... \\
+		y3[n] = ax1[n-1]+bx2[n-1]+ax1[n-2]+bx2[n-2]... \\ 
+		y3[n] = a( x1[n-1]+x1[n-2]+...)+b(x2[n-1]+x2[n-2]+...) \\
+		y3[n] = y1[n]+y2[n] \\ 
+		From the above expressions we conclude system is linear we can easily see that  both additivity and homogeneity proporteis hold. \\
+		\textbf{Invertibilty} \\
+	A system is invertible if distinct inputs lead distinct outputs \\
+	we can easily see that system performs summation of inputs .For different inputs  the outputs are different. so system is invertible\\ 
+	\textbf{Time -Invariance} \\
+	To check that this system is time invariant, we must determine whether the timeinvariance property holds for any input and any time shift n0 Thus, let x1[n-n0] be an arbitrary input to this system, and let \\
+	y1[n]= x1[n-1]+x1[n-2]+.. \\ \\ 
+	x2[n]=x1[n-n0] \\
+	y2[n]=x2[n-1]+x2[n-2]+... =x1[n-n0-1]+x1[n-n0-2]+... \\
+	so \\
+	y2[n]=y1[n-n0] therefore the system is time invariant. \\ 
+	\textbf{Conculusion} \\
+	\textbf{the system is has memory, unstable, linear, invertible and time invariant}
+	
+	
+	
+	
+    \item %write the solution of q1b
+    	\textbf{memory} \\
+    	A system is said to be memory less if its output for each value of the independent variable
+at a given time is dependent only on the input at that same time.\\
+
+   	y(1)=y(5) so system \textbf{ need memory } because is not dependent only on the input at that same time. \\
+   		\textbf{stability} \\
+   	let us consider $|x(t)|< \infty$ \\
+   	$|y(t)|=|ty(2t+3)|$ \\
+   	$|y(t)| \leq |t||y(2t+3)|$ \\
+   	even if $|x(t)|< \infty$ the magnitude of the output depends upon the variable n,which states that the output is \textbf{unstable }\\
+   	\textbf{Linearity} \\
+   	y1(t) = t x1(2t+3) \\ 
+   	y2(t) = t x2(2t+3) \\
+   	\\
+   	x3(t) = ax1(t)+bx2(t) \\
+   	 \\
+   	 y3(t) = tx3(2t+1)
+   	 \\
+   	 y3(t) = atx1(2t+3)+btx2(2t+3) = ay1(t)+by2(t) so this system is linear\\
+   	 \textbf{Invertibilty} \\
+	A system is invertible if distinct inputs lead distinct outputs \\
+	this system is not invertible because for example if x(1)=5 and x(5)=1 then y(1)=1*5 and y(5)=5*1 so system give same output for different inputs system is \textbf{ not invetible}.\\
+	
+   	\textbf{Time -Invariance} \\
+	To check that this system is time invariant, we must determine whether the timeinvariance property holds for any input and any time shift n0 Thus, let x1[n-n0] be an arbitrary input to this system, and let \\
+	x(t-t0) $\rightarrow$ y(n)=nx(n-n0) but y(n-n0)=(n-n0)x(n-n0)tehy are not equal so system is \textbf{ not time invariant }
+	\\
+	
+	
+   	
+    
+    \end{enumerate}
+
+\item %write the solution of q2
+    \begin{enumerate}
+    % Write your solutions in the following items.
+    \item %write the solution of q2a
+    $y(t)=\int_{-\infty}^{\infty}(x(\tau)-5y(\tau))d\tau$\\
+    Differentiate both sides. \\
+    $\dfrac{dy(t)}{dt}=x(t)-5y(t)$\\
+    $\dfrac{dy(t)}{dt}+5y(t)=x(t)$\\
+    $y'(t)+5y(t)=x(t)$
+    \item %write the solution of q2b
+    $ y'(t)+5y(t)=e^{-t}+e^{-3t} $\\
+    First, homogenous solution:\\
+    $\lambda+5=0 \Rightarrow \lambda = -5$\\
+    $ y_H(t)=Ke^{-5t} $\\
+    For particular solution, since the system is linear, find particular solution to $x_1(t)=e^{-t}$ and $x_2(t)=e^{-3t}$ separately. Then combine.\\
+    1) For $x_1(t)=e^{-t}$, assume $y_{P1}=A_1e^{-t}$\\
+    $-A_1e^{-t}+5A_1e^{-t}=e^{-t} \Rightarrow A_1=1/4$\\
+    $y_{P1}=(1/4)e^{-t}$\\
+    $y_{G1}=Ke^{-5t}+(1/4)e^{-t}$\\
+    2) For $x_2(t)=e^{-3t}$, assume $y_{P2}=A_2e^{-3t}$\\
+    $-3A_2e^{-3t}+5A_2e^{-3t}=A_2e^{-3t} \Rightarrow A_2=1/2$\\
+    $y_{P2}=(1/2)e^{-3t}$\\
+    $y_{G2}=Ke^{-5t}+(1/2)e^{-3t}$\\
+    So, general solution is $y(t)=2Ke^{-5t}+(1/4)e^{-t}+(1/2)e^{-3t}$\\
+    $y(0)=2K+3/4=0 \Rightarrow K=-3/8$\\
+    $y(t)=-(3/4)e^{-5t}+(1/4)e^{-t}+(1/2)e^{-3t}$
+    \end{enumerate}
+
+\item %write the solution of q3     
+    \begin{enumerate}
+    % Write your solutions in the following items.
+    \item %write the solution of q3a
+    y[n] = x[n] * h[n]= $\sum\limits_{k= -\infty }^\infty x[k] h[n-k] $ \\
+    
+    x[n] = $\sum\limits_{k= -\infty }^\infty x[k] \delta [n-k] $ \\ according to above equations from book \\
+    y[n] = $\sum\limits_{k= -\infty }^\infty x[k]   \delta [n-1-k] $+  2$\sum\limits_{k= -\infty }^\infty x[k]   \delta [n+1-k] $
+    \\
+    x[n-1]=$\sum\limits_{k= -\infty }^\infty x[k] \delta [n-1-k] $ \\
+    x[n+1]=$\sum\limits_{k= -\infty }^\infty x[k] \delta [n+1-k] $ \\
+    so \\
+    y[n] = x[n-1]+2x[n+1] \\
+    y[n] =  $2 \delta [n-1]+ \delta [n]+2(2 \delta [n+1]+\delta [n+2])       $ \\
+    \begin{figure} [h!]
+    \centering
+    \begin{tikzpicture}[scale=1.0] 
+      \begin{axis}[
+          axis lines=middle,
+          xlabel={$n$},
+          ylabel={$\boldsymbol{y[n]}$},
+          xtick={ -2, -1, 0,  1,2},
+          ytick={2,4,1,2},
+          ymin=-4, ymax=6,
+          xmin=-5, xmax=5,
+          every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
+          every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+          grid,
+        ]
+        \addplot [ycomb, black, thick, mark=*] table [x={n}, y={xn}] {q3.dat};
+      \end{axis}
+    \end{tikzpicture}
+    \caption{$n$ vs. $x[n]$.}
+    
+\end{figure}
+   
+    
+    \item %write the solution of q3b
+ $ \dfrac{d}{dt} u(t-t0) = \delta (t-t0)$ from book  therefore \\ 
+    	 $ \dfrac{d}{dt} x(t) =  \delta (t-1)+ \delta (t+1) $ \\
+    	 % Write your solutions in the following items.
+    
+   
+    y(t) = $ (\delta (t-1)+ \delta (t+1))h(t) $ \\
+    from distribution property of convolution \\
+     y(t) = $ \delta (t-1)*h(t) + \delta (t+1)*h(t)) $ \\
+    from book x(t)$\delta (t-t0) = x(t-t0)$ therefore \\
+    y(t) = h(t-1)+h(t+1) \\
+    y(t) = $e^{-t+1}sin(t-1)u(t-1)+e^{-t-1}sin(t+1)u(t+1) $ \\
+    y(t)=0 for t$<$ -1 \\
+    y(t) = $e^{-t-1}sin(t+1)u(t+1) $ for -1$\leq$t$<$1 \\
+    y(t) = $e^{-t+1}sin(t-1)u(t-1)+e^{-t-1}sin(t+1)u(t+1) $ for 1$\leq$t
+     
+    	 
+    \end{enumerate}
+
+\item %write the solution of q4
+    \begin{enumerate}
+    % Write your solutions in the following items.
+    \item %write the solution of q4a
+    The product of $x(\tau)\ and\ h(t-\tau)$ is non zero for only $0<\tau<t$ \\
+    For $t\geq0$:
+    $\int_{0}^{t}x(\tau)h(t-\tau)d\tau=\int_{0}^{t}e^{-\tau}e^{-2t}e^{2\tau}d\tau=e^{-2t}\int_{0}^{t}e^{\tau}d\tau=e^{-2t}(e^t-1)=(e^{-t}-e^{-2t})$\\
+    For $t<0$: y(t)=0\\
+    Thus, $y(t)=(e^{-t}-e^{-2t})u(t)$
+    \item %write the solution of q4b
+    The product of $x(\tau)\ and\ h(t-\tau)$ is nonzero for only $0\leq\tau\leq1$. Also,  because $x(\tau)=1$ for $0\leq\tau\leq1$, we do not need to write it in the product.\\
+    $\int_{0}^{1}x(\tau)h(t-\tau)d\tau=y(t)=\int_{0}^{1}e^{3t-3\tau}d\tau=e^{3t}\int_{0}^{1}e^{-3\tau}d\tau=e^{3t}\dfrac{e^{-3}-1}{-3}=\dfrac{-e^{3t-3}+e^{3t}}{3}$\\
+    Thus, \begin{equation}
+   y(t)=% 
+   \begin{cases}
+     \dfrac{-e^{3t-3}+e^{3t}}{3} & 0\leq t\leq1 \\
+     0 &\text{otherwise}
+   \end{cases}
+\end{equation}
+    \end{enumerate}
+
+\item %write the solution of q5
+    \begin{enumerate}
+    % Write your solutions in the following items.
+    \item %write the solution of q5a
+    \item %write the solution of q5b
+    we assume y(t)=$Ae^{rt} $ \\ 
+    so \\
+    $y'(t)= Ar e^{rt}$ \\
+    $y''(t)= Ar^2 e^{rt}$ \\
+    $y'''(t)= Ar^3 e^{rt}$ \\
+    so \\
+    $r^3 e^{rt} -3(r^2 e^{rt})+4(r e^{rt})-2(e^{rt})$ \\
+    $Ae^{rt} (r^3-3r^2+4r-2)=0$ $e^{rt} $cannot be zero so $ (r^3-3r^2+4r-2)=0$ need to be true \\
+    so r1=1 \\
+    r2=1-j \\
+    r3=1+j \\
+    y(t)=c1 $e^{t} $+$e^{t}$ (c2sin(t)+c3cos(t))  \\
+    y(0)=c1+c3=3 \\
+    y'(t)=c1 $e^{t} $+$e^{t}$ (c2sin(t)+c3cos(t))+$e^{t}$ (c2cos(t)-c3sin(t)) \\
+    y'(0)=c1+c2+c3=1 \\
+    y''(t)=c1 $e^{t} $+$e^{t}$ (c2sin(t)+c3cos(t))+$e^{t}$ (c2cos(t)-c3sin(t)) +$e^{t}$ (c2cos(t)+c3 -sin(t)) +$e^{t}$ (c2-sin(t)-c3cos(t)) \\
+    y''(0)=c1+2c2=2 \\
+    c1=6 \\
+    c2=-2 \\
+    c3=-3 \\
+     
+    
+    \end{enumerate}
+
+
+\item %write the solution of q6
+    \begin{enumerate}
+    % Write your solutions in the following items.
+    \item %write the solution of q6a
+    $ w[n]-\dfrac{1}{2}w[n-1]=x[n] $\\
+    Take the Fourier Transform of both sides to be in frequency domain.\\
+    $ W(e^{jw})-\dfrac{1}{2}e^{-jw}W(e^{jw})=X(e^{jw}) $\\
+    $ W(e^{jw})(1-\dfrac{1}{2}e^{-jw})=X(e^{jw}) $\\
+    $\dfrac{W(e^{jw})}{X(e^{jw})}=H_0(e^{jw})=\dfrac{1}{1-\dfrac{1}{2}e^{-jw}}$\\
+    Now, take the reverse fourier to be in time domain.\\
+    $ h_0[n]=(\dfrac{1}{2})^nu[n] $
+    \item %write the solution of q6b
+    $ h_0[k]h_0[n-k] $ is positive only for $0\leq k \leq n$. \\
+    $ h_0[n] \ast h_0[n]=\Sigma_0^n h_0[k]h_0[n-k]=\Sigma_0^n(\dfrac{1}{2})^n $\\
+    $ h[n]=n(\dfrac{1}{2})^nu[n]$
+    \item %write the solution of q6c
+    $ X(e^{jw})H_0(e^{jw})H_0(e^{jw})= W(e^{jw})$\\
+    $ \dfrac{Y(e^{jw})}{X(e^{jw})} = (H_0(e^{jw}))^2 = \dfrac{1}{1-e^{-jw}-\frac{1}{4}e^{-2jw}} $\\
+    $ Y(e^{jw})-e^{-jw}Y(e^{jw})-\frac{1}{4}e^{-2jw}Y(e^{jw}) = X(e^{jw}) $\\
+    Take the inverse fourier to be in time domain.\\
+    $ y[n]-y[n-1]-\frac{1}{4}y[n-2]=x[n] $
+    \end{enumerate}
+
+\end{enumerate}
+\end{document}
+
