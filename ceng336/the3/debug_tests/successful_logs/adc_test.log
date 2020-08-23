@@ -1,0 +1,1814 @@
+device PIC18F8722
+
+hwtool SIM
+
+Resetting SFRs
+Resetting peripherals
+
+set warningmessagebreakoptions.W0223_ADC_UNDERFLOW ignore
+
+set warningmessagebreakoptions.W0222_ADC_OVERFLOW ignore
+
+set oscillator.frequency 10
+
+set oscillator.frequencyunit Mega
+
+program "../dist/default/production/the3.production.elf"
+Programming target...
+Resetting SFRs
+Resetting peripherals
+Program succeeded.
+
+reset MCLR
+Resetting SFRs
+Resetting peripherals
+
+stim sinewave.scl
+
+break adc_complete
+Breakpoint 0 at function adc_complete.
+run
+Running
+
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+670
+
+stopwatch
+Stopwatch cycle count = 500665 (50.0665 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+812
+
+stopwatch
+Stopwatch cycle count = 500335 (50.0335 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+926
+
+stopwatch
+Stopwatch cycle count = 500335 (50.0335 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+998
+
+stopwatch
+Stopwatch cycle count = 500337 (50.0337 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+1023
+
+stopwatch
+Stopwatch cycle count = 500338 (50.0338 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+998
+
+stopwatch
+Stopwatch cycle count = 500338 (50.0338 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+926
+
+stopwatch
+Stopwatch cycle count = 500338 (50.0338 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+812
+
+stopwatch
+Stopwatch cycle count = 500338 (50.0338 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+670
+
+stopwatch
+Stopwatch cycle count = 500336 (50.0336 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+512
+
+stopwatch
+Stopwatch cycle count = 500337 (50.0337 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+353
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+210
+
+stopwatch
+Stopwatch cycle count = 500331 (50.0331 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+97
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+24
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+0
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+24
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+97
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+210
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+353
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+511
+
+stopwatch
+Stopwatch cycle count = 500331 (50.0331 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+670
+
+stopwatch
+Stopwatch cycle count = 500335 (50.0335 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+812
+
+stopwatch
+Stopwatch cycle count = 500337 (50.0337 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+926
+
+stopwatch
+Stopwatch cycle count = 500336 (50.0336 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+998
+
+stopwatch
+Stopwatch cycle count = 500337 (50.0337 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+1023
+
+stopwatch
+Stopwatch cycle count = 500338 (50.0338 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+998
+
+stopwatch
+Stopwatch cycle count = 500338 (50.0338 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+926
+
+stopwatch
+Stopwatch cycle count = 500338 (50.0338 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+812
+
+stopwatch
+Stopwatch cycle count = 500338 (50.0338 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+670
+
+stopwatch
+Stopwatch cycle count = 500336 (50.0336 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+512
+
+stopwatch
+Stopwatch cycle count = 500337 (50.0337 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+350
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+208
+
+stopwatch
+Stopwatch cycle count = 500331 (50.0331 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+95
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+23
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+0
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+26
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+99
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+213
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+356
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500331 (50.0331 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500331 (50.0331 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500331 (50.0331 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500331 (50.0331 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+continue
+Running
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+
+print adc_value
+adc_value=
+508
+
+stopwatch
+Stopwatch cycle count = 500330 (50.033 ms)
+quit
+Stop at
+	address:0x760
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:6
+
+>---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1
+---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1

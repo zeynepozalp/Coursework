@@ -1,0 +1,143 @@
+device PIC18F8722
+hwtool SIM
+set warningmessagebreakoptions.W0223_ADC_UNDERFLOW ignore
+set warningmessagebreakoptions.W0222_ADC_OVERFLOW ignore
+set oscillator.frequency 10
+set oscillator.frequencyunit Mega
+program "../dist/default/production/the3.production.elf"
+
+reset MCLR
+break init_complete
+run
+
+wait
+delete
+echo corresponds to a 0
+write pin AN12 0.3V
+break adc_complete
+continue
+
+wait
+delete
+echo check adc value and push RB4
+print adc_value
+stim RB4_debounce.scl
+break rb4_handled
+continue
+
+wait
+delete
+break latcde_update_complete
+continue
+
+wait
+delete
+echo check if this looks like an up arrow
+print x PORTC
+print x PORTD
+print x PORTE
+echo corresponds to a 9
+write pin AN12 4.7V
+break adc_complete
+continue
+
+wait
+delete
+echo check adc value and push RB4
+print adc_value
+stepi 1000000
+stim RB4_debounce.scl
+break rb4_handled
+continue
+
+wait
+delete
+break latcde_update_complete
+continue
+
+wait
+delete
+echo check if this looks like an down arrow
+print x PORTC
+print x PORTD
+print x PORTE
+echo finally guess it correctly
+write pin AN12 2.3V
+break adc_complete
+continue
+
+wait
+delete
+echo check adc value and push RB4
+print adc_value
+stepi 1000000
+stim RB4_debounce.scl
+break rb4_handled
+continue
+
+wait
+delete
+break correct_guess
+continue
+
+wait
+delete
+echo guessed it correctly now check the 7seg blink on correct answer
+break latjh_update_complete
+continue
+
+wait
+delete
+echo this one should represent 4
+print x PORTJ
+print x PORTH
+break hs_passed
+continue
+
+wait
+delete
+echo half a second must have passed
+stopwatch
+break latjh_update_complete
+continue
+
+wait
+delete
+echo this one should be off
+print x PORTJ
+print x PORTH
+break hs_passed
+continue
+
+wait
+delete
+echo half a second must have passed
+stopwatch
+break latjh_update_complete
+continue
+
+wait
+delete
+echo this one should represent 4
+print x PORTJ
+print x PORTH
+break hs_passed
+continue
+
+wait
+delete
+echo half a second must have passed
+stopwatch
+break latjh_update_complete
+continue
+
+wait
+delete
+echo this one should be off
+print x PORTJ
+print x PORTH
+break restart
+continue
+
+wait
+quit

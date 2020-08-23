@@ -1,0 +1,163 @@
+device PIC18F8722
+
+hwtool SIM
+
+Resetting SFRs
+Resetting peripherals
+
+set warningmessagebreakoptions.W0223_ADC_UNDERFLOW ignore
+
+set warningmessagebreakoptions.W0222_ADC_OVERFLOW ignore
+
+set oscillator.frequency 10
+
+set oscillator.frequencyunit Mega
+
+program "../dist/default/production/the3.production.elf"
+Programming target...
+Resetting SFRs
+Resetting peripherals
+Program succeeded.
+
+reset MCLR
+Resetting SFRs
+Resetting peripherals
+
+break init_complete
+Breakpoint 0 at function init_complete.
+run
+Running
+
+
+wait
+
+Single breakpoint: @0x756
+Simulator halted
+Stop at
+	address:0x756
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:5
+
+>
+delete
+
+break rb4_handled
+Breakpoint 1 at function rb4_handled.
+stim RB4_pulse.scl
+
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75C
+Simulator halted
+Stop at
+	address:0x75c
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:7
+
+>
+continue
+Running
+
+
+wait 5000
+
+stim RB4_debounce.scl
+
+continue
+
+
+wait
+
+Single breakpoint: @0x75C
+Simulator halted
+Stop at
+	address:0x75c
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:7
+
+>
+continue
+Running
+
+
+wait 5000
+
+stim RB4_push_then_debounce.scl
+
+continue
+
+
+wait
+
+Single breakpoint: @0x75C
+Simulator halted
+Stop at
+	address:0x75c
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:7
+
+>
+continue
+Running
+
+
+wait 5000
+
+stim RB4_debounce_then_hold.scl
+
+continue
+
+
+wait
+
+Single breakpoint: @0x75C
+Simulator halted
+Stop at
+	address:0x75c
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:7
+
+>
+continue
+Running
+
+
+wait 5000
+
+delete
+
+break restart
+Breakpoint 2 at function restart.
+continue
+
+
+wait
+
+Single breakpoint: @0x752
+Simulator halted
+Stop at
+	address:0x752
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:13
+
+>
+quit
+Stop at
+	address:0x752
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:13
+
+>---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1
+---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1

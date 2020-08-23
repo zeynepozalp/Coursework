@@ -1,0 +1,24 @@
+testbench for "pic18f8722" is
+  begin
+    process is
+      begin
+        RB4 <= '1';
+        wait for 3 ms;
+        RB4 <= '0';
+        wait for 1 ms;
+        RB4 <= '1';
+        wait for 2 ms;
+        RB4 <= '0';
+        wait for 1 ms;
+        RB4 <= '1';
+        wait for 50 ms;
+        RB4 <= '0';
+        wait for 3 ms;
+        RB4 <= '1';
+        wait for 2 ms;
+        RB4 <= '0';
+        wait for 1 ms;
+        RB4 <= '1';
+        wait;
+      end process;
+  end testbench;

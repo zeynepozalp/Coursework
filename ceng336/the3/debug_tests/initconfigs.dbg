@@ -1,0 +1,9 @@
+device PIC18F8722
+hwtool SIM
+set warningmessagebreakoptions.W0223_ADC_UNDERFLOW ignore
+set warningmessagebreakoptions.W0222_ADC_OVERFLOW ignore
+set oscillator.frequency 10
+set oscillator.frequencyunit Mega
+program "../dist/default/production/the3.production.elf"
+
+reset MCLR

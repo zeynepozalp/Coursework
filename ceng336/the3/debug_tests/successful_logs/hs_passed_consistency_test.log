@@ -1,0 +1,194 @@
+device PIC18F8722
+
+hwtool SIM
+
+Resetting SFRs
+Resetting peripherals
+
+set warningmessagebreakoptions.W0223_ADC_UNDERFLOW ignore
+
+set warningmessagebreakoptions.W0222_ADC_OVERFLOW ignore
+
+set oscillator.frequency 10
+
+set oscillator.frequencyunit Mega
+
+program "../dist/default/production/the3.production.elf"
+Programming target...
+Resetting SFRs
+Resetting peripherals
+Program succeeded.
+
+reset MCLR
+Resetting SFRs
+Resetting peripherals
+
+break init_complete
+Breakpoint 0 at function init_complete.
+run
+Running
+
+
+wait
+
+Single breakpoint: @0x756
+Simulator halted
+Stop at
+	address:0x756
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:5
+
+>
+delete
+
+break hs_passed
+Breakpoint 1 at function hs_passed.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+stopwatch
+Stopwatch cycle count = 5003518 (500.3518 ms)
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+stopwatch
+Stopwatch cycle count = 5003300 (500.33 ms)
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+stopwatch
+Stopwatch cycle count = 5003302 (500.3302 ms)
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+stopwatch
+Stopwatch cycle count = 5003302 (500.3302 ms)
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+stopwatch
+Stopwatch cycle count = 5003302 (500.3302 ms)
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+stopwatch
+Stopwatch cycle count = 5003302 (500.3302 ms)
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+stopwatch
+Stopwatch cycle count = 5003302 (500.3302 ms)
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+stopwatch
+Stopwatch cycle count = 5003302 (500.3302 ms)
+continue
+Running
+
+
+quit
+Simulator halted
+Stop at
+	address:0x3da
+	file:whereever_these_files_are_located/main.c
+	source line:188
+
+>---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1
+---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1

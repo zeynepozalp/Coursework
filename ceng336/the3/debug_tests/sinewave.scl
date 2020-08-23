@@ -1,0 +1,25 @@
+testbench for "pic18f8722" is
+begin
+    process is
+
+    file     fileVar : text;
+    variable fileLine   : line;
+    variable status  : file_open_status;
+
+    begin
+
+    file_open(status, fileVar, "sinewave.dat", read_mode);
+
+    if status == open_ok then
+      while endfile(fileVar) == false loop
+        readline(fileVar, fileLine);
+        read(fileLine, AN12);
+        wait for 1 ms;
+      end loop;
+      file_close(fileVar);
+      wait;
+    end if;
+    report("file_open failed");
+    wait;
+    end process;
+end testbench;

@@ -1,0 +1,469 @@
+device PIC18F8722
+
+hwtool SIM
+
+Resetting SFRs
+Resetting peripherals
+
+set warningmessagebreakoptions.W0223_ADC_UNDERFLOW ignore
+
+set warningmessagebreakoptions.W0222_ADC_OVERFLOW ignore
+
+set oscillator.frequency 10
+
+set oscillator.frequencyunit Mega
+
+program "../dist/default/production/the3.production.elf"
+Programming target...
+Resetting SFRs
+Resetting peripherals
+Program succeeded.
+
+reset MCLR
+Resetting SFRs
+Resetting peripherals
+
+break init_complete
+Breakpoint 0 at function init_complete.
+run
+Running
+
+
+wait
+
+Single breakpoint: @0x756
+Simulator halted
+Stop at
+	address:0x756
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:5
+
+>
+delete
+
+/*corresponds to a 0*/
+write pin AN12 0.3V
+
+break adc_complete
+Breakpoint 1 at function adc_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+delete
+
+/*check adc value and push RB4*/
+print adc_value
+adc_value=
+61
+
+stim RB4_debounce.scl
+
+break rb4_handled
+Breakpoint 2 at function rb4_handled.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75C
+Simulator halted
+Stop at
+	address:0x75c
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:7
+
+>
+delete
+
+break latcde_update_complete
+Breakpoint 3 at function latcde_update_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x754
+Simulator halted
+Stop at
+	address:0x754
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:9
+
+>
+delete
+
+/*check if this looks like an up arrow*/
+print x PORTC
+PORTC=
+0x02
+
+print x PORTD
+PORTD=
+0x0F
+
+print x PORTE
+PORTE=
+0x02
+
+/*corresponds to a 9*/
+write pin AN12 4.7V
+
+break adc_complete
+Breakpoint 4 at function adc_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+delete
+
+/*check adc value and push RB4*/
+print adc_value
+adc_value=
+962
+
+stepi 1000000
+Stop at
+	address:0x3a
+
+>
+stim RB4_debounce.scl
+
+break rb4_handled
+Breakpoint 5 at function rb4_handled.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75C
+Simulator halted
+Stop at
+	address:0x75c
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:7
+
+>
+delete
+
+break latcde_update_complete
+Breakpoint 6 at function latcde_update_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x754
+Simulator halted
+Stop at
+	address:0x754
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:9
+
+>
+delete
+
+/*check if this looks like an down arrow*/
+print x PORTC
+PORTC=
+0x04
+
+print x PORTD
+PORTD=
+0x0F
+
+print x PORTE
+PORTE=
+0x04
+
+/*finally guess it correctly*/
+write pin AN12 2.3V
+
+break adc_complete
+Breakpoint 7 at function adc_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x760
+Simulator halted
+Stop at
+	address:0x760
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:6
+
+>
+delete
+
+/*check adc value and push RB4*/
+print adc_value
+adc_value=
+471
+
+stepi 1000000
+Stop at
+	address:0x352
+	file:wherever_these_files_are_located/main.c
+	source line:193
+
+>
+stim RB4_debounce.scl
+
+break rb4_handled
+Breakpoint 8 at function rb4_handled.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75C
+Simulator halted
+Stop at
+	address:0x75c
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:7
+
+>
+delete
+
+break correct_guess
+Breakpoint 9 at function correct_guess.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75A
+Simulator halted
+Stop at
+	address:0x75a
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:10
+
+>
+delete
+
+/*guessed it correctly now check the 7seg blink on correct answer*/
+break latjh_update_complete
+Breakpoint 10 at function latjh_update_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x750
+Simulator halted
+Stop at
+	address:0x750
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:8
+
+>
+delete
+
+/*this one should represent 4*/
+print x PORTJ
+PORTJ=66
+
+print x PORTH
+PORTH=8
+
+break hs_passed
+Breakpoint 11 at function hs_passed.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+delete
+
+/*half a second must have passed*/
+stopwatch
+Stopwatch cycle count = 5027019 (502.7019 ms)
+break latjh_update_complete
+Breakpoint 12 at function latjh_update_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x750
+Simulator halted
+Stop at
+	address:0x750
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:8
+
+>
+delete
+
+/*this one should be off*/
+print x PORTJ
+PORTJ=0
+
+print x PORTH
+PORTH=8
+
+break hs_passed
+Breakpoint 13 at function hs_passed.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+delete
+
+/*half a second must have passed*/
+stopwatch
+Stopwatch cycle count = 5003265 (500.3265 ms)
+break latjh_update_complete
+Breakpoint 14 at function latjh_update_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x750
+Simulator halted
+Stop at
+	address:0x750
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:8
+
+>
+delete
+
+/*this one should represent 4*/
+print x PORTJ
+PORTJ=66
+
+print x PORTH
+PORTH=8
+
+break hs_passed
+Breakpoint 15 at function hs_passed.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x75E
+Simulator halted
+Stop at
+	address:0x75e
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:11
+
+>
+delete
+
+/*half a second must have passed*/
+stopwatch
+Stopwatch cycle count = 5003006 (500.3006 ms)
+break latjh_update_complete
+Breakpoint 16 at function latjh_update_complete.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x750
+Simulator halted
+Stop at
+	address:0x750
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:8
+
+>
+delete
+
+/*this one should be off*/
+print x PORTJ
+PORTJ=0
+
+print x PORTH
+PORTH=8
+
+break restart
+Breakpoint 17 at function restart.
+continue
+Running
+
+
+wait
+
+Single breakpoint: @0x752
+Simulator halted
+Stop at
+	address:0x752
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:13
+
+>
+quit
+Stop at
+	address:0x752
+	file:wherever_these_files_are_located/breakpoints.c
+	source line:13
+
+>---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1
+---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1

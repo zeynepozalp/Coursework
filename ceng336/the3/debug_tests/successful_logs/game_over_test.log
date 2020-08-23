@@ -1,0 +1,59 @@
+device PIC18F8722
+
+hwtool SIM
+
+Resetting SFRs
+Resetting peripherals
+
+set warningmessagebreakoptions.W0223_ADC_UNDERFLOW ignore
+
+set warningmessagebreakoptions.W0222_ADC_OVERFLOW ignore
+
+set oscillator.frequency 10
+
+set oscillator.frequencyunit Mega
+
+program "../dist/default/production/the3.production.elf"
+Programming target...
+Resetting SFRs
+Resetting peripherals
+Program succeeded.
+
+reset MCLR
+Resetting SFRs
+Resetting peripherals
+
+break game_over
+Breakpoint 0 at function game_over.
+run
+Running
+
+
+wait
+
+Single breakpoint: @0x758
+Simulator halted
+Stop at
+	address:0x758
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:12
+
+>
+stopwatch
+Stopwatch cycle count = 50033538 (5.003354 s)
+quit
+Stop at
+	address:0x758
+	file:whereever_these_files_are_located/breakpoints.c
+	source line:12
+
+>---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1
+---debug: Peripheral Accessed - ADC
+---debug: Peripheral Accessed - TMR0
+---debug: Peripheral Accessed - IOC
+---debug: Peripheral Accessed - OSC
+---debug: Peripheral Accessed - TMR1
